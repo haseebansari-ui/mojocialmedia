@@ -2,6 +2,7 @@
 :root{
     --primary:#febd16;
     --white-color:#fff;
+    --font-color: #121212;
 
     --transition: 0.3s ease-in-out;
 }
@@ -16,6 +17,7 @@
 
 body{
     font-family: "Rubik", sans-serif;
+    color: var(--font-color);
 }
 
 ul{
@@ -23,26 +25,75 @@ ul{
     padding: 0;
 }
 li{list-style: none;}
+
 a{text-decoration: none;}
-p{margin: 0;}
+
+p{
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+h2{
+    font-size: 3rem;
+}
 
 /* --- Reusable Code --- */
 .sec-padding{
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
+
+.header-bx {
+    margin-bottom: 1rem;
+}
+
+small{
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.heading2{
+    margin-top: 2rem;
+}
+
 
 /* --- Header Section --- */
 
 header{
-    padding: 1rem 0;
+    padding: 2.5rem 0 1rem;
     position: fixed;
     top:0;
     left:0;
     width: 100%;
+    z-index: 999;
+    transition: var(--transition);
+}
+
+header.active{
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding: 1rem 0 1rem;
 }
 
 .logo{
     width: 130px;
+}
+
+header.active .logo{
+    display: none;
+}
+
+.logo-new{
+    width: 100px;
+    display: none;
+}
+
+header.active .logo-new{
+    display: block;
 }
 
 .header-main-bx{
@@ -54,14 +105,17 @@ header{
 nav ul{
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 nav ul li a{
     color: var(--white-color);
     position: relative;
-
 }
+
+header.active nav ul li a{
+    color: #121212;
+} 
 
 nav ul li a::after{
     content: '';
@@ -72,6 +126,10 @@ nav ul li a::after{
     width: 0%;
     background: var(--white-color);
     transition: var(--transition);
+}
+
+header.active nav ul li a::after{
+    background: var(--primary);
 }
 
 nav ul li a:hover{
@@ -89,6 +147,10 @@ nav ul li a.login{
     border-radius: 0.4rem;
 }
 
+header.active nav ul li a.login{
+    color: var(--white-color);
+}
+
 nav ul li a.login::after{
     background: none;
 }
@@ -98,7 +160,6 @@ nav ul li a.login::after{
 .hero-sec{
     height: 100%;
     position: relative;
-    z-index: -1;
 }
 
 .hero-video{
@@ -121,7 +182,7 @@ nav ul li a.login::after{
 .hero-content h1{
     font-size: 5rem;
     color: var(--white-color);
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 .hero-bg-bottom{
     position: absolute;
@@ -164,9 +225,9 @@ nav ul li a.login::after{
     content: '';
     position: absolute;
     top: 6px;
-    left: -43px;
-    height: 2rem;
-    width: 2rem;
+    left: -37px;
+    height: 30px;
+    width: 30px;
     /* background: var(--primary); */
     border-radius: 100%;
     border: 3px solid var(--primary);
@@ -175,10 +236,10 @@ nav ul li a.login::after{
 .marquee-content span::after{
     content: '';
     position: absolute;
-    top: 13px;
-    left: -36px;
-    height: 1.3rem;
-    width: 1.3rem;
+    top: 14px;
+    left: -29px;
+    height: 14px;
+    width: 14px;
     background: var(--primary);
     border-radius: 100%;
 }
@@ -191,3 +252,72 @@ nav ul li a.login::after{
         transform:translateX(-50%);
     }
 }
+
+/* --- About us Section --- */
+
+
+
+.about-content p{
+    margin-bottom: 1rem;
+}
+
+/* --- Mission section --- */
+
+.services-sec{
+        background: linear-gradient(0deg, rgb(84 138 127 / 14%) 0%, rgb(205 207 207 / 14%) 50%, rgb(253 192 101 / 19%) 100%);
+}
+
+.mission-img{
+    height: 220px;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-top: 5rem;
+}
+
+.mission-img img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.value-title{
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.mission-sec .header-bx .btn{
+    padding: 0.8rem 1.8rem;
+    border: 1px solid var(--primary);
+}
+
+.mission-sec .header-bx h2{
+    margin-bottom: 2rem;
+}
+
+.srvc-icon-bx span i{
+    font-size: 5rem;
+}
+
+.srvc-card-title{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.srvc-card p{
+    margin-bottom: 0.5rem;
+}
+
+.srvc-card{
+    border: 1px solid #c9c9c9;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: var(--transition);
+}
+
+.srvc-card:hover{
+    box-shadow: 0 0 20px rgba(253, 192, 101, 0.61);
+}
+
+   
