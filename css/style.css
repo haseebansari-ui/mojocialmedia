@@ -3,6 +3,7 @@
     --primary:#febd16;
     --white-color:#fff;
     --font-color: #121212;
+    --secondry:#242a56;
 
     --transition: 0.3s ease-in-out;
 }
@@ -59,11 +60,17 @@ small{
     margin-top: 2rem;
 }
 
+.mr-bt{
+    margin-bottom: 5rem;
+}
+
+
+
 
 /* --- Header Section --- */
 
 header{
-    padding: 2.5rem 0 1rem;
+    padding: 1rem 0 1rem;
     position: fixed;
     top:0;
     left:0;
@@ -76,32 +83,34 @@ header.active{
     background-color: rgba(255, 255, 255, 0.8);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    padding: 1rem 0 1rem;
+    padding: 0.6rem 0;
 }
 
 
 .logo{
     width: 130px;
-    position: relative;
-    z-index: 5;
 }
 
 header.active .logo{
     display: none;
 }
 
+.logo-bx{
+    position: relative;
+    z-index: 5;
+}
+
 .logo-bg{
     position: absolute;
-    top: 86px;
-    left: 112px;
+    top: 46px;
+    left: 0px;
     height: 35px;
-    width: 146px;
+    width: 100%;
     box-shadow: inset 0 0 70px var(--white-color);
-    border-radius: 127px;
     transition: var(--transition);
     visibility: visible;
     opacity: 1;
-    z-index: 3;
+    z-index: -1;
 }
 
 header.active .logo-bg{
@@ -168,13 +177,30 @@ nav ul li a.login{
     color: var(--white-color);
     padding: 0.8rem 1.3rem;
     border-radius: 0.4rem;
+    transition: var(--transition);
+}
+
+nav ul li a.login:hover{
+    background: var(--white-color);
+    color: var(--font-color);
 }
 
 header.active nav ul li a.login{
     color: var(--white-color);
+    border: 2px solid transparent;
+}
+
+header.active nav ul li a.login:hover{
+    color: var(--font-color);
+    border: 2px solid var(--primary);
+    background: transparent;
 }
 
 nav ul li a.login::after{
+    background: none;
+}
+
+header.active nav ul li a.login::after{
     background: none;
 }
 
@@ -311,7 +337,16 @@ nav ul li a.login::after{
 
 .mission-sec .header-bx .btn{
     padding: 0.8rem 1.8rem;
+    border: 1px solid transparent;
+    background: var(--primary);
+    color: var(--white-color);
+    transition: var(--transition);
+}
+
+.mission-sec .header-bx .btn:hover{
+    background: transparent;
     border: 1px solid var(--primary);
+    color: var(--font-color);
 }
 
 .mission-sec .header-bx h2{
@@ -396,7 +431,7 @@ nav ul li a.login::after{
     height: 100%;
     width: 100%;
     padding: 2rem 2rem 4rem;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     color: var(--white-color);
     display: flex;
@@ -428,4 +463,190 @@ nav ul li a.login::after{
 .ads-img-bx:hover .ads-contnet-bx{
     transform: translateY(0%);
 }
-   
+
+/* --- Other Services --- */
+
+.other-srvc.sec-padding{
+    padding: 8rem 0rem 3rem;
+}
+
+.other-srvc{
+    background: rgb(246, 247, 252);
+}
+
+.other-srvc-card{
+    box-shadow: 0 0 20px rgb(229 229 229);
+    padding: 3.5rem 2rem 2.5rem;
+    position: relative;
+}
+
+.other-srvc-num{
+    position: absolute;
+    top: -43px;
+    left: 35px;
+    background: #e5e4e4;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 0.8rem 1rem;
+    color: rgba(123, 121, 121, 0.631);
+    border-radius: 0.5rem;
+}
+
+.other-srvc-title{
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+
+
+.other-srvc-card:hover .other-srvc-num{
+    /* background: var(--primary); */
+    color: var(--secondry);
+}
+
+.other-srvc-card:hover{
+    background: var(--secondry);
+    color: var(--white-color);
+}
+
+/* --- Technology Section --- */
+
+.tech-sec{
+    background: url('../img/techimg.png');
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    height: 500px;
+    z-index: 1;
+}
+
+.tech-sec::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 500px;
+    width: 100%;
+    background: rgb(0 0 0 / 61%);
+    z-index: 2;
+}
+
+.tech-sec .header-bx h2{
+    color: var(--white-color);
+}
+
+.tech-main-bx{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+
+.tech-content-bx{
+    color: var(--white-color);
+}
+
+.tech-sub-title{
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.tech-sec .header-bx{
+    margin-bottom: 3rem;
+}
+
+.tech-sec .mr-bt{
+    margin-bottom: 1rem;
+}
+
+
+/* --- Choose us Section --- */
+
+.choose-us-sec .header-bx{
+    margin-bottom: 3rem;
+}
+
+.choose-us-sec .header-bx h2{
+    margin-bottom: 2rem;
+}
+
+.choose-us-img-bx{
+    height:520px;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 3px solid #ffb702;
+}
+
+.choose-us-img-bx img{
+    width: 100%;
+    height:520px;
+    object-fit: cover;
+
+}
+
+.sub-title{
+    color: var(--secondry);
+    font-weight: bold;
+    font-size: 1.3rem;   
+}
+
+/* --- footer Section --- */
+
+.ft-sec {
+    background: var(--secondry);
+    padding: 3rem 0 0;
+}
+.flex-bx{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cta-btn{
+    font-size: 3rem;
+    color: var(--white-color);
+}
+
+.cta-btn:hover{
+    color: var(--white-color);
+}
+
+.ft-content-bx {
+    color: var(--white-color);
+}
+
+.ft-content-bx h2{
+    margin-bottom: 2rem;
+}
+
+.ft-content-bx p{
+    font-size: 1.4rem;
+}
+
+.copy-right-bx{
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #ebebeb8c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copy-right-cnct{
+    color: var(--white-color);
+}
+
+.ft-social-links ul{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.ft-social-links ul li a{
+    font-size: 1.5rem;
+    color: var(--white-color);
+}
