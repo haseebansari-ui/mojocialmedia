@@ -26,14 +26,7 @@
         margin-bottom: 5rem;
     }
 
-    .tech-sec{
-        height: 647px;
-    }
-
-    .tech-sec::before{
-        height: 647px;
-    }
-
+    
     .choose-us-img-bx{
         margin-bottom: 2rem;
     }
@@ -130,14 +123,6 @@
         font-size: 1.3rem;
     }
 
-    .tech-sec::before {
-        height: 560px;
-    }
-
-    .tech-sec {
-        height: 560px;
-    }
-
     .sub-title{
         font-size: 1.2rem;
     }
@@ -210,12 +195,16 @@
       bottom: 85px;
     }
 
-    .tech-sec {
-        height: 575px;
-    }
-
-    .tech-sec::before {
-        height: 575px;
-    }
+    
 }
 
+
+@media only screen and (max-width: 480px){
+    .tech-sec{
+        height: 700px;
+    }
+
+    .hero-bg-bottom {
+        bottom: 63px;
+    }
+}

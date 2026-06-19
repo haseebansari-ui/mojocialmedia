@@ -535,7 +535,7 @@ nav ul li a.login::after{
     background-attachment: fixed;
     background-size: cover;
     position: relative;
-    height: 500px;
+    height: 600px;
     z-index: 1;
 }
 
@@ -544,7 +544,7 @@ nav ul li a.login::after{
     position: absolute;
     top:0;
     left: 0;
-    height: 500px;
+    height: 100%;
     width: 100%;
     background: rgb(0 0 0 / 61%);
     z-index: 2;
@@ -560,6 +560,8 @@ nav ul li a.login::after{
     left:0;
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
     z-index: 5;
 }
 
