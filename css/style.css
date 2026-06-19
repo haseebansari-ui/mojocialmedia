@@ -79,7 +79,7 @@ header{
     transition: var(--transition);
 }
 
-header.active{
+.header.active{
     background-color: rgba(255, 255, 255, 0.8);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
@@ -91,7 +91,7 @@ header.active{
     width: 130px;
 }
 
-header.active .logo{
+.header.active .logo{
     display: none;
 }
 
@@ -113,7 +113,7 @@ header.active .logo{
     z-index: -1;
 }
 
-header.active .logo-bg{
+.header.active .logo-bg{
     display: none;
     visibility: hidden;
     opacity: 0;
@@ -124,7 +124,7 @@ header.active .logo-bg{
     display: none;
 }
 
-header.active .logo-new{
+.header.active .logo-new{
     display: block;
 }
 
@@ -145,7 +145,7 @@ nav ul li a{
     position: relative;
 }
 
-header.active nav ul li a{
+.header.active nav ul li a{
     color: var(--secondry);
 } 
 
@@ -160,7 +160,7 @@ nav ul li a::after{
     transition: var(--transition);
 }
 
-header.active nav ul li a::after{
+.header.active nav ul li a::after{
     background: var(--primary);
 }
 
@@ -185,12 +185,12 @@ nav ul li a.login:hover{
     color: var(--font-color);
 }
 
-header.active nav ul li a.login{
+.header.active nav ul li a.login{
     color: var(--white-color);
     border: 1px solid transparent;
 }
 
-header.active nav ul li a.login:hover{
+.header.active nav ul li a.login:hover{
     color: var(--font-color);
     border: 1px solid var(--primary);
     background: transparent;
@@ -200,8 +200,28 @@ nav ul li a.login::after{
     background: none;
 }
 
-header.active nav ul li a.login::after{
+.header.active nav ul li a.login::after{
     background: none;
+}
+
+.headerlinks{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-bar span{
+    color: var(--white-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.menu-open{
+    display: none;
+}
+
+.menu-close{
+    display: none;
 }
 
 /* --- Hero Video --- */
@@ -213,7 +233,6 @@ header.active nav ul li a.login::after{
 
 .hero-video{
     width: 100%;
-        position: relative;
 }
 
 .hero-content{
@@ -277,7 +296,6 @@ header.active nav ul li a.login::after{
     left: -37px;
     height: 30px;
     width: 30px;
-    /* background: var(--primary); */
     border-radius: 100%;
     border: 3px solid var(--primary);
 }
