@@ -618,8 +618,9 @@ nav ul li a.login::after{
 /* --- footer Section --- */
 
 .ft-sec {
-    background: var(--secondry);
+    background: #F9F8FC;
     padding: 3rem 0 0;
+    border-top: 1px solid #E2E2E8;
 }
 .flex-bx{
     display: flex;
@@ -628,15 +629,15 @@ nav ul li a.login::after{
 
 .cta-btn{
     font-size: 3rem;
-    color: var(--white-color);
+    color: var(--secondry);
 }
 
 .cta-btn:hover{
-    color: var(--white-color);
+    color: var(--secondry);
 }
 
 .ft-content-bx {
-    color: var(--white-color);
+    color: var(--secondry);
 }
 
 .ft-content-bx h2{
@@ -650,14 +651,14 @@ nav ul li a.login::after{
 .copy-right-bx{
     padding: 2rem 0;
     margin-top: 2rem;
-    border-top: 1px solid #ebebeb8c;
+    border-top: 1px solid var(--secondry);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .copy-right-cnct{
-    color: var(--white-color);
+    color: var(--secondry);
 }
 
 .ft-social-links ul{
@@ -668,5 +669,5 @@ nav ul li a.login::after{
 
 .ft-social-links ul li a{
     font-size: 1.5rem;
-    color: var(--white-color);
+    color: var(--secondry);
 }
