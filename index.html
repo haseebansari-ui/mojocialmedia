@@ -1,564 +1,808 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mojicial Media</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/media.css" />
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mojicial Media</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/media.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header-main-bx">
+					<div class="logo-main-bx">
+						<div class="logo-bx">
+							<a href="index.html">
+								<img src="./img/mojocial_logo.png" alt="logo" class="logo" />
+								<div class="logo-bg"></div>
+							</a>
+						</div>
+						<div class="logo-bx">
+							<a href="index.html">
+								<img
+									src="./img/mojocial_logo.png"
+									alt="logo2"
+									class="logo-new"
+								/>
+							</a>
+						</div>
+					</div>
 
-    <header class="header">
-        <div class="container">
-            <div class="header-main-bx">
-                <div class="logo-main-bx">
-                    <div class="logo-bx">
-                        <a href="index.html">
-                            <img src="./img/mojocial_logo.png" alt="logo" class="logo">
-                            <div class="logo-bg"></div>
-                        </a>
-                        
-                    </div>
-                    <div class="logo-bx">
-                        <a href="index.html">
-                            <img src="./img/mojocial_logo.png" alt="logo2" class="logo-new">
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="headerlinks">
-                    <nav>
-                        <div class="close-menu-bx">
-                            <span class="menu-close">
-                                <i class="ri-close-large-line"></i>
-                            </span>
-                        </div>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#" class="login">Login</a></li>
-                        </ul>
-                    </nav>
-                    <div class="menue-bar-bx">
-                        <div class="menu-bar">
-                            <span class="menu-open">
-                                <i class="ri-menu-3-line"></i>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </header>
+					<div class="headerlinks">
+						<nav>
+							<div class="close-menu-bx">
+								<span class="menu-close">
+									<i class="ri-close-large-line"></i>
+								</span>
+							</div>
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="#" class="login">Login</a></li>
+							</ul>
+						</nav>
+						<div class="menue-bar-bx">
+							<div class="menu-bar">
+								<span class="menu-open">
+									<i class="ri-menu-3-line"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 
-    <!-- Hero Section -->
-     <section class="hero-sec">
-        <video src="hero_video.mp4" controls poster="thumbnail.jpg" autoplay muted loop playsinline class="hero-video"></video>
-        <div class="hero-content">
-            <h1>Engage. Expand. Elevate.</h1>
+		<!-- Hero Section -->
+		<section class="hero-sec">
+			<video
+				src="hero_video.mp4"
+				controls
+				poster="thumbnail.jpg"
+				autoplay
+				muted
+				loop
+				playsinline
+				class="hero-video"
+			></video>
+			<div class="hero-content">
+				<h1>Engage. Expand. Elevate.</h1>
 
-            <div class="marquee">
-                <div class="marquee-content">
-                    <span>Mobile Advertising</span>
-                    <span>Programmatic Advertising</span>
-                    <span>Affiliate Marketing</span>
-                    <span>Display Advertising</span>
-                    <span>Video Advertising</span>
-                    <span>Native Advertising</span>
+				<div class="marquee">
+					<div class="marquee-content">
+						<span>Performance Marketing</span>
+						<span>User Acquisition</span>
+						<span>Mobile App Marketing</span>
+						<span>Affiliate Marketing</span>
+						<span>Programmatic Advertising</span>
+						<span>Media Buying</span>
+						<span>Lead Generation</span>
+						<span>SEO & Organic Growth</span>
+						<span>Social Media Marketing</span>
+						<span>Creative Studio</span>
 
-                    <!-- Duplicate Content -->
-                    <span>Mobile Advertising</span>
-                    <span>Programmatic Advertising</span>
-                    <span>Affiliate Marketing</span>
-                    <span>Display Advertising</span>
-                    <span>Video Advertising</span>
-                    <span>Native Advertising</span>
-                </div>
-            </div>
+						<!-- Duplicate Content -->
+						<span>Performance Marketing</span>
+						<span>User Acquisition</span>
+						<span>Mobile App Marketing</span>
+						<span>Affiliate Marketing</span>
+						<span>Programmatic Advertising</span>
+						<span>Media Buying</span>
+						<span>Lead Generation</span>
+						<span>SEO & Organic Growth</span>
+						<span>Social Media Marketing</span>
+						<span>Creative Studio</span>
+					</div>
+				</div>
 
-            <div class="hero-bg-bottom">
-                <img src="./img/hero_bg_banner-bottom.png" alt="">
-            </div>
-        </div>
-        
-     </section>
+				<div class="hero-bg-bottom">
+					<img src="./img/hero_bg_banner-bottom.png" alt="" />
+				</div>
+			</div>
+		</section>
 
-    <!-- About Us Section -->
-     <section class="about-sec sec-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="header-bx">
-                        <small>About us</small>
-                        <h2 class="heading2">Who are Mojocial Media?</h2>
-                        <div class="about-img-bx">
-                            <img src="" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="about-content">
-                        <p>
-                            Mojocial Media is a premier global digital advertising network that connects advertisers with high-quality publishers across various platforms. We offer a comprehensive suite of advertising solutions, including display, video, mobile, and native ads, all driven by advanced technology and data analytics. Founded in [Year], we have quickly become a trusted partner for businesses looking to drive scalable growth and deliver targeted ad experiences to their audiences.
-                        </p>
-                        <p>
-                            Our commitment to excellence and innovation ensures that both advertisers and publishers maximize revenue opportunities through seamless, high-performing ad campaigns.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-     </section>
-    
-    <!-- Mission section -->
-     <section class="mission-sec sec-padding">
-        <div class="container">
-            <div class="row">
+		<!-- About Us Section -->
+		<section class="about-sec sec-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5">
+						<div class="header-bx">
+							<small>About us</small>
+							<h2 class="heading2">Who are Mojocial Media?</h2>
+							<div class="about-img-bx">
+								<img src="" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<div class="about-content">
+							<!-- <div class="abt-cnct-small">Not the typical agency.</div> -->
+							<p>
+								Mojocial Media is a performance-driven growth agency helping
+								brands acquire customers, scale revenue, and expand into new
+								markets.
+							</p>
+							<p>
+								From media buying and affiliate partnerships to user acquisition
+								and app growth, we build campaigns focused on one thing —
+								measurable business outcomes.
+							</p>
+							<p>
+								From media buying and affiliate partnerships to user acquisition
+								and app growth, we build campaigns focused on one thing —
+								measurable business outcomes.
+							</p>
+							<p>
+								Our team works across North America, MENA, APAC, and emerging
+								markets, helping brands connect with high-intent audiences
+								through data-driven marketing strategies.
+							</p>
+							<p>
+								Our team works across North America, MENA, APAC, and emerging
+								markets, helping brands connect with high-intent audiences
+								through data-driven marketing strategies.
+							</p>
+							<!-- <p>No vanity metrics. No inflated reports.</p>
+							<p>Just transparent growth..</p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-                <div class="row mb-3">
-                    <div class="col-lg-5">
-                        <div class="header-bx">
-                            <small>Specialization</small>
-                            <h2 class="heading2">Boosting your brand to new heights online.</h2>
-                            <a href="#" class="btn">Contact us</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="mission-img">
-                            <img src="./img/misimg.png" alt="" />
-                        </div>
-                    </div>
-                </div>
+		<!-- Mission section -->
+		<section class="mission-sec sec-padding">
+			<div class="container">
+				<div class="row">
+					<div class="row mb-3">
+						<div class="col-lg-5">
+							<div class="header-bx">
+								<small>Specialization</small>
+								<h2 class="heading2">
+									Boosting your brand to new heights online.
+								</h2>
+								<a href="#" class="btn">Contact us</a>
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="mission-img">
+								<img src="./img/misimg.png" alt="" />
+							</div>
+						</div>
+					</div>
 
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="value-content">
-                            <div class="value-title">Our vision</div>
-                            <p>
-                                Our vision is to be the driving force behind businesses’ success in the digital age, where social media is not just a platform but a powerful tool for growth and engagement.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="value-content">
-                            <div class="value-title">Our Mission</div>
-                            <p>
-                                At Mojocial Media, our mission is to provide data-driven, performance-oriented advertising solutions that help brands connect with their target audience effectively while offering a rewarding and profitable experience for publishers.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+					<div class="row">
+						<div class="col-lg-5">
+							<div class="value-content">
+								<div class="value-title">Our vision</div>
+								<p>
+									Our vision is to be the driving force behind businesses’
+									success in the digital age, where social media is not just a
+									platform but a powerful tool for growth and engagement.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="value-content">
+								<div class="value-title">Our Mission</div>
+								<p>
+									At Mojocial Media, our mission is to provide data-driven,
+									performance-oriented advertising solutions that help brands
+									connect with their target audience effectively while offering
+									a rewarding and profitable experience for publishers.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-            </div>
-        </div>
-     </section>
+		<!-- Services section -->
+		<section class="services-sec sec-padding">
+			<div class="container">
+				<div class="header-bx">
+					<h2>Our Services</h2>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 mb-5">
+						<div class="srvc-card">
+							<div class="srvc-icon-bx">
+								<span>
+									<i class="ri-presentation-line"></i>
+								</span>
+							</div>
+							<div class="srvc-card-title">Performance Marketing</div>
+							<p>
+								Banner ads, interstitials, and rich media across multiple
+								devices and websites.
+							</p>
+							<p>
+								Custom ad formats designed to suit both advertiser and publisher
+								needs.
+							</p>
+						</div>
+					</div>
 
-    <!-- Services section -->
-     <section class="services-sec sec-padding">
-        <div class="container">
-            <div class="header-bx">
-                <h2>Our Services</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="srvc-card">
-                        <div class="srvc-icon-bx">
-                           <span>
-                                <i class="ri-presentation-line"></i>
-                           </span>
-                        </div>
-                        <div class="srvc-card-title"> Display Advertising </div>
-                        <p>
-                            Banner ads, interstitials, and rich media across multiple devices and websites.
-                        </p>
-                        <p>
-                            Custom ad formats designed to suit both advertiser and publisher needs.
-                        </p>
-                    </div>
-                </div>
+					<div class="col-lg-4 col-md-6 mb-5">
+						<div class="srvc-card">
+							<div class="srvc-icon-bx">
+								<span>
+									<i class="ri-video-line"></i>
+								</span>
+							</div>
+							<div class="srvc-card-title">User Acquisition</div>
+							<p>
+								Pre-roll, mid-roll, and post-roll video ads for both desktop and
+								mobile platforms.
+							</p>
+							<p>
+								Full-screen and interactive video experiences that engage users.
+							</p>
+						</div>
+					</div>
 
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="srvc-card">
-                        <div class="srvc-icon-bx">
-                           <span>
-                                <i class="ri-video-line"></i>
-                           </span>
-                        </div>
-                        <div class="srvc-card-title"> Video Advertising </div>
-                        <p>Pre-roll, mid-roll, and post-roll video ads for both desktop and mobile platforms.
-                        </p>
-                        <p>
-                           Full-screen and interactive video experiences that engage users.
-                        </p>
-                    </div>
-                </div>
+					<div class="col-lg-4 col-md-6 mb-5">
+						<div class="srvc-card">
+							<div class="srvc-icon-bx">
+								<span>
+									<i class="ri-links-line"></i>
+								</span>
+							</div>
+							<div class="srvc-card-title">Mobile App Marketing</div>
+							<p>
+								Connecting brands with affiliates, influencers, and content
+								creators for performance-based campaigns.
+							</p>
+							<p>
+								Driving measurable conversions and sales through affiliate
+								partnerships.
+							</p>
+						</div>
+					</div>
 
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="srvc-card">
-                        <div class="srvc-icon-bx">
-                           <span>
-                                <i class="ri-links-line"></i>
-                           </span>
-                        </div>
-                        <div class="srvc-card-title"> Affiliate Marketing </div>
-                        <p>
-                           Connecting brands with affiliates, influencers, and content creators for performance-based campaigns.                        </p>
-                        <p>
-                           Driving measurable conversions and sales through affiliate partnerships.
-                        </p>
-                    </div>
-                </div>
+					<div class="col-lg-4 col-md-6 mb-5">
+						<div class="srvc-card">
+							<div class="srvc-icon-bx">
+								<span>
+									<i class="ri-smartphone-line"></i>
+								</span>
+							</div>
+							<div class="srvc-card-title">Affiliate Marketing</div>
+							<p>
+								Ads tailored for mobile apps, including in-app ads, banners, and
+								native ads.
+							</p>
+							<p>
+								Location-based targeting to maximise engagement and conversions.
+							</p>
+						</div>
+					</div>
 
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="srvc-card">
-                        <div class="srvc-icon-bx">
-                           <span>
-                                <i class="ri-smartphone-line"></i>
-                           </span>
-                        </div>
-                        <div class="srvc-card-title"> Mobile Advertising </div>
-                        <p>
-                           Ads tailored for mobile apps, including in-app ads, banners, and native ads.
-                        </p>
-                        <p>
-                           Location-based targeting to maximise engagement and conversions.
-                        </p>
-                    </div>
-                </div>
+					<div class="col-lg-4 col-md-6 mb-5">
+						<div class="srvc-card">
+							<div class="srvc-icon-bx">
+								<span>
+									<i class="ri-ai-generate"></i>
+								</span>
+							</div>
+							<div class="srvc-card-title">Programmatic Advertising</div>
+							<p>
+								Automated, real-time bidding solutions to help advertisers
+								optimize their campaigns.
+							</p>
+							<p>
+								Delivering targeted ads based on data and behavior across
+								multiple ad exchanges and DSPs.
+							</p>
+						</div>
+					</div>
 
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="srvc-card">
-                        <div class="srvc-icon-bx">
-                           <span>
-                                <i class="ri-ai-generate"></i>
-                           </span>
-                        </div>
-                        <div class="srvc-card-title"> Programmatic Advertising </div>
-                        <p>
-                           Automated, real-time bidding solutions to help advertisers optimize their campaigns.
-                        </p>
-                        <p>
-                           Delivering targeted ads based on data and behavior across multiple ad exchanges and DSPs.
-                        </p>
-                    </div>
-                </div>
+					<div class="col-lg-4 col-md-6 mb-5">
+						<div class="srvc-card">
+							<div class="srvc-icon-bx">
+								<span>
+									<i class="ri-article-line"></i>
+								</span>
+							</div>
+							<div class="srvc-card-title">Media Buying</div>
+							<p>
+								Integrating ads into content for a seamless and non-intrusive
+								experience.
+							</p>
+							<p>
+								Sponsored content and branded integrations across various
+								digital platforms.
+							</p>
+						</div>
+					</div>
 
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="srvc-card">
-                        <div class="srvc-icon-bx">
-                           <span>
-                                <i class="ri-article-line"></i>
-                           </span>
-                        </div>
-                        <div class="srvc-card-title"> Native Advertising </div>
-                        <p>
-                            Integrating ads into content for a seamless and non-intrusive experience.
-                        </p>
-                        <p>
-                            Sponsored content and branded integrations across various digital platforms.
-                        </p>
-                    </div>
-                </div>                
+					<div class="col-lg-4 col-md-6 mb-5">
+						<div class="srvc-card">
+							<div class="srvc-icon-bx">
+								<span>
+									<i class="ri-article-line"></i>
+								</span>
+							</div>
+							<div class="srvc-card-title">Lead Generation</div>
+							<p>
+								Integrating ads into content for a seamless and non-intrusive
+								experience.
+							</p>
+							<p>
+								Sponsored content and branded integrations across various
+								digital platforms.
+							</p>
+						</div>
+					</div>
 
-            </div>
-        </div>
-     </section>
-    
-    <!-- Advertismet section -->
-     <section class="ads-sec sec-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="adv-content-bx">
-                        <div class="ads-img-bx">
-                            <img src="./img/adv-bg-img.png" alt="">
-                            <div class="ads-title">Advertisers</div>
-                            <div class="ads-contnet-bx">
-                                <p>
-                                    E-commerce brands, consumer goods companies, mobile apps, tech startups, travel agencies, financial services, and more are looking for scalable digital marketing solutions.
-                                </p>
-                            </div>
-                        </div>
+					<div class="col-lg-4 col-md-6 mb-5">
+						<div class="srvc-card">
+							<div class="srvc-icon-bx">
+								<span>
+									<i class="ri-article-line"></i>
+								</span>
+							</div>
+							<div class="srvc-card-title">SEO & Organic Growth</div>
+							<p>
+								Integrating ads into content for a seamless and non-intrusive
+								experience.
+							</p>
+							<p>
+								Sponsored content and branded integrations across various
+								digital platforms.
+							</p>
+						</div>
+					</div>
 
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="adv-content-bx">
-                        <div class="ads-img-bx">
-                            <img src="./img/publisher-bg-img.png" alt="">
-                            <div class="ads-title"> Publishers </div>
-                            <div class="ads-contnet-bx">
-                                <p>
-                                    Website owners, bloggers, mobile app developers, and content creators seeking to monetize their content and traffic.
-                                </p>
-                            </div>
-                        </div>
+					<div class="col-lg-4 col-md-6 mb-5">
+						<div class="srvc-card">
+							<div class="srvc-icon-bx">
+								<span>
+									<i class="ri-article-line"></i>
+								</span>
+							</div>
+							<div class="srvc-card-title">Social Media Marketing</div>
+							<p>
+								Integrating ads into content for a seamless and non-intrusive
+								experience.
+							</p>
+							<p>
+								Sponsored content and branded integrations across various
+								digital platforms.
+							</p>
+						</div>
+					</div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-     </section>
+					<div class="col-lg-4 col-md-6 mb-5">
+						<div class="srvc-card">
+							<div class="srvc-icon-bx">
+								<span>
+									<i class="ri-article-line"></i>
+								</span>
+							</div>
+							<div class="srvc-card-title">Creative Studio</div>
+							<p>
+								Integrating ads into content for a seamless and non-intrusive
+								experience.
+							</p>
+							<p>
+								Sponsored content and branded integrations across various
+								digital platforms.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- Other Services -->
-     <section class="other-srvc sec-padding">
-        <div class="container">
-            <div class="row">
+		<!-- Solutions section -->
+		<section class="solution-sec sec-padding">
+			<div class="container">
+				<div class="heading-bx">
+					<h2>Our Solution</h2>
+				</div>
+				<div class="slt-bg-clr">
+					<div class="row">
+						<!-- Left Column -->
+						<div class="col-lg-6">
+							<div class="solution-item active" data-target="1">
+								<span>01</span>
+								<h4>Brand Growth</h4>
+							</div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="other-srvc-card mr-bt">
-                        <div class="other-srvc-num">
-                            01
-                        </div>
-                        <div class="other-srvc-content-bx">
-                            <div class="other-srvc-title">
-                                Acquisition Tools
-                            </div>
-                            <p>
-                                We provide advanced digital and mobile acquisition technologies designed to support and execute your customer acquisition strategy with efficiency and precision. Our solutions enable scalable growth and seamless integration into your broader marketing ecosystem.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+							<div class="solution-item" data-target="2">
+								<span>02</span>
+								<h4>Digital Marketing</h4>
+							</div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="other-srvc-card mr-bt">
-                        <div class="other-srvc-num">
-                            02
-                        </div>
-                        <div class="other-srvc-content-bx">
-                            <div class="other-srvc-title">
-                                Digital Media Buying
-                            </div>
-                            <p>
-                                We provide advanced digital and mobile acquisition technologies designed to support and execute your customer acquisition strategy with efficiency and precision. Our solutions enable scalable growth and seamless integration into your broader marketing ecosystem.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+							<div class="solution-item" data-target="3">
+								<span>03</span>
+								<h4>SEO Optimization</h4>
+							</div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="other-srvc-card mr-bt">
-                        <div class="other-srvc-num">
-                            03
-                        </div>
-                        <div class="other-srvc-content-bx">
-                            <div class="other-srvc-title">
-                                Social Media Advertising
-                            </div>
-                            <p>
-                                Our team develops and deploys bespoke social media strategies, supported by proprietary tools and insights. We ensure alignment with your target audience, market landscape, and product positioning to drive engagement and brand awareness.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+							<div class="solution-item" data-target="4">
+								<span>04</span>
+								<h4>Social Media</h4>
+							</div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="other-srvc-card sm-mb">
-                        <div class="other-srvc-num">
-                            04
-                        </div>
-                        <div class="other-srvc-content-bx">
-                            <div class="other-srvc-title">
-                                Paid Search
-                            </div>
-                            <p>
-                                Our dedicated paid search specialists create and manage comprehensive search engine marketing (SEM) strategies, leveraging advanced analytics to optimize visibility, drive qualified leads, and maximize profitability.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+							<div class="solution-item" data-target="5">
+								<span>05</span>
+								<h4>Content Strategy</h4>
+							</div>
+						</div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="other-srvc-card sm-mb">
-                        <div class="other-srvc-num">
-                            05
-                        </div>
-                        <div class="other-srvc-content-bx">
-                            <div class="other-srvc-title">
-                                Marketing Strategy
-                            </div>
-                            <p>
-                                We offer strategic marketing advisory services focused on optimizing digital marketing performance. Our consultants work collaboratively to evaluate your existing efforts, identify opportunities, and implement solutions that generate measurable results.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+						<!-- Right Column -->
+						<div class="col-lg-6">
+							<div class="solution-preview active" id="content-1">
+								<img src="./img/adv-bg-img.png" alt="" />
+								<div class="overlay-content">
+									<h3>Brand Growth</h3>
+									<p>
+										Grow your brand with strategic campaigns and audience
+										targeting.
+									</p>
+								</div>
+							</div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="other-srvc-card sm-mb">
-                        <div class="other-srvc-num">
-                            06
-                        </div>
-                        <div class="other-srvc-content-bx">
-                            <div class="other-srvc-title">
-                                Affiliate Marketing
-                            </div>
-                            <p>
-                                We develop and manage tailored affiliate marketing programs that align with your business objectives. From strategy creation to operational execution and team enablement, we help you unlock the full potential of third-party marketing channels.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+							<div class="solution-preview" id="content-2">
+								<img src="./img/adv-bg-img.png" alt="" />
+								<div class="overlay-content">
+									<h3>Digital Marketing</h3>
+									<p>
+										Drive leads and conversions through performance marketing.
+									</p>
+								</div>
+							</div>
 
+							<div class="solution-preview" id="content-3">
+								<img src="./img/adv-bg-img.png" alt="" />
+								<div class="overlay-content">
+									<h3>SEO Optimization</h3>
+									<p>
+										Improve rankings and organic traffic with SEO strategies.
+									</p>
+								</div>
+							</div>
 
-            </div>
-        </div>
-     </section>
-    
-    <!-- Technology Section -->
-     <section class="tech-sec sec-padding">
-        <div class="tech-main-bx sec-padding">
-            <div class="container">
-                <div class="header-bx">
-                <h2>Technological Infrastructure</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="tech-content-bx mr-bt">
-                        <div class="tech-sub-title">Advanced Ad Serving Technology</div>
-                        <p>
-                            Our ad serving infrastructure is designed for speed, scalability, and reliability. It supports a wide range of ad formats and delivery channels, ensuring efficient and effective campaign execution.
-                        </p>
-                    </div>
-                </div>
+							<div class="solution-preview" id="content-4">
+								<img src="./img/adv-bg-img.png" alt="" />
+								<div class="overlay-content">
+									<h3>Social Media</h3>
+									<p>Build engagement and grow your online community.</p>
+								</div>
+							</div>
 
-                <div class="col-lg-6">
-                    <div class="tech-content-bx mr-bt">
-                        <div class="tech-sub-title">Comprehensive Fraud Protection</div>
-                        <p>
-                            We utilize sophisticated fraud detection systems and enforce rigorous brand safety protocols to safeguard your campaigns and ensure the authenticity of every impression.
-                        </p>
-                    </div>            
-                </div>
-            </div>
-            <div class="tech-content-bx">
-                <div class="tech-sub-title">Comprehensive Fraud Protection</div>
-                    <p>
-                        We utilize sophisticated fraud detection systems and enforce rigorous brand safety protocols to safeguard your campaigns and ensure the authenticity of every impression.
-                    </p>
-                </div>
-            </div>
-        </div>
-        
-     </section>
-    
-    <!-- Why Choose Us Section -->
-     <section class="choose-us-sec sec-padding">
-        <div class="container">
-            <div class="header-bx">
-                <small>Choose us</small>
-                <h2 class="heading2">Why Choose Mojocial Media</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="choose-us-img-bx">
-                        <img src="./img/choose-us-img.png" alt="" />
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-lg-6 mb-4">
-                            <div class="choose-us-content-bx">
-                                <div class="sub-title">Expertise and Proven Experience</div>
-                                <p>
-                                    Our team comprises seasoned professionals with extensive knowledge of digital advertising and programmatic media buying. We bring strategic insight and industry best practices to every campaign.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="choose-us-content-bx">
-                                <div class="sub-title"> Access to Premium, Brand-Safe Inventory </div>
-                                <p>
-                                    We provide access to high-quality, brand-safe advertising placements across a wide range of reputable digital platforms—ensuring both reach and relevance for your target audience.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 mb-3">
-                            <div class="choose-us-content-bx">
-                                <div class="sub-title"> Tailored Advertising Solutions </div>
-                                <p>
-                                    We understand that every business is unique. Our solutions are customized to meet your specific objectives, whether that means driving traffic, increasing engagement, or maximizing conversions.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-3">
-                            <div class="choose-us-content-bx">
-                                <div class="sub-title"> Real-Time Campaign Optimization </div>
-                                <p>
-                                    Our technology continuously monitors and optimizes campaigns in real time, ensuring optimal performance and return on investment throughout the campaign lifecycle.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="choose-us-content-bx">
-                        <div class="sub-title"> Dedicated Client Support </div>
-                            <p>
-                                Our experienced support team is available to assist with campaign management, technical queries, and performance analysis—ensuring a seamless and effective advertising experience.
-                            </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-     </section>
+							<div class="solution-preview" id="content-5">
+								<img src="./img/adv-bg-img.png" alt="" />
+								<div class="overlay-content">
+									<h3>Content Strategy</h3>
+									<p>
+										Create compelling content that converts visitors into
+										customers.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- CTA Section -->
-     <footer class="ft-sec">
-        <div class="container">
-            <div class="flex-bx">
-                <div class="">
-                    <div class="ft-content-bx">
-                        <h2>Elevate Your <br> Digital Marketing</h2>
-                        <p>Partner with Mojocial Media for powerful results</p>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="cta-btn-bx">
-                        <a href="#" class="cta-btn">
-                            Let's Talk 
-                            <span>
-                                <i class="ri-arrow-right-long-line"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="copy-right-bx">
-                <div class="copy-right-cnct">
-                    <p>Copyright &copy; 2025  |  mojocialmedia.com</p>
-                </div>
-                <div class="ft-social-links">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="ri-facebook-box-fill"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="ri-instagram-fill"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="ri-linkedin-box-fill"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>    
-            </div>
-        </div>
-     </footer>
+		<!-- Advertismet section -->
+		<section class="ads-sec sec-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="adv-content-bx">
+							<div class="ads-img-bx">
+								<img src="./img/adv-bg-img.png" alt="" />
+								<div class="ads-title">Advertisers</div>
+								<div class="ads-contnet-bx">
+									<p>
+										E-commerce brands, consumer goods companies, mobile apps,
+										tech startups, travel agencies, financial services, and more
+										are looking for scalable digital marketing solutions.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="adv-content-bx">
+							<div class="ads-img-bx">
+								<img src="./img/publisher-bg-img.png" alt="" />
+								<div class="ads-title">Publishers</div>
+								<div class="ads-contnet-bx">
+									<p>
+										Website owners, bloggers, mobile app developers, and content
+										creators seeking to monetize their content and traffic.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <script src="js/scritp.js"></script>
-</body>
+		<!-- Other Services -->
+		<section class="other-srvc sec-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-6">
+						<div class="other-srvc-card mr-bt">
+							<div class="other-srvc-num">01</div>
+							<div class="other-srvc-content-bx">
+								<div class="other-srvc-title">Acquisition Tools</div>
+								<p>
+									We provide advanced digital and mobile acquisition
+									technologies designed to support and execute your customer
+									acquisition strategy with efficiency and precision. Our
+									solutions enable scalable growth and seamless integration into
+									your broader marketing ecosystem.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6">
+						<div class="other-srvc-card mr-bt">
+							<div class="other-srvc-num">02</div>
+							<div class="other-srvc-content-bx">
+								<div class="other-srvc-title">Digital Media Buying</div>
+								<p>
+									We provide advanced digital and mobile acquisition
+									technologies designed to support and execute your customer
+									acquisition strategy with efficiency and precision. Our
+									solutions enable scalable growth and seamless integration into
+									your broader marketing ecosystem.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6">
+						<div class="other-srvc-card mr-bt">
+							<div class="other-srvc-num">03</div>
+							<div class="other-srvc-content-bx">
+								<div class="other-srvc-title">Social Media Advertising</div>
+								<p>
+									Our team develops and deploys bespoke social media strategies,
+									supported by proprietary tools and insights. We ensure
+									alignment with your target audience, market landscape, and
+									product positioning to drive engagement and brand awareness.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6">
+						<div class="other-srvc-card sm-mb">
+							<div class="other-srvc-num">04</div>
+							<div class="other-srvc-content-bx">
+								<div class="other-srvc-title">Paid Search</div>
+								<p>
+									Our dedicated paid search specialists create and manage
+									comprehensive search engine marketing (SEM) strategies,
+									leveraging advanced analytics to optimize visibility, drive
+									qualified leads, and maximize profitability.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6">
+						<div class="other-srvc-card sm-mb">
+							<div class="other-srvc-num">05</div>
+							<div class="other-srvc-content-bx">
+								<div class="other-srvc-title">Marketing Strategy</div>
+								<p>
+									We offer strategic marketing advisory services focused on
+									optimizing digital marketing performance. Our consultants work
+									collaboratively to evaluate your existing efforts, identify
+									opportunities, and implement solutions that generate
+									measurable results.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6">
+						<div class="other-srvc-card sm-mb">
+							<div class="other-srvc-num">06</div>
+							<div class="other-srvc-content-bx">
+								<div class="other-srvc-title">Affiliate Marketing</div>
+								<p>
+									We develop and manage tailored affiliate marketing programs
+									that align with your business objectives. From strategy
+									creation to operational execution and team enablement, we help
+									you unlock the full potential of third-party marketing
+									channels.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Technology Section -->
+		<section class="tech-sec sec-padding">
+			<div class="tech-main-bx sec-padding">
+				<div class="container">
+					<div class="header-bx">
+						<h2>Technological Infrastructure</h2>
+					</div>
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="tech-content-bx mr-bt">
+								<div class="tech-sub-title">Advanced Ad Serving Technology</div>
+								<p>
+									Our ad serving infrastructure is designed for speed,
+									scalability, and reliability. It supports a wide range of ad
+									formats and delivery channels, ensuring efficient and
+									effective campaign execution.
+								</p>
+							</div>
+						</div>
+
+						<div class="col-lg-6">
+							<div class="tech-content-bx mr-bt">
+								<div class="tech-sub-title">Comprehensive Fraud Protection</div>
+								<p>
+									We utilize sophisticated fraud detection systems and enforce
+									rigorous brand safety protocols to safeguard your campaigns
+									and ensure the authenticity of every impression.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="tech-content-bx">
+						<div class="tech-sub-title">Comprehensive Fraud Protection</div>
+						<p>
+							We utilize sophisticated fraud detection systems and enforce
+							rigorous brand safety protocols to safeguard your campaigns and
+							ensure the authenticity of every impression.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Choose Us Section -->
+		<section class="choose-us-sec sec-padding">
+			<div class="container">
+				<div class="header-bx">
+					<small>Choose us</small>
+					<h2 class="heading2">Why Choose Mojocial Media</h2>
+				</div>
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="choose-us-img-bx">
+							<img src="./img/choose-us-img.png" alt="" />
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div class="row">
+							<div class="col-lg-6 mb-4">
+								<div class="choose-us-content-bx">
+									<div class="sub-title">Growth First</div>
+									<p>
+										Every campaign is optimized for business outcomes, not
+										impressions.
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-6 mb-4">
+								<div class="choose-us-content-bx">
+									<div class="sub-title">Global Reach</div>
+									<p>
+										Scale campaigns across multiple regions through trusted
+										media and publisher partnerships.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-6 mb-3">
+								<div class="choose-us-content-bx">
+									<div class="sub-title">Real-Time Optimization</div>
+									<p>
+										Continuous monitoring, reporting, and campaign refinement.
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-6 mb-3">
+								<div class="choose-us-content-bx">
+									<div class="sub-title">Performance Driven</div>
+									<p>Every dollar spent is measured against ROI.</p>
+								</div>
+							</div>
+						</div>
+						<div class="choose-us-content-bx">
+							<div class="sub-title">Dedicated Account Management</div>
+							<p>
+								Experienced specialists managing every stage of the campaign
+								lifecycle.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<footer class="ft-sec">
+			<div class="container">
+				<div class="flex-bx">
+					<div class="">
+						<div class="ft-content-bx">
+							<h2>
+								Elevate Your <br />
+								Digital Marketing
+							</h2>
+							<p>Partner with Mojocial Media for powerful results</p>
+						</div>
+					</div>
+					<div class="">
+						<div class="cta-btn-bx">
+							<a href="#" class="cta-btn">
+								Let's Talk
+								<span>
+									<i class="ri-arrow-right-long-line"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="copy-right-bx">
+					<div class="copy-right-cnct">
+						<p>Copyright &copy; 2025 | mojocialmedia.com</p>
+					</div>
+					<div class="ft-social-links">
+						<ul>
+							<li>
+								<a href="#">
+									<i class="ri-facebook-box-fill"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ri-instagram-fill"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ri-linkedin-box-fill"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/scritp.js"></script>
+	</body>
 </html>

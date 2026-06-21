@@ -34,3 +34,22 @@ if(closeMenuBtn){
   
 }
 
+// Solution
+
+const items = document.querySelectorAll(".solution-item");
+const previews = document.querySelectorAll(".solution-preview");
+
+items.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+        const target = item.getAttribute("data-target");
+
+        items.forEach(i => i.classList.remove("active"));
+        previews.forEach(p => p.classList.remove("active"));
+
+        item.classList.add("active");
+        document
+            .getElementById(`content-${target}`)
+            .classList.add("active");
+    });
+});
+
