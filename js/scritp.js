@@ -86,7 +86,7 @@ items.forEach(item => {
                     item.classList.add('hidden');
                 }
             });
-            viewMoreBtn.textContent = 'View More';
+            viewMoreBtn.textContent = 'View More Services ';
             allCardsShown = false;
         }
         
