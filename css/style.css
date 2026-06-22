@@ -463,10 +463,10 @@ nav ul li a.login::after {
         text-align: center;
     }
         
-    .services-sec .header-bx h2 {
+    /* .services-sec .header-bx h2 {
         font-size: 3rem;
         font-weight: 700;
-    }
+    } */
         
     /* Service Card */
     .srvc-card {
