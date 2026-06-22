@@ -3,6 +3,7 @@
 	--white-color: #fff;
 	--font-color: #121212;
 	--secondry: #242a56;
+    --bg-soft:#f7f7fb;
 
 	--transition: 0.3s ease-in-out;
 }
@@ -683,6 +684,7 @@ nav ul li a.login::after {
 	font-size: 1.4rem;
 	margin-bottom: 0.5rem;
 	font-weight: bold;
+    text-align: center;
 }
 
 .other-srvc-card:hover .other-srvc-num {
@@ -934,4 +936,226 @@ nav ul li a.login::after {
 .solution-sec .heading-bx {
 	margin-bottom: 3rem;
 	text-align: center;
+}
+
+
+/* --- Case Study --- */
+
+.case-study-hero{
+    padding:120px 0;
+    background:linear-gradient(
+        135deg,
+        #fff7e8,
+        #fff
+    );
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(255, 183, 2, .14);
+    color: #8a5a00;
+    font-weight: 700;
+    font-size: .9rem;
+    margin-bottom: 22px;
+}
+.casestudy-btn-bx{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 1.5rem;
+}
+
+
+.hero-visual {
+    position: relative;
+    min-height: 640px;
+    border-radius: 32px;
+    padding: 22px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .72), rgba(255, 255, 255, .92)), radial-gradient(circle at top, rgba(255, 183, 2, .18), transparent 45%);
+    border: 1px solid rgba(17, 24, 39, .08);
+    box-shadow: var(--card-shadow);
+}
+
+.floating-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    opacity: .9;
+    animation: float 7s ease-in-out infinite;
+}
+
+
+.orb1 {
+    width: 110px;
+    height: 110px;
+    background: rgba(255, 183, 2, .24);
+    top: 18px;
+    right: 18px;
+}
+
+.orb2 {
+    width: 80px;
+    height: 80px;
+    background: rgba(26, 26, 26, .12);
+    bottom: 120px;
+    left: 12px;
+    animation-delay: 1s;
+}
+
+.orb3 {
+    width: 54px;
+    height: 54px;
+    background: rgba(255, 183, 2, .35);
+    bottom: 40px;
+    right: 90px;
+    animation-delay: 2s;
+}
+
+.dashboard {
+    position: absolute;
+    inset: 26px;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 18px;
+}
+
+.mock-card {
+    padding: 22px;
+}
+
+.mock-card, .stat-card, .graph-card, .before-after {
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .82);
+    border: 1px solid rgba(17, 24, 39, .08);
+    box-shadow: 0 16px 40px rgba(17, 24, 39, .06);
+    backdrop-filter: blur(10px);
+}
+
+.mock-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dots  span{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+}
+
+.mock-chart {
+    height: 190px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 183, 2, .12), transparent), linear-gradient(90deg, rgba(17, 24, 39, .06) 1px, transparent 1px) 0 0 / 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mock-chart {
+    height: 190px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 183, 2, .12), transparent), linear-gradient(90deg, rgba(17, 24, 39, .06) 1px, transparent 1px) 0 0 / 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-radius: 18px;
+    background: var(--bg-soft);
+}
+
+.metric strong {
+    font-size: 1rem;
+}
+
+.metric-list {
+    display: grid;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.hero-side {
+    display: grid;
+    gap: 18px;
+    align-content: start;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.stat-card {
+    padding: 22px;
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    margin-bottom: 6px;
+}
+
+.stat-card p {
+    color: var(--muted);
+    font-size: .95rem;
+    line-height: 1.5;
+}
+.card {
+    border-radius: 28px;
+    background: #fff;
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+
+.mini-panel {
+    padding: 22px;
+}
+
+.mini-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    height: 140px;
+    margin-top: 14px;
+}
+
+.bar {
+    flex: 1;
+    border-radius: 14px 14px 0 0;
+    background: linear-gradient(180deg, var(--primary), #ffdd7d);
+}
+
+.bar:nth-child(1) {
+    height: 45%;
+}
+.bar:nth-child(2) {
+    height: 65%;
+}
+
+.bar:nth-child(3) {
+    height: 90%;
+}
+
+.bar:nth-child(4) {
+    height: 72%;
+}
+
+.bar:nth-child(5) {
+    height: 100%;
 }

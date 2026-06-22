@@ -194,6 +194,12 @@
     .mission-img{
         margin-top: 2rem;
     }
+
+    .copy-right-bx{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
 }
 
 
