@@ -99,7 +99,7 @@
     }
 
     .srvc-card-title {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .ads-title{
@@ -110,8 +110,12 @@
         font-size: 1rem;
     }
 
+    .hero-content p{
+        font-size: 1rem;
+    }
+
     .other-srvc-title{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .other-srvc-num{
@@ -124,7 +128,7 @@
     }
 
     .sub-title{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .menu-open{
