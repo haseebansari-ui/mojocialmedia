@@ -53,3 +53,48 @@ items.forEach(item => {
     });
 });
 
+// Services 
+
+
+// Get all service items
+        const serviceItems = document.querySelectorAll('.srv-item');
+        const viewMoreBtn = document.getElementById('viewMoreBtn');
+        
+        // Number of cards to show initially
+        const initialCardsCount = 6;
+        
+        // Track if all cards are currently shown
+        let allCardsShown = false;
+        
+        // Function to show all cards
+        function showAllCards() {
+            serviceItems.forEach((item, index) => {
+                if (index >= initialCardsCount) {
+                    item.classList.remove('hidden');
+                    item.classList.add('show');
+                }
+            });
+            viewMoreBtn.textContent = 'Show Less';
+            allCardsShown = true;
+        }
+        
+        // Function to hide extra cards (show only initial 6)
+        function hideExtraCards() {
+            serviceItems.forEach((item, index) => {
+                if (index >= initialCardsCount) {
+                    item.classList.remove('show');
+                    item.classList.add('hidden');
+                }
+            });
+            viewMoreBtn.textContent = 'View More';
+            allCardsShown = false;
+        }
+        
+        // Button click handler
+        viewMoreBtn.addEventListener('click', () => {
+            if (!allCardsShown) {
+                showAllCards();
+            } else {
+                hideExtraCards();
+            }
+        });

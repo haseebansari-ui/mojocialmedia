@@ -64,7 +64,21 @@ small {
 }
 
 .mr-bt {
-	margin-bottom: 5rem;
+	margin-bottom: 3rem;
+}
+
+.btn {
+    padding: 0.8rem 1.8rem;
+    border: 1px solid transparent;
+    background: var(--primary);
+    color: var(--white-color);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--font-color);
 }
 
 /* --- Header Section --- */
@@ -237,19 +251,30 @@ nav ul li a.login::after {
 	position: absolute;
 	top: 0;
 	left: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
 	height: 100%;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.4);
+    text-align: center;
 }
 .hero-content h1 {
 	font-size: 5rem;
 	color: var(--white-color);
-	margin-bottom: 4rem;
+	margin: 10rem 0 2rem;
 }
+
+.hero-content p{
+    color: var(--white-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+
+}
+.hero-content .para-width{
+    max-width: 1000px;
+    margin: 0 auto 1rem ;
+}
+
+
 .hero-bg-bottom {
 	position: absolute;
 	bottom: 240px;
@@ -323,6 +348,13 @@ nav ul li a.login::after {
 	margin-bottom: 1rem;
 }
 
+.abt-cnct-small{
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
 /* --- Mission section --- */
 
 .services-sec {
@@ -353,25 +385,14 @@ nav ul li a.login::after {
 	margin-bottom: 1rem;
 }
 
-.mission-sec .header-bx .btn {
-	padding: 0.8rem 1.8rem;
-	border: 1px solid transparent;
-	background: var(--primary);
-	color: var(--white-color);
-	transition: var(--transition);
-}
-
-.mission-sec .header-bx .btn:hover {
-	background: transparent;
-	border: 1px solid var(--primary);
-	color: var(--font-color);
-}
-
 .mission-sec .header-bx h2 {
 	margin-bottom: 2rem;
 }
 
-.srvc-icon-bx span i {
+
+/* ---- Srvices Section ---- */
+
+/* .srvc-icon-bx span i {
 	font-size: 5rem;
 	background: linear-gradient(
 		135deg,
@@ -411,6 +432,139 @@ nav ul li a.login::after {
 	margin-bottom: 5rem;
 	text-align: center;
 }
+
+.view-more-btn {
+    background: linear-gradient(
+        135deg,
+        #ffb702,
+        rgba(250, 179, 73, 0.897)
+    );
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.view-more-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 183, 2, 0.3);
+}
+
+.service-item.active {
+    display: none;
+} */
+
+
+    .services-sec .header-bx {
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+        
+    .services-sec .header-bx h2 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+        
+    /* Service Card */
+    .srvc-card {
+        border: 1px solid #c9c9c9;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        transition: var(--transition);
+        transform: translateY(10px);
+        background: rgba(255, 255, 255, 0.05);
+    }
+        
+    .srvc-card:hover {
+        box-shadow: 0 0 20px rgba(253, 192, 101, 0.61);
+        transform: translateY(0px);
+        border-color: #ffb702;
+    }
+        
+    .srvc-icon-bx {
+        margin-bottom: 1rem;
+    }
+        
+    .srvc-icon-bx span {
+        display: inline-block;
+    }
+        
+    .srvc-icon-bx span i {
+        font-size: 5rem;
+        background: linear-gradient(
+            135deg,
+            #ffb702,
+            rgba(250, 179, 73, 0.897) 50%,
+            rgba(252, 197, 115, 0.822) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: inline-block;
+    }
+        
+    .srvc-card-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+
+    }
+        
+    .srvc-card p {
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+        
+        /* View More/Less Button */
+    .view-more-btn {
+        background: var(--primary);
+        color: #fff;
+        border: 1px solid var(--primary);
+        padding: 12px 30px;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.3s ease;
+        font-size: 1.2rem;
+        min-width: 150px;
+    }
+        
+    .view-more-btn:hover {
+        box-shadow: 0 10px 20px rgba(255, 183, 2, 0.3);
+        color: var(--font-color);
+        background: transparent;
+    }
+        
+        /* Hidden cards - initially concealed */
+    .srv-item.hidden {
+        display: none;
+    }
+        
+        /* Show cards with animation */
+    .srv-item {
+        transition: all 0.4s ease;
+    }
+        
+    .srv-item.show {
+        display: block;
+        animation: slideIn 0.4s ease;
+    }
+        
+    @keyframes slideIn {
+       from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
 
 /* --- Advertismet section --- */
 
@@ -493,11 +647,16 @@ nav ul li a.login::after {
 	transform: translateY(0%);
 }
 
-/* --- Other Services --- */
+/* --- Industries Services --- */
 
-.other-srvc.sec-padding {
-	padding: 8rem 0rem 3rem;
+.other-srvc .heading-bx{
+    margin-bottom: 6rem;
+    text-align: center;
 }
+
+/* .other-srvc.sec-padding {
+	padding: 8rem 0rem 3rem;
+} */
 
 .other-srvc {
 	background: rgb(246, 247, 252);
@@ -505,8 +664,9 @@ nav ul li a.login::after {
 
 .other-srvc-card {
 	box-shadow: 0 0 20px rgb(229 229 229);
-	padding: 3.5rem 2rem 2.5rem;
+	padding: 2rem;
 	position: relative;
+    border-radius: 1rem;
 }
 
 .other-srvc-num {
@@ -522,7 +682,7 @@ nav ul li a.login::after {
 }
 
 .other-srvc-title {
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 	margin-bottom: 0.5rem;
 	font-weight: bold;
 }
@@ -533,8 +693,20 @@ nav ul li a.login::after {
 }
 
 .other-srvc-card:hover {
-	background: var(--secondry);
+	background: rgba(36, 42, 86, 0.741);
 	color: var(--white-color);
+}
+
+.inds-img-bx{
+    margin-bottom: 1rem;
+    height: 200px;
+}
+
+.inds-img-bx img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.8rem;
 }
 
 /* --- Technology Section --- */
@@ -622,6 +794,14 @@ nav ul li a.login::after {
 	font-size: 1.3rem;
 }
 
+.choose-us-img-bx {
+    height: 466px;
+}
+
+.choose-us-sec .btn{
+    margin-top: 1.5rem;
+}
+
 /* --- footer Section --- */
 
 .ft-sec {
@@ -682,20 +862,24 @@ nav ul li a.login::after {
 /* --- Solution Section --- */
 .slt-bg-clr {
 	width: 100%;
-	background-color: #f2eefc;
-	border: 1px solid #efefef;
+	background: #f9f8fc;
+	border: 1px solid #e2e2e8;
 	-webkit-box-shadow: 6px 15px 20px 5px rgb(5 5 5 / 5%);
 	border-radius: 15px;
 	padding: 50px;
 }
 
 .solution-item {
-	padding: 20px 0;
+	padding: 20px 0 20px 20px;
 	cursor: pointer;
 	border-bottom: 1px solid #ddd;
 	transition: 0.3s;
 	display: flex;
 	gap: 2rem;
+}
+
+.solution-item:last-child{
+    border-bottom: none;
 }
 
 .solution-item h4 {
@@ -704,7 +888,9 @@ nav ul li a.login::after {
 
 .solution-item:hover,
 .solution-item.active {
-	background: #f5f5f5;
+	/* background: #f5f5f5; */
+    background: var(--secondry);
+    color: var(--white-color);
 }
 
 .solution-preview {
