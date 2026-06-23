@@ -130,13 +130,13 @@ accordionItems.forEach(item => {
 
 });
 
-// window.addEventListener("load", () => {
-//     const activeContent = document.querySelector(
-//         ".accordion-item.active .accordion-content"
-//     );
+window.addEventListener("load", () => {
+    const activeContent = document.querySelector(
+        ".accordion-item.active .accordion-content"
+    );
 
-//     if (activeContent) {
-//         activeContent.style.maxHeight =
-//             activeContent.scrollHeight + "px";
-//     }
-// });
+    if (activeContent) {
+        activeContent.style.maxHeight =
+            activeContent.scrollHeight + "px";
+    }
+});
