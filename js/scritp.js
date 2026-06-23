@@ -4,7 +4,7 @@
 
 window.onscroll = function() {headerScroll()};
 
-var header = document.querySelector(".header");
+var header = document.querySelector("header");
 var sticky = header.offsetTop;
 
 function headerScroll() {
@@ -100,17 +100,43 @@ items.forEach(item => {
         });
 
 
-// Casestudy
+// Faq
 
-const buttons = document.querySelectorAll(".filter-btn");
+const accordionItems = document.querySelectorAll(".accordion-item");
 
-buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
+accordionItems.forEach(item => {
 
-        buttons.forEach(item =>
-            item.classList.remove("active")
-        );
+    const header = item.querySelector(".accordion-header");
 
-        btn.classList.add("active");
+    header.addEventListener("click", () => {
+
+        const activeItem = document.querySelector(".accordion-item.active");
+
+        if (activeItem && activeItem !== item) {
+            activeItem.classList.remove("active");
+            activeItem.querySelector(".accordion-content").style.maxHeight = null;
+        }
+
+        item.classList.toggle("active");
+
+        const content = item.querySelector(".accordion-content");
+
+        if (item.classList.contains("active")) {
+            content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+            content.style.maxHeight = null;
+        }
     });
+
 });
+
+// window.addEventListener("load", () => {
+//     const activeContent = document.querySelector(
+//         ".accordion-item.active .accordion-content"
+//     );
+
+//     if (activeContent) {
+//         activeContent.style.maxHeight =
+//             activeContent.scrollHeight + "px";
+//     }
+// });
