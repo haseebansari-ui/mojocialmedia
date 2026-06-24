@@ -4,6 +4,7 @@
 	--font-color: #121212;
 	--secondry: #242a56;
     --bg-soft:#f7f7fb;
+    --shadow:0 20px 60px rgba(17, 24, 39, .08);
 
 	--transition: 0.3s ease-in-out;
 }
@@ -87,6 +88,11 @@ small {
     font-weight: bold;
     line-height: 1.3;
     margin: 2rem 0 1.4rem;
+}
+
+.inn-ban-pg{
+    padding: 10rem 0 3rem;
+    background: linear-gradient(135deg, #fff7e8, #fff);
 }
 
 /* --- Header Section --- */
@@ -761,7 +767,8 @@ header.active nav ul li a.login::after {
 /* --- footer Section --- */
 
 .ft-sec {
-	background: #f9f8fc;
+	/* background: #f9f8fc; */
+    background: linear-gradient(135deg, #fff7e8, #fff);
 	padding: 3rem 0 0;
 	border-top: 1px solid #e2e2e8;
 }
@@ -899,14 +906,7 @@ header.active nav ul li a.login::after {
 
 /* --- Casestudy Section --- */
 
-.case-study-hero{
-    padding:10rem 0 3rem;
-    background:linear-gradient(
-        135deg,
-        #fff7e8,
-        #fff
-    );
-}
+
 
 .eyebrow {
     display: inline-flex;
@@ -1630,3 +1630,177 @@ header.active nav ul li a.login::after {
     margin-top: 2rem;
 }
 
+
+/* --- Publisher Page --- */
+.publisher-hero .casestudy-content-bx{
+    text-align: center;
+}
+
+.publisher-hero .casestudy-content-bx .casestudy-btn-bx{
+    justify-content: center;
+}
+
+.pub-inn-pg-trust ul, .pub-inn-pg-trust2 ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.trust-pill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 2rem;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid var(--primary);
+}
+
+.publisher-hero .pub-inn-pg-trust2 .trust-pill{
+    padding: 0.5rem 2rem;
+}
+
+.publisher-hero .pub-inn-pg-trust2 ul{
+    margin-top: 1rem;
+}
+
+/* --- Become Publisher Section --- */
+
+.bcm-pub-sec{
+    background: #f7f7fb;
+}
+
+.bcm-pub-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.benefit-card {
+    border-radius: 22px;
+    background: #fff;
+    border: 1px solid rgb(17 24 39 / 10%);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.benefit-card::after {
+    content: "";
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 183, 2, .25), transparent 60%);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.benefit-card:hover{
+    border-color:var(--primary) ;
+}
+
+.benefit-card:hover::after{
+    opacity: 1;
+    transition: var(--transition);
+}
+
+.benefit-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(255, 183, 2, .16);
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.benefit-card p{
+    font-size: 1rem;
+}
+
+.cards-title{
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+/* --- Traffic Section --- */
+
+
+.trffc-guide-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.trffc-guide-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.traffic-src-bx{
+    background: #ebebebeb;
+    border-top: 1px solid var(--primary);
+    border-left: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    width: 88%;
+    height: 80px;
+    color: var(--secondry);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+.traffic-src-bx::before{
+    content:'';
+    position: absolute;
+    right: -28px;
+    top: 11px;
+    height: 55px;
+    width: 55px;
+    z-index: -1;
+    background: #ebebebeb;
+    transform: rotate(45deg);
+    border-top: 1px solid var(--primary);
+    border-right: 1px solid var(--primary);
+}
+
+.sub-heading-title{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.pub-bg-clr{
+    background: linear-gradient(135deg, #fff7e8, #fff);
+    border: 1px solid linear-gradient(135deg, #fff7e8, #fff);
+    -webkit-box-shadow: 6px 15px 20px 5px rgb(255, 247, 232);
+    border-radius: 15px;
+    padding: 50px;
+}
+
+
+/* --- Publisher's Benefits Section --- */
+
+.pub-benefits-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.pub-benefits-sec .heading-bx h2{
+    margin-top: 2rem;
+}
