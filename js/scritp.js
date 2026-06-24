@@ -86,57 +86,60 @@ items.forEach(item => {
                     item.classList.add('hidden');
                 }
             });
-            viewMoreBtn.textContent = 'View More Services ';
+            if(viewMoreBtn){
+              viewMoreBtn.textContent = 'View More Services ';
             allCardsShown = false;
+            }
+            
         }
         
         // Button click handler
-        viewMoreBtn.addEventListener('click', () => {
+        if(viewMoreBtn){
+          viewMoreBtn.addEventListener('click', () => {
             if (!allCardsShown) {
                 showAllCards();
             } else {
                 hideExtraCards();
             }
         });
+        }
+        
 
 
 // Faq
 
-const accordionItems = document.querySelectorAll(".accordion-item");
+const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
-accordionItems.forEach(item => {
+accordionItemHeaders.forEach(accordionItemHeader => {
+   accordionItemHeader.addEventListener("click", event => {
+    
+    //  Uncomment in case you only want to allow for the display of only one collapsed item at a time!
+    
+    const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
+    if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
+       currentlyActiveAccordionItemHeader.classList.toggle("active");
+       currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+     }
 
-    const header = item.querySelector(".accordion-header");
-
-    header.addEventListener("click", () => {
-
-        const activeItem = document.querySelector(".accordion-item.active");
-
-        if (activeItem && activeItem !== item) {
-            activeItem.classList.remove("active");
-            activeItem.querySelector(".accordion-content").style.maxHeight = null;
-        }
-
-        item.classList.toggle("active");
-
-        const content = item.querySelector(".accordion-content");
-
-        if (item.classList.contains("active")) {
-            content.style.maxHeight = content.scrollHeight + "px";
-        } else {
-            content.style.maxHeight = null;
-        }
-    });
-
+     accordionItemHeader.classList.toggle("active");
+     const accordionItemBody = accordionItemHeader.nextElementSibling;
+     if(accordionItemHeader.classList.contains("active")) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+     }
+     else {
+       accordionItemBody.style.maxHeight = 0;
+     }
+    
+   });
 });
 
-window.addEventListener("load", () => {
-    const activeContent = document.querySelector(
-        ".accordion-item.active .accordion-content"
-    );
 
-    if (activeContent) {
-        activeContent.style.maxHeight =
-            activeContent.scrollHeight + "px";
-    }
-});
+// Casestudy accordian
+
+const processAcc = document.querySelectorAll(".process-cntnt-bx");
+
+for(let i = 0; i < processAcc.length; i++){
+   processAcc[i].addEventListener("click", ()=>{
+      processAcc[i].classList.toggle("active");
+   })
+}
