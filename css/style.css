@@ -293,7 +293,7 @@ header.active nav ul li a.login::after {
 .hero-content h1 {
 	font-size: 5rem;
 	color: var(--white-color);
-	margin: 10rem 0 2rem;
+	margin: 14rem 0 4rem;
 }
 
 .hero-content p{
@@ -625,9 +625,11 @@ header.active nav ul li a.login::after {
 
 .other-srvc-card {
 	box-shadow: 0 0 20px rgb(229 229 229);
-	padding: 2rem;
+	padding: 1rem;
 	position: relative;
     border-radius: 1rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
 }
 
 .other-srvc-num {
@@ -655,20 +657,24 @@ header.active nav ul li a.login::after {
 }
 
 .other-srvc-card:hover {
-	background: rgba(36, 42, 86, 0.741);
-	color: var(--white-color);
+	border: 1px solid var(--primary);
+    box-shadow: 0 0 20px rgba(253, 192, 101, 0.61);
 }
 
 .inds-img-bx{
-    margin-bottom: 1rem;
-    height: 200px;
+    height: 80px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;margin-bottom: 1rem;
 }
 
-.inds-img-bx img{
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 0.8rem;
+.inds-img-bx span i{
+    background: linear-gradient(135deg, #ffb702, rgba(250, 179, 73, 0.897) 50%, rgba(252, 197, 115, 0.822) 100%);
+    font-size: 4rem;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
 }
 
 /* --- Technology Section --- */
@@ -1597,6 +1603,7 @@ header.active nav ul li a.login::after {
     border: 1px solid var(--primary);
     margin-bottom: 1rem;
     border-radius: 0.5rem;
+    background: #fff;
 }
 
 .prss-title{
@@ -1630,20 +1637,16 @@ header.active nav ul li a.login::after {
     margin-top: 2rem;
 }
 
+/* ==============================
+    Publisher Page
+=================================*/
 
-/* --- Publisher Page --- */
-.publisher-hero .casestudy-content-bx{
-    text-align: center;
-}
 
-.publisher-hero .casestudy-content-bx .casestudy-btn-bx{
-    justify-content: center;
-}
+/* --- Publisher Hero Section Page --- */
 
 .pub-inn-pg-trust ul, .pub-inn-pg-trust2 ul{
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 2rem;
@@ -1665,6 +1668,22 @@ header.active nav ul li a.login::after {
 
 .publisher-hero .pub-inn-pg-trust2 ul{
     margin-top: 1rem;
+}
+
+.publisher-hero .dashboard{
+    grid-template-columns: 1fr;
+}
+
+.publisher-hero .metric{
+    flex-direction: column;
+}
+
+.publisher-hero .metric-list {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.publisher-hero .mock-chart{
+    height: 260px;
 }
 
 /* --- Become Publisher Section --- */
@@ -1712,14 +1731,21 @@ header.active nav ul li a.login::after {
 }
 
 .benefit-icon {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     border-radius: 12px;
-    background: rgba(255, 183, 2, .16);
     display: grid;
     place-items: center;
     margin-bottom: 12px;
     font-size: 1.2rem;
+}
+
+.benefit-icon span i{
+    background: linear-gradient(135deg, #ffb702, rgba(250, 179, 73, 0.897) 50%, rgba(252, 197, 115, 0.822) 100%);
+    font-size: 4rem;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
 }
 
 .benefit-card h3 {
@@ -1749,7 +1775,7 @@ header.active nav ul li a.login::after {
 }
 
 .traffic-src-bx{
-    background: #ebebebeb;
+    background: rgb(246, 247, 252);
     border-top: 1px solid var(--primary);
     border-left: 1px solid var(--primary);
     border-bottom: 1px solid var(--primary);
@@ -1774,7 +1800,7 @@ header.active nav ul li a.login::after {
     height: 55px;
     width: 55px;
     z-index: -1;
-    background: #ebebebeb;
+    background: rgb(246, 247, 252);
     transform: rotate(45deg);
     border-top: 1px solid var(--primary);
     border-right: 1px solid var(--primary);
@@ -1803,4 +1829,182 @@ header.active nav ul li a.login::after {
 
 .pub-benefits-sec .heading-bx h2{
     margin-top: 2rem;
+}
+
+/* --- Campaign Categories Section --- */
+
+.camp-cat-sec{
+    background: rgb(246, 247, 252);
+}
+
+.camp-cat-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.camp-cat-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.camp-cat-sec .benefit-card{
+    border: 1px solid #d1d1d1;
+}
+
+.camp-cat-sec .benefit-card::after{
+    display: none;
+}
+
+/* --- Publisher Testimonial Section --- */
+.pub-test-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.pub-test-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.stats-bx{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stats-cntnt{
+    background: var(--bg-soft);
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    width: 100%;
+}
+
+.stat-title{
+    font-weight: bold;
+}
+
+.stats-cntnt p{
+    font-size: 0.8rem;
+}
+
+.pub-sub-title{
+    color: var(--secondry);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.pub-test-sec .test-card h6{
+    font-size: 1.2rem;
+}
+.pub-test-sec .test-card{
+    border-color:var(--primary) ;
+}
+
+/* --- Reporting & Tracing Section --- */
+
+.dashboard-section{
+    border-radius: 26px;
+    background: linear-gradient(135deg, #111827, #1f2937);
+    color: #fff;
+    padding: 22px;
+    box-shadow: var(--shadow);
+}
+
+.dashboard-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.dashboard-section p {
+    color: rgba(255, 255, 255, .78);
+    font-size: .94rem;
+    margin-bottom: 14px;
+}
+
+.dash-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.dash-metric {
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .06);
+    padding: 14px;
+    font-size: .88rem;
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.dash-metric strong {
+    display: block;
+    font-size: 1.2rem;
+}
+
+.mini-chart {
+    height: 160px;
+    border-radius: 18px;
+    background: radial-gradient(circle at top, rgba(255, 183, 2, .35), transparent 40%), linear-gradient(180deg, rgba(15, 23, 42, .9), rgba(15, 23, 42, .95));
+    position: relative;
+    overflow: hidden;
+}
+
+.mini-chart::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: 34px;
+    bottom: 22px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(255, 183, 2, .95), rgba(56, 189, 248, .9));
+    clip-path: polygon(0 76%, 18% 70%, 32% 58%, 46% 66%, 60% 48%, 76% 38%, 88% 22%, 100% 18%, 100% 100%, 0 100%);
+}
+
+.rt-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.rt-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.rt-sec{
+    background: var(--bg-soft);
+}
+
+/* --- How it work Section  --- */
+
+.prss-steps-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.prss-steps-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.prss-steps-sec .step-card{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 13px 25px rgba(17, 24, 39, .08);
+    padding: 1rem;
+    border-radius: 1rem;
+    background: var(--white-color);
+}
+
+.step-card .step-num{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.prss-step-sub-title{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+.prss-step-bg-clr{
+    background: linear-gradient(135deg, #fff7e8, #fff);
+    border: 1px solid linear-gradient(135deg, #fff7e8, #fff);
+    -webkit-box-shadow: 6px 15px 20px 5px rgb(255, 247, 232);
+    border-radius: 15px;
+    padding: 50px;
 }
