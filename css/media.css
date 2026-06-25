@@ -78,7 +78,9 @@
         font-size: 1.3rem;
     }
 
-    
+    .inn-header nav ul li a{
+       color: var(--white-color); 
+    }
 
     .menu-close{
         display: block;
@@ -103,6 +105,29 @@
     .pub-test-sec .test-card {
         margin-bottom: 1.5rem;
     }
+
+    .visual-box {
+        height: 556px;
+        min-height: inherit;
+    }
+
+    .sucess-sec .card{
+        margin-bottom: 2rem;
+    }
+
+    .stat-big{
+        margin-bottom: 2rem;
+    }
+
+    .e-com-sec .ele-retail .metric-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .test-card {
+        margin-bottom: 2rem;
+    }
+
+    
 
 }
 
@@ -224,6 +249,13 @@
         padding: 25px;
     }
 
+    .result-strip{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-big .count {
+        font-size: 2rem;
+    }
 }
 
 
@@ -242,6 +274,13 @@
         font-weight: 500;
     }
     
+    .hero-side{
+        display: none;
+    }
+
+    .case-study-hero  .dashboard{
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -256,6 +295,23 @@
 
     .dash-metrics {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .visual-box {
+        height: 778px;
+    }
+
+    .visual-box .before-after{
+        grid-template-columns: 1fr;
+        height: 73%;
+    }
+
+    .phone-bars{
+        height: 100px;
+    }
+
+    .cstdy-feature-section .card-pad .dashboard-grid{
         grid-template-columns: repeat(2, 1fr);
     }
 }
