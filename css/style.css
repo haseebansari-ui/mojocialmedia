@@ -262,6 +262,10 @@ header.active nav ul li a.login::after {
 	cursor: pointer;
 }
 
+.menu-bar .menu-open{
+    color: var(--secondry);
+}
+
 .menu-open {
 	display: none;
 }
