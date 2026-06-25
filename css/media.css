@@ -314,4 +314,12 @@
     .cstdy-feature-section .card-pad .dashboard-grid{
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .cstdy-feature-section .card-pad{
+        padding: 24px 0px;
+    }
+
+    .cstdy-feature-section .case-card {
+    padding: 24px 15px;
+}
 }
