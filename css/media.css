@@ -253,4 +253,9 @@
     .hero-bg-bottom {
         bottom: 63px;
     }
+
+    .dash-metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
