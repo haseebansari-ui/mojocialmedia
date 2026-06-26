@@ -1416,7 +1416,7 @@ header.active nav ul li a.login::after {
 
 .card h3 {
     font-size: 1.45rem;
-    margin: 2rem 0 0.5rem;
+    /* margin: 2rem 0 0.5rem; */
 }
 
 .meta {
