@@ -293,6 +293,10 @@
         width: 320px;    
     }
 
+    .heading-bx p br{
+        display: none;
+    }
+
     
 }
 
