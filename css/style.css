@@ -262,9 +262,11 @@ header.active nav ul li a.login::after {
 	cursor: pointer;
 }
 
-.menu-bar .menu-open{
+.inn-header .menu-bar .menu-open{
     color: var(--secondry);
 }
+
+
 
 .menu-open {
 	display: none;
@@ -1648,9 +1650,14 @@ header.active nav ul li a.login::after {
 
 /* --- Publisher Hero Section Page --- */
 
-.pub-inn-pg-trust ul, .pub-inn-pg-trust2 ul{
+
+
+.pub-inn-pg-trust {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
     display: flex;
     align-items: center;
+
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 2rem;
@@ -1660,7 +1667,7 @@ header.active nav ul li a.login::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 2rem;
+    padding: 8px;
     border-radius: 999px;
     background: #fff;
     border: 1px solid var(--primary);
@@ -2011,4 +2018,74 @@ header.active nav ul li a.login::after {
     -webkit-box-shadow: 6px 15px 20px 5px rgb(255, 247, 232);
     border-radius: 15px;
     padding: 50px;
+}
+
+
+/* =========================
+    Advetiser Page
+============================*/
+
+/* --- Advetiser Industries grow Section --- */
+
+
+
+.adv-industry-sec.camp-cat-sec{
+    background: none;
+}
+
+/* --- Advetiser Reporting & Analytics Section --- */
+.ra-sec .dashboard-section .dash-metrics{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.ra-sec .analyst-bx .dashboard-section{
+    background: var(--white-color);
+    color: var(--font-color);
+}
+
+.ra-sec .analyst-bx .dashboard-section .dash-metrics{
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.ra-sec .analyst-bx .dashboard-section .dash-metrics .dash-metric{
+    background: var(--bg-soft);
+    
+}
+
+.ra-sec .analyst-bx .dashboard-section .dash-metrics .dash-metric strong{
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--secondry);
+    margin-bottom: 0.3rem;
+}
+
+.analyst-sub-bx {
+    background: var(--white-color);
+    border-radius: 26px;
+    padding: 15px 0;
+    box-shadow: var(--shadow);
+}
+
+.analyst-sub-bx .dash-metric strong{
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--secondry);
+}
+
+/* --- Advertiser Testimonial Section --- */
+
+.adv-test-sec .test-card .stats-bx{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.adv-test-sec .test-card .stats-bx .stats-cntnt{
+    height: 100px;
+}
+
+/* --- Advertiser Faq  Section --- */
+
+.adv-faq-sec{
+    background: var(--bg-soft);
 }
