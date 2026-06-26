@@ -297,7 +297,10 @@
         display: none;
     }
 
-    
+    .other-srvc-card{
+        width: 280px;
+        margin: 0 auto 1.5rem;
+    }
 }
 
 
