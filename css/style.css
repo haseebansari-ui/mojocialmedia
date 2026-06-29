@@ -636,6 +636,7 @@ header.active nav ul li a.login::after {
     border-radius: 1rem;
     border: 1px solid transparent;
     transition: var(--transition);
+    background: var(--white-color);
 }
 
 .other-srvc-num {
@@ -651,7 +652,7 @@ header.active nav ul li a.login::after {
 }
 
 .other-srvc-title {
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	margin-bottom: 0.5rem;
 	font-weight: bold;
     text-align: center;
@@ -672,12 +673,13 @@ header.active nav ul li a.login::after {
     border-radius: 12px;
     display: grid;
     place-items: center;
-    font-size: 1.2rem;margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
 }
 
 .inds-img-bx span i{
     background: linear-gradient(135deg, #ffb702, rgba(250, 179, 73, 0.897) 50%, rgba(252, 197, 115, 0.822) 100%);
-    font-size: 4rem;
+    font-size: 3rem;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     display: inline-block;
@@ -2089,8 +2091,349 @@ header.active nav ul li a.login::after {
     height: 100px;
 }
 
-/* --- Advertiser Faq  Section --- */
+/* --- Advertiser Faq Section --- */
 
 .adv-faq-sec{
     background: var(--bg-soft);
+}
+
+/* --- Services Hero Section --- */
+
+.srvc-metrics{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.srvc-metrics .metric-card {
+    padding: 18px;
+    background: var(--white-color);
+    box-shadow: 0 20px 60px rgba(17, 24, 39, .08);
+    border-radius: 18px;
+    border: 1px solid rgb(17 24 39 / 8%);
+    margin-bottom: 1.5rem;
+}
+
+.srvc-metrics .metric-card strong{
+    display: block;
+    font-size: 1.1rem;
+}
+
+.srvc-metrics .metric-card span{
+    font-size: 1.2rem;
+    /* display: block; */
+}
+
+.srvc-metrics .metric-card p{
+    font-size: 1rem;
+}
+
+.srvc-hero-sec .trust-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem 1rem;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--white-color);
+    color: var(--muted);
+    font-size: 0.9rem;
+    border: 1px solid rgb(17 24 39 / 8%);
+    margin-bottom: 0.8rem;
+}
+
+.srvc-hero-visual{
+    position: relative;
+    min-height: 640px;
+    border-radius: 32px;
+    padding: 22px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .72), rgba(255, 255, 255, .92)), radial-gradient(circle at top, rgba(255, 183, 2, .18), transparent 45%);
+    border: 1px solid rgba(17, 24, 39, .08);
+    box-shadow: 0 20px 60px rgba(17, 24, 39, .08);
+}
+
+.floating-card{
+    position: absolute;
+    z-index: 3;
+    width: 165px;
+    padding: 14px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(14px);
+}
+
+.card-a {
+    top: 18px;
+    right: 10px;
+}
+
+.card-b {
+    top: 168px;
+    left: -10px;
+}
+
+.card-c {
+    bottom: 28px;
+    right: 36px;
+}
+
+.floating-card span {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.floating-card span {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+
+small {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.glass {
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dashboard-shell {
+    position: relative;
+    z-index: 2;
+    padding: 22px;
+    border-radius: 26px;
+}
+
+.dash-label {
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.dash-top h2 {
+    margin-top: 4px;
+    font-size: 1.5rem;
+}
+
+.chart-area {
+    margin-top: 20px;
+    height: 200px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(255, 176, 0, 0.12), rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(17, 24, 39, 0.06) 1px, transparent 1px) 0 0 / 28px 28px;
+    padding: 22px;
+    overflow: hidden;
+}
+
+.chart-bars {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    height: 100%;
+}
+
+.chart-bars span {
+    flex: 1;
+    border-radius: 16px 16px 0 0;
+    background: linear-gradient(180deg, #febd16, #ff8a00);
+    box-shadow: 0 12px 18px rgba(255, 176, 0, 0.22);
+}
+
+.dash-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.dash-grid p {
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-bottom: 4px;
+}
+
+.dash-grid strong {
+    font-size: 1.05rem;
+}
+
+.dash-grid div {
+    padding: 14px;
+    border-radius: 16px;
+    background: rgba(247, 248, 251, 0.9);
+}
+
+/* --- Services Overview Section --- */
+
+.srvc-over-view-sec .heading-bx h2{
+    margin-top: 2rem;
+
+}
+
+/* --- Services Overview Section --- */
+
+.fetre-srvc-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.fetre-srvc-content ul{
+    margin: 1rem 0 1.5rem;
+}
+
+.fetre-srvc-content ul li{
+    margin-bottom: 10px;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.fetre-srvc-content ul li::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 1px;
+    width: 0.8rem;
+    background: green;
+}
+
+.split-illustration {
+    padding: 22px;
+    border-radius: 26px;
+    min-height: 420px;
+    position: relative;
+    overflow: hidden;
+}
+
+.glass {
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.mini-stat {
+    position: absolute;
+    padding: 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
+}
+
+.mini-stat:nth-child(1) {
+    top: 18px;
+    left: 18px;
+}
+
+.mini-stat:nth-child(2) {
+    top: 18px;
+    right: 18px;
+}
+
+.mini-stat:nth-child(3) {
+    bottom: 18px;
+    left: 18px;
+}
+
+.mini-stat span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.mini-stat strong {
+    font-size: 1.4rem;
+}
+
+.illustration-chart {
+    position: absolute;
+    inset: 88px 20px 20px 20px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(255, 176, 0, 0.08), rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(17, 24, 39, 0.05) 1px, transparent 1px) 0 0 / 24px 24px;
+    overflow: hidden;
+}
+
+.line {
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #febd16, #ff8a00);
+    box-shadow: 0 10px 20px rgba(255, 176, 0, 0.14);
+}
+
+.line-1 {
+    top: 26%;
+    width: 72%;
+}
+
+.line-2 {
+    top: 50%;
+    width: 86%;
+    opacity: 0.8;
+}
+
+.line-3 {
+    top: 74%;
+    width: 64%;
+    opacity: 0.7;
+}
+
+
+/* ---  --- */
+
+.srvc-industries-sec .other-srvc-card{
+    height: 160px;
+    padding: 0;
+}
+
+/* --- Services Why Choose us Section --- */
+
+.srvc-choose-us-sec .other-srvc-card{
+    height: 170px;
+    padding: 0 1rem;
+}
+
+.srvc-choose-us-sec .heading-bx{
+    text-align: left;
+}
+
+.srvc-choose-us-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+/* --- Services counter Section --- */
+
+.srvc-counter-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.srvc-counter-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.counter-content{
+    text-align: center;
+    padding: 26px 18px;
+    background: #fff;
+    border: 1px solid rgb(17 24 39 / 8%);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    
+}
+
+.conter-num-bx{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.conter-num-bx span{
+    font-size: 1.3rem;
+    color: var(--primary);
+    
 }

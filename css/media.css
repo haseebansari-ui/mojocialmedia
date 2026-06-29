@@ -135,6 +135,10 @@
         margin-bottom: 2rem;
     }
 
+    .counter-content{
+        margin: 0 auto 1rem;
+    }
+
 }
 
 @media only screen and (max-width: 767px){
@@ -352,7 +356,34 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* .ra-sec .analyst-bx .dashboard-section .dash-metrics {
-    grid-template-columns: repeat(1, 1fr);
-} */
+    .srvc-metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .srvc-metrics .metric-card{
+        margin-bottom: 0;
+    }
+
+    .trust-row{
+        margin-top: 1.5rem;
+    }
+
+    .card-a {
+        top: -42px;
+        right: -2px;
+    }
+
+    .split-illustration {
+        margin-top: 2rem;
+    }
+
+    .srvc-hero-sec .casestudy-content-bx small{
+        width: 293px;
+        display: block;
+    }  
+    
+    .counter-content{
+        width: 280px;
+    }
 }
