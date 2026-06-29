@@ -139,6 +139,23 @@
         margin: 0 auto 1rem;
     }
 
+    .heading-bx h2 br{
+        display: none;
+    }
+
+    .abt-who-we-are-sec .mt-5{
+        margin-top: 0 !important;
+    }
+
+    .mission-img{
+        margin-top: 2rem;
+    }
+    .value-img-bx{
+        margin-bottom: 2rem;
+    }
+
+    
+    
 }
 
 @media only screen and (max-width: 767px){
@@ -266,6 +283,9 @@
     .stat-big .count {
         font-size: 2rem;
     }
+
+    .abt-industries-sec.srvc-industries-sec .other-srvc-card { 
+    margin: 0 auto 30px;}
 }
 
 
@@ -385,5 +405,28 @@
     
     .counter-content{
         width: 280px;
+    }
+
+    .abt-hero-sec .casestudy-content-bx small{
+        width: 300px;
+        display: block;
+    }
+
+    .abt-hero-sec .trust-row{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .ww-campaign-bx{
+        height: 333px;
+    }
+
+    .ww-campaign-bx img{
+        height: 333px;
+        object-fit: cover;
+    }
+
+    .ww-campaign-cnct{
+        height: inherit;
+        margin: 29px auto 0;
     }
 }

@@ -2437,3 +2437,408 @@ small {
     color: var(--primary);
     
 }
+
+/* =========================
+    About Page
+============================*/
+
+/* --- About Page Hero Banner --- */
+
+.abt-hero-visual{
+    position: relative;
+    min-height: 560px;
+}
+
+
+.abt-hero-visual .floating-card {
+    position: absolute;
+    z-index: 3;
+    width: 160px;
+    padding: 14px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(14px);
+}
+
+.abt-hero-visual .floating-card span {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.abt-hero-visual .floating-card strong {
+    display: block;
+    font-size: 1.5rem;
+    margin: 4px 0;
+}
+
+.abt-hero-visual .fc-1 {
+    top: 20px;
+    right: 14px;
+}
+ 
+.abt-hero-visual .fc-2 {
+    top: 170px;
+    left: -12px;
+    width: 190px;
+}
+
+.abt-hero-visual .fc-3 {
+    bottom: 24px;
+    right: 44px;
+}
+
+.abt-hero-visual small {
+    padding: 0.2rem 1rem;
+}
+ 
+.abt-hero-visual .dash {
+    position: relative;
+    z-index: 2;
+    padding: 24px;
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+}
+
+.abt-hero-visual .dash .dash-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.abt-hero-visual .dash .dash-top h2 {
+    margin-top: 4px;
+    font-size: 1.6rem;
+    color: var(--font-color);
+}
+
+.abt-hero-visual .dash .dash-top .live-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(16, 185, 129, 0.12);
+    color: #047857;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.abt-hero-sec p {
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: #64748b;
+    max-width: 62ch;
+}
+
+.abt-hero-visual .glass {
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+.abt-hero-visual .dash-hero-graphic {
+    position: relative;
+    margin-top: 22px;
+    height: 230px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255, 176, 0, 0.12), rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(17, 24, 39, 0.05) 1px, transparent 1px) 0 0 / 28px 28px;
+    overflow: hidden;
+}
+
+.node {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffb000, #ff8a00);
+    box-shadow: 0 0 0 10px rgba(255, 176, 0, 0.12);
+    animation: float 6s ease-in-out infinite;
+}
+
+.node-1 {
+    top: 26%;
+    left: 16%;
+}
+
+.node-2 {
+    top: 50%;
+    left: 42%;
+    animation-delay: 0.8s;
+}
+
+.node-3 {
+    top: 34%;
+    left: 72%;
+    animation-delay: 1.6s;
+}
+
+.abt-hero-visual .pulse-line {
+    position: absolute;
+    inset: auto 12% 28% 12%;
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ffb000, #ff8a00);
+    box-shadow: 0 10px 20px rgba(255, 176, 0, 0.18);
+}
+
+.dash-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.abt-hero-visual .dash-stats span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-bottom: 4px;
+}
+
+.abt-hero-visual .dash-stats strong {
+    font-size: 1.05rem;
+}
+
+.bg-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(10px);
+    opacity: 0.7;
+}
+
+.orb-1 {
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(255, 176, 0, 0.34), transparent 65%);
+    top: 24px;
+    right: -20px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.orb-2 {
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle, rgba(17, 24, 39, 0.12), transparent 68%);
+    left: -18px;
+    bottom: 10px;
+    animation: float 9s ease-in-out infinite;
+}
+
+.abt-hero-sec .trust-row{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1rem;
+}
+
+.abt-hero-sec .trust-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.abt-hero-sec .trust-pill i {
+    color: var(--primary);
+}
+
+.abt-who-we-are-sec .heading-bx{
+    margin-bottom: 3rem;
+}   
+ 
+.abt-who-we-are-sec .btn{
+    margin-top: 1.7rem;
+}
+
+
+
+/* --- About Story Section --- */
+
+.abt-story-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.abt-story-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.timeline-item, .process-step {
+    padding: 20px;
+    background: #fff;
+    border-radius: 22px;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.timeline-item:hover{
+    box-shadow: 0 20px 60px rgba(253, 192, 101, 0.61);
+}
+
+
+.timeline-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, rgba(255, 176, 0, 0.18), rgba(255, 138, 0, 0.18));
+} 
+
+.timeline-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.timeline-title p{
+    font-size: 1rem;
+}
+
+/* --- About Core values Section --- */
+
+
+.core-value-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.core-value-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.value-img-bx{
+    height: 530px;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid var(--primary);
+}
+
+.value-img-bx img{
+    width: 100%;
+    height: 530px;
+    object-fit: cover;
+}
+
+.value-card {
+    margin-bottom: 2rem;
+}
+
+.value-card span i{
+    font-size: 2rem;
+    background: linear-gradient(135deg, #ffb702, rgba(250, 179, 73, 0.897) 50%, rgba(252, 197, 115, 0.822) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.value-sub-title{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--secondry);
+}
+
+/* --- About Industries Section --- */
+
+.abt-industries-sec{
+    background: linear-gradient(135deg, #fff7e8, #fff);
+}
+
+.abt-industries-sec .heading-bx{
+    text-align: left;
+    margin-bottom: 6rem;
+}
+
+.abt-industries-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+/* --- world Wide Campaign --- */
+
+.ww-campaign-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.ww-campaign-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.ww-campaign-bx {
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.ww-campaign-bx::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.356);
+    z-index: 3;
+}
+
+.ww-campaign-bx img{
+    width: 100%;
+}
+
+.ww-campaign-title{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.ww-campaign-cnct{
+    padding: 26px;
+    height: 147px;
+    background: #fff;
+    border: 1px solid rgb(17 24 39 / 8%);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    margin: 74px auto 0;
+}
+
+.ww-cpm-sub-content{
+    position: absolute;
+    color: var(--white-color);
+    background: rgba(122, 122, 122, 0.541);
+    border: 1px solid var(--white-color);
+    border-radius: 2rem;
+    bottom:0;
+    left: 0;
+    height: 3rem;
+    width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.ww-cnct-1{
+    bottom: 178px;
+    left: 19px;
+    width: 13rem;
+    height: 3rem;
+}
+
+.ww-cnct-2{
+    bottom: 119px;
+    left: 19px;
+    width: 15rem;
+}
+
+.ww-cnct-3{
+    bottom: 62px;
+    left: 19px;
+    width: 18rem;
+}
+
