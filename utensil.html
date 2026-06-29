@@ -3,27 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Premium performance marketing services for brands, startups, and enterprises. Scale acquisition, improve conversions, and maximize ROI." />
-  <meta name="keywords" content="performance marketing, affiliate marketing, media buying, CRO, mobile app marketing, user acquisition, analytics" />
+  <meta name="description" content="Learn about our performance marketing agency, our mission, values, team, and global growth approach built to help brands scale efficiently." />
+  <meta name="keywords" content="about us, performance marketing agency, adtech, martech, affiliate marketing, user acquisition, media buying, CRO" />
   <meta name="author" content="Performance Marketing Agency" />
   <meta name="theme-color" content="#111827" />
-  <title>Our Performance Marketing Services</title>
+  <title>About Us | Performance Marketing Agency</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Remix Icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css" />
   <style>
     :root {
   --primary: #ffb000;
   --primary-2: #ff8a00;
   --navy: #111827;
   --text: #0f172a;
-  --muted: #6b7280;
+  --muted: #64748b;
   --bg: #ffffff;
   --bg-soft: #f7f8fb;
   --line: rgba(17, 24, 39, 0.08);
@@ -32,41 +29,19 @@
   --radius: 18px;
   --radius-lg: 24px;
   --container: 1200px;
-  --ease: all 0.3s ease;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 body {
   font-family: 'Manrope', sans-serif;
   color: var(--text);
   background: var(--bg);
   overflow-x: hidden;
 }
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button,
-input,
-textarea {
-  font: inherit;
-}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea { font: inherit; }
 
 .container {
   width: min(100% - 2rem, var(--container));
@@ -82,8 +57,7 @@ textarea {
   background: var(--bg-soft);
 }
 
-.section-tag,
-.eyebrow {
+.section-tag, .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -93,7 +67,6 @@ textarea {
   color: #9a5e00;
   font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
 }
 
 .section-head {
@@ -103,7 +76,6 @@ textarea {
 
 .section-head h2,
 .hero h1,
-.featured-copy h2,
 .cta-copy h2 {
   letter-spacing: -0.04em;
 }
@@ -125,7 +97,7 @@ textarea {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.86);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(17, 24, 39, 0.06);
 }
@@ -161,9 +133,7 @@ textarea {
   color: var(--muted);
 }
 
-.nav a:hover {
-  color: var(--navy);
-}
+.nav a:hover { color: var(--navy); }
 
 .header-actions {
   display: flex;
@@ -189,14 +159,12 @@ textarea {
   border-radius: 999px;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: var(--ease);
+  transition: all 0.3s ease;
   font-weight: 700;
   white-space: nowrap;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
+.btn:hover { transform: translateY(-2px); }
 
 .btn-primary {
   color: #111;
@@ -226,9 +194,7 @@ textarea {
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-.w-full {
-  width: 100%;
-}
+.w-full { width: 100%; }
 
 /* Hero */
 .hero {
@@ -238,18 +204,18 @@ textarea {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 1.04fr 0.96fr;
   gap: 42px;
   align-items: center;
 }
 
 .hero h1 {
-  font-size: clamp(2.7rem, 5vw, 5.1rem);
+  font-size: clamp(2.7rem, 5vw, 5rem);
   line-height: 1.02;
   margin: 18px 0 16px;
 }
 
-.hero-text {
+.hero p {
   font-size: 1.08rem;
   line-height: 1.85;
   color: var(--muted);
@@ -263,55 +229,14 @@ textarea {
   margin-top: 26px;
 }
 
-.hero-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 30px;
-}
-
-.metric-card,
-.stat-box,
-.industry-card,
-.service-card,
-.feature-box,
-.case-card,
-.faq-item,
-.testimonial-card,
-.form-card,
-.trust-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.metric-card {
-  padding: 18px;
-}
-
-.metric-card strong,
-.stat-box strong {
-  display: block;
-  font-size: 1.8rem;
-  line-height: 1.1;
-  margin-bottom: 4px;
-}
-
-.metric-card span,
-.stat-box span {
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.trust-row {
+.hero-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 18px;
 }
 
-.trust-pill {
+.pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -328,17 +253,18 @@ textarea {
   min-height: 560px;
 }
 
-.dashboard-shell {
-  position: relative;
-  z-index: 2;
-  padding: 22px;
-  border-radius: 26px;
-}
-
 .glass {
   backdrop-filter: blur(16px);
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dash {
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
 }
 
 .dash-top {
@@ -355,7 +281,7 @@ textarea {
 
 .dash-top h2 {
   margin-top: 4px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .live-pill {
@@ -370,58 +296,68 @@ textarea {
   font-weight: 700;
 }
 
-.chart-area {
-  margin-top: 20px;
-  height: 200px;
-  border-radius: 22px;
+.dash-hero-graphic {
+  position: relative;
+  margin-top: 22px;
+  height: 230px;
+  border-radius: 24px;
   background:
     linear-gradient(180deg, rgba(255, 176, 0, 0.12), rgba(255, 255, 255, 0)),
-    linear-gradient(90deg, rgba(17, 24, 39, 0.06) 1px, transparent 1px) 0 0 / 28px 28px;
-  padding: 22px;
+    linear-gradient(90deg, rgba(17, 24, 39, 0.05) 1px, transparent 1px) 0 0 / 28px 28px;
   overflow: hidden;
 }
 
-.chart-bars {
-  display: flex;
-  align-items: end;
-  gap: 10px;
-  height: 100%;
+.node {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  box-shadow: 0 0 0 10px rgba(255, 176, 0, 0.12);
+  animation: float 6s ease-in-out infinite;
 }
 
-.chart-bars span {
-  flex: 1;
-  border-radius: 16px 16px 0 0;
-  background: linear-gradient(180deg, var(--primary), var(--primary-2));
-  box-shadow: 0 12px 18px rgba(255, 176, 0, 0.22);
+.node-1 { top: 26%; left: 16%; }
+.node-2 { top: 50%; left: 42%; animation-delay: 0.8s; }
+.node-3 { top: 34%; left: 72%; animation-delay: 1.6s; }
+
+.pulse-line {
+  position: absolute;
+  inset: auto 12% 28% 12%;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
+  box-shadow: 0 10px 20px rgba(255, 176, 0, 0.18);
 }
 
-.dash-grid {
+.dash-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   margin-top: 16px;
 }
 
-.dash-grid div {
+.dash-stats div {
   padding: 14px;
   border-radius: 16px;
-  background: rgba(247, 248, 251, 0.9);
+  background: var(--bg-soft);
 }
 
-.dash-grid p {
+.dash-stats span {
+  display: block;
   color: var(--muted);
   font-size: 0.82rem;
   margin-bottom: 4px;
 }
 
-.dash-grid strong {
+.dash-stats strong {
   font-size: 1.05rem;
 }
 
 .floating-card {
   position: absolute;
   z-index: 3;
-  width: 150px;
+  width: 160px;
   padding: 14px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.88);
@@ -441,348 +377,347 @@ textarea {
   margin: 4px 0;
 }
 
-.card-a { top: 18px; right: 10px; }
-.card-b { top: 168px; left: -10px; }
-.card-c { bottom: 28px; right: 36px; }
+.fc-1 { top: 20px; right: 14px; }
+.fc-2 { top: 170px; left: -12px; }
+.fc-3 { bottom: 24px; right: 44px; }
 
-.bg-shape {
+.bg-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(8px);
-  opacity: 0.65;
-  z-index: 1;
+  filter: blur(10px);
+  opacity: 0.7;
 }
 
-.shape-1 {
+.orb-1 {
   width: 220px;
   height: 220px;
-  background: radial-gradient(circle, rgba(255, 176, 0, 0.35), transparent 65%);
-  top: 30px;
+  background: radial-gradient(circle, rgba(255, 176, 0, 0.34), transparent 65%);
+  top: 24px;
   right: -20px;
   animation: float 8s ease-in-out infinite;
 }
 
-.shape-2 {
+.orb-2 {
   width: 160px;
   height: 160px;
   background: radial-gradient(circle, rgba(17, 24, 39, 0.12), transparent 68%);
-  left: -20px;
-  bottom: 20px;
+  left: -18px;
+  bottom: 10px;
   animation: float 9s ease-in-out infinite;
 }
 
-/* Grid cards */
-.cards-grid {
+/* Shared cards */
+.highlight-grid,
+.value-grid,
+.feature-grid,
+.industry-grid,
+.number-grid,
+.team-grid,
+.partner-grid {
   display: grid;
   gap: 18px;
 }
 
-.services-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.highlight-grid {
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.service-card {
-  padding: 22px;
-  transition: var(--ease);
+.highlight-card,
+.statement-card,
+.value-card,
+.feature-card,
+.industry-card,
+.number-card,
+.team-card,
+.partner-card,
+.global-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
-.service-card:hover,
-.feature-box:hover,
+.highlight-card,
+.statement-card,
+.value-card,
+.feature-card,
+.industry-card,
+.number-card,
+.team-card,
+.partner-card {
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover,
+.statement-card:hover,
+.value-card:hover,
+.feature-card:hover,
 .industry-card:hover,
-.case-card:hover,
-.trust-card:hover {
+.number-card:hover,
+.team-card:hover,
+.partner-card:hover,
+.global-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
 }
 
-.service-icon {
-  font-size: 1.5rem;
-  display: inline-flex;
+.highlight-card i,
+.statement-icon,
+.value-card i,
+.feature-card i,
+.industry-card i,
+.step-icon {
   width: 48px;
   height: 48px;
   border-radius: 16px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   color: #111827;
   background: linear-gradient(135deg, rgba(255, 176, 0, 0.18), rgba(255, 138, 0, 0.18));
+  font-size: 1.25rem;
 }
 
-.service-card h3 {
-  font-size: 1.1rem;
+.highlight-card h3,
+.statement-card h3,
+.value-card h3,
+.feature-card h3,
+.industry-card h3,
+.team-card h3,
+.global-card h3 {
   margin-bottom: 8px;
+  font-size: 1.08rem;
 }
 
-.service-card p {
+.highlight-card p,
+.statement-card p,
+.value-card p,
+.feature-card p,
+.industry-card p,
+.team-card p,
+.global-card p {
   color: var(--muted);
   line-height: 1.7;
-  margin-bottom: 14px;
   font-size: 0.95rem;
 }
 
-.card-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #9a5e00;
-  font-weight: 700;
-}
-
-/* Featured */
-.featured-grid {
+/* Layout sections */
+.who-grid,
+.cards-two,
+.global-grid,
+.cta-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 24px;
+}
+
+.who-grid,
+.global-grid,
+.cta-grid {
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 
-.featured-copy h2 {
-  font-size: clamp(2rem, 4vw, 3.6rem);
-  margin: 16px 0 14px;
-}
-
-.feature-list {
-  list-style: none;
-  display: grid;
-  gap: 12px;
-  margin: 22px 0 28px;
-}
-
-.feature-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  color: var(--text);
-}
-
-.feature-list i {
-  color: #0ea65a;
-  margin-top: 2px;
-}
-
-.split-illustration {
-  padding: 22px;
+.image-panel {
+  padding: 16px;
   border-radius: 26px;
+}
+
+.image-placeholder {
   min-height: 420px;
-  position: relative;
-  overflow: hidden;
-}
-
-.mini-stat {
-  position: absolute;
-  padding: 14px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(12px);
-}
-
-.mini-stat span {
-  display: block;
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-
-.mini-stat strong {
-  font-size: 1.4rem;
-}
-
-.mini-stat:nth-child(1) { top: 18px; left: 18px; }
-.mini-stat:nth-child(2) { top: 18px; right: 18px; }
-.mini-stat:nth-child(3) { bottom: 18px; left: 18px; }
-
-.illustration-chart {
-  position: absolute;
-  inset: 88px 20px 20px 20px;
   border-radius: 22px;
   background:
-    linear-gradient(180deg, rgba(255, 176, 0, 0.08), rgba(255, 255, 255, 0)),
-    linear-gradient(90deg, rgba(17, 24, 39, 0.05) 1px, transparent 1px) 0 0 / 24px 24px;
-  overflow: hidden;
+    linear-gradient(135deg, rgba(255, 176, 0, 0.18), rgba(17, 24, 39, 0.08)),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), transparent 42%);
 }
 
-.line {
-  position: absolute;
-  left: 8%;
-  right: 8%;
-  height: 4px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--primary), var(--primary-2));
-  box-shadow: 0 10px 20px rgba(255, 176, 0, 0.14);
+.business-illustration {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.65), transparent 18%),
+    radial-gradient(circle at 75% 28%, rgba(255,176,0,.38), transparent 18%),
+    radial-gradient(circle at 55% 70%, rgba(17,24,39,.18), transparent 14%);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.line-1 { top: 26%; width: 72%; }
-.line-2 { top: 50%; width: 86%; opacity: 0.8; }
-.line-3 { top: 74%; width: 64%; opacity: 0.7; }
-
-/* Industries */
-.industries-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.mini-note {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
 }
 
-.industry-card {
-  padding: 20px;
-  text-align: center;
-  transition: var(--ease);
+.cards-two {
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.industry-card i {
-  font-size: 1.5rem;
-  color: #9a5e00;
-  margin-bottom: 10px;
-  display: inline-flex;
-  width: 50px;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  background: rgba(255, 176, 0, 0.12);
+.statement-card {
+  padding: 24px;
 }
 
-.industry-card h3 {
-  font-size: 1rem;
+.highlight-card:hover i,
+.statement-card:hover .statement-icon,
+.value-card:hover i,
+.feature-card:hover i,
+.industry-card:hover i,
+.step-icon {
+  transform: translateY(-2px);
 }
 
-/* Timeline */
-.timeline {
+/* Story timeline */
+.timeline,
+.process {
   display: grid;
-  grid-template-columns: repeat(9, minmax(0, 1fr));
-  gap: 12px;
-  align-items: center;
+  gap: 16px;
 }
 
-.timeline-step {
-  grid-column: span 1;
-  text-align: center;
-  padding: 22px 14px;
-  border-radius: 20px;
+.timeline-item,
+.process-step {
+  padding: 20px;
   background: #fff;
+  border-radius: 22px;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
-  transition: var(--ease);
+  transition: all 0.3s ease;
 }
 
-.timeline-step:hover {
+.timeline-item:hover,
+.process-step:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
 }
 
 .timeline-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 16px;
-  margin: 0 auto 12px;
-  display: grid;
-  place-items: center;
-  color: #111827;
-  background: linear-gradient(135deg, rgba(255, 176, 0, 0.18), rgba(255, 138, 0, 0.18));
-}
-
-.timeline-step h3 {
-  margin-bottom: 8px;
-  font-size: 1rem;
-}
-
-.timeline-step p {
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.6;
-}
-
-.timeline-arrow {
-  text-align: center;
-  color: #9a5e00;
-  font-size: 1.3rem;
-}
-
-/* Why */
-.why-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.feature-box {
-  padding: 20px;
-  text-align: center;
-  transition: var(--ease);
-}
-
-.feature-box i {
   width: 52px;
   height: 52px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 16px;
+  display: grid;
+  place-items: center;
   margin-bottom: 12px;
   background: linear-gradient(135deg, rgba(255, 176, 0, 0.18), rgba(255, 138, 0, 0.18));
-  color: #111827;
-  font-size: 1.25rem;
 }
 
-.feature-box h3 {
-  font-size: 0.98rem;
-  line-height: 1.45;
+.process-step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-/* Results */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+.step-icon {
+  margin-bottom: 0;
+  flex: 0 0 auto;
 }
 
-.stat-box {
+/* Values and features */
+.value-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.feature-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.feature-card {
+  text-align: center;
+}
+
+.feature-card i,
+.industry-card i {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Industry cards */
+.industry-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Numbers */
+.number-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.number-card {
   text-align: center;
   padding: 26px 18px;
 }
 
-.stat-box strong {
+.number-card strong {
+  display: block;
   font-size: 2.8rem;
+  line-height: 1;
+  margin-bottom: 8px;
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Case studies */
-.case-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.number-card span {
+  color: var(--muted);
 }
 
-.case-card {
-  padding: 18px;
+/* Team */
+.team-grid {
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.case-image {
-  height: 180px;
+.team-card {
+  text-align: left;
+}
+
+.avatar {
+  width: 100%;
+  height: 240px;
   border-radius: 18px;
   margin-bottom: 16px;
+  background: linear-gradient(135deg, rgba(255, 176, 0, 0.22), rgba(17, 24, 39, 0.12));
+}
+
+.avatar-1,
+.avatar-2,
+.avatar-3,
+.avatar-4,
+.client-photo {
+  background-image:
+    radial-gradient(circle at 35% 35%, rgba(255,255,255,.6), transparent 18%),
+    radial-gradient(circle at 70% 30%, rgba(255,176,0,.35), transparent 18%),
+    radial-gradient(circle at 50% 70%, rgba(17,24,39,.18), transparent 18%);
+}
+
+.role {
+  color: #9a5e00;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--bg-soft);
+  color: var(--navy);
+}
+
+.socials a:hover {
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+}
+
+/* Testimonials slider */
+.slider {
   overflow: hidden;
 }
 
-.placeholder {
-  background:
-    linear-gradient(135deg, rgba(255, 176, 0, 0.22), rgba(17, 24, 39, 0.12)),
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 45%);
-}
-
-.case-card h3 {
-  margin-bottom: 8px;
-}
-
-.case-card p {
-  color: var(--muted);
-  line-height: 1.7;
-  margin-bottom: 14px;
-}
-
-/* Testimonials */
-.testimonial-slider {
-  position: relative;
-  overflow: hidden;
-}
-
-.testimonial-track {
+.slides {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
@@ -800,11 +735,10 @@ textarea {
   margin-bottom: 16px;
 }
 
-.client-avatar {
+.client-photo {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
 }
 
 .testimonial-top span {
@@ -812,14 +746,9 @@ textarea {
   font-size: 0.9rem;
 }
 
-.testimonial-card p {
-  line-height: 1.8;
-  color: var(--text);
-}
-
 .stars {
-  margin-top: 14px;
   color: #f59e0b;
+  margin-bottom: 12px;
   letter-spacing: 2px;
 }
 
@@ -838,6 +767,55 @@ textarea {
   cursor: pointer;
 }
 
+/* Partners */
+.partner-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.partner-card {
+  display: grid;
+  place-items: center;
+  min-height: 96px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+/* Global */
+.global-map {
+  min-height: 420px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 25% 32%, rgba(255,176,0,.28), transparent 16%),
+    radial-gradient(circle at 55% 42%, rgba(255,176,0,.18), transparent 18%),
+    radial-gradient(circle at 75% 60%, rgba(17,24,39,.16), transparent 18%),
+    linear-gradient(135deg, rgba(17,24,39,.08), rgba(255,255,255,.95));
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.map-overlay {
+  position: absolute;
+  inset: auto 18px 18px 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.map-overlay span {
+  display: inline-flex;
+  width: fit-content;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.global-card {
+  padding: 26px;
+}
+
 /* FAQ */
 .faq-list {
   display: grid;
@@ -846,7 +824,6 @@ textarea {
 
 .faq-item {
   overflow: hidden;
-  transition: var(--ease);
 }
 
 .faq-question {
@@ -881,22 +858,15 @@ textarea {
 }
 
 .faq-item.active .faq-answer {
-  max-height: 160px;
+  max-height: 170px;
   padding: 0 20px 18px;
 }
 
-/* CTA Banner */
+/* CTA */
 .cta-banner {
   padding: 92px 0;
   background: linear-gradient(135deg, #ffb000, #ff8a00);
   color: #111827;
-}
-
-.cta-wrap {
-  display: grid;
-  grid-template-columns: 1fr 0.9fr;
-  gap: 24px;
-  align-items: center;
 }
 
 .cta-copy h2 {
@@ -929,6 +899,7 @@ textarea {
 }
 
 .form-group input,
+.form-group textarea,
 .newsletter input {
   width: 100%;
   padding: 13px 14px;
@@ -936,6 +907,11 @@ textarea {
   border-radius: 14px;
   outline: none;
   background: rgba(255, 255, 255, 0.92);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 /* Footer */
@@ -978,7 +954,16 @@ textarea {
   margin-top: 8px;
 }
 
-/* Reveal animations */
+.footer-socials {
+  margin-top: 18px;
+}
+
+.footer-socials a {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+/* Reveal */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -990,73 +975,29 @@ textarea {
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.fade-left {
-  transform: translateX(-24px);
-}
-
-.fade-right {
-  transform: translateX(24px);
-}
-
-.scale {
-  transform: scale(0.96);
-}
-
-/* Utility */
-.counter-box {
-  transition: var(--ease);
-}
-
-.counter-box:hover {
-  box-shadow: var(--shadow-hover);
-}
-
-.glow-border {
-  position: relative;
-}
-
-.glow-border::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  opacity: 0;
-  transition: var(--ease);
-}
-
-.glow-border:hover::before {
-  opacity: 1;
-}
+.fade-left { transform: translateX(-24px); }
+.fade-right { transform: translateX(24px); }
+.scale { transform: scale(0.96); }
 
 /* Responsive */
 @media (max-width: 1200px) {
-  .services-grid,
-  .industries-grid,
-  .why-grid,
-  .stats-grid,
-  .case-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .featured-grid,
-  .cta-wrap {
+  .who-grid,
+  .global-grid,
+  .cta-grid {
     grid-template-columns: 1fr;
   }
 
-  .timeline {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline-arrow {
-    display: none;
+  .feature-grid,
+  .industry-grid,
+  .team-grid,
+  .number-grid,
+  .partner-grid,
+  .value-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1091,47 +1032,46 @@ textarea {
   }
 
   .hero-grid,
-  .services-grid,
-  .industries-grid,
-  .why-grid,
-  .stats-grid,
-  .case-grid,
+  .feature-grid,
+  .industry-grid,
+  .team-grid,
+  .number-grid,
+  .partner-grid,
+  .value-grid,
+  .cards-two,
+  .highlight-grid,
   .footer-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero-metrics {
-    grid-template-columns: 1fr;
-  }
-
-  .dash-grid {
-    grid-template-columns: 1fr 1fr;
+  .hero-badges {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero-visual {
     min-height: 480px;
   }
 
+  .dash-stats {
+    grid-template-columns: 1fr;
+  }
+
   .floating-card {
-    width: 128px;
+    width: 130px;
   }
 
-  .card-b {
-    left: 0;
-  }
-
-  .card-c {
-    right: 14px;
-  }
+  .fc-2 { left: 0; }
+  .fc-3 { right: 12px; }
 }
 
 @media (max-width: 520px) {
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
 
-  .dash-grid {
-    grid-template-columns: 1fr;
+  .hero-visual {
+    min-height: auto;
   }
 
   .floating-card {
@@ -1140,8 +1080,13 @@ textarea {
     margin-bottom: 12px;
   }
 
-  .hero-visual {
-    min-height: auto;
+  .dash {
+    padding: 18px;
+  }
+
+  .process-step {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -1151,612 +1096,572 @@ textarea {
     transform: translateY(-10px);
   }
 }
-
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 16px 28px rgba(255, 176, 0, 0.18);
-  }
-  50% {
-    box-shadow: 0 18px 36px rgba(255, 176, 0, 0.3);
-  }
-}
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a href="#" class="brand" aria-label="Home">
-        <span class="brand-mark"></span>
-        <span>GrowthEngine</span>
-      </a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="#hero" class="brand" aria-label="Homepage">
+      <span class="brand-mark"></span>
+      <span>GrowthEngine</span>
+    </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#featured">Featured</a>
-        <a href="#industries">Industries</a>
-        <a href="#process">Process</a>
-        <a href="#results">Results</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+    <nav class="nav" aria-label="Primary">
+      <a href="#who">Who We Are</a>
+      <a href="#story">Story</a>
+      <a href="#values">Values</a>
+      <a href="#team">Team</a>
+      <a href="#faq">FAQ</a>
+    </nav>
 
-      <div class="header-actions">
-        <a class="btn btn-ghost" href="#faq">Learn More</a>
-        <a class="btn btn-primary" href="#cta">Get Started</a>
-        <button class="menu-toggle" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="#contact">Contact Us</a>
+      <a class="btn btn-primary" href="#contact">Get Started</a>
+      <button class="menu-toggle" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal fade-up">
+        <span class="eyebrow"><i class="ri-sparkling-2-line"></i> Performance Marketing · AdTech · SaaS Growth</span>
+        <h1>Driving Growth Through Performance Marketing</h1>
+        <p>
+          We help brands scale faster through data-driven marketing strategies, global publisher partnerships, AI-powered optimization, and measurable performance campaigns.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary"><i class="ri-rocket-2-line"></i> Get Started</a>
+          <a href="#who" class="btn btn-secondary"><i class="ri-chat-3-line"></i> Contact Us</a>
+        </div>
+
+        <div class="hero-badges">
+          <span class="pill"><i class="ri-shield-check-line"></i> Trusted by global brands</span>
+          <span class="pill"><i class="ri-star-fill"></i> 4.9/5 client rating</span>
+          <span class="pill"><i class="ri-global-line"></i> Worldwide execution</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal fade-right" aria-label="Performance marketing illustration">
+        <div class="floating-card fc-1">
+          <span>ROAS</span><strong>6.4x</strong><small>+22% MoM</small>
+        </div>
+        <div class="floating-card fc-2">
+          <span>Clients</span><strong>500+</strong><small>enterprise brands</small>
+        </div>
+        <div class="floating-card fc-3">
+          <span>Impressions</span><strong>10B+</strong><small>monthly</small>
+        </div>
+
+        <div class="dash glass">
+          <div class="dash-top">
+            <div>
+              <p class="dash-label">Global Growth Intelligence</p>
+              <h2>AI-Driven Performance</h2>
+            </div>
+            <span class="live-pill"><i class="ri-checkbox-blank-circle-fill"></i> Live</span>
+          </div>
+
+          <div class="dash-hero-graphic">
+            <div class="node node-1"></div>
+            <div class="node node-2"></div>
+            <div class="node node-3"></div>
+            <div class="pulse-line"></div>
+          </div>
+
+          <div class="dash-stats">
+            <div><span>Campaigns</span><strong>1,200+</strong></div>
+            <div><span>Countries</span><strong>120+</strong></div>
+            <div><span>Retention</span><strong>95%</strong></div>
+          </div>
+        </div>
+
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero section" id="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal fade-up">
-          <span class="eyebrow"><i class="ri-sparkling-2-line"></i> Enterprise Performance Marketing Solutions</span>
-          <h1>Our Performance Marketing Services</h1>
-          <p class="hero-text">
-            Helping brands acquire high-quality users, increase conversions, and maximize ROI through data-driven digital marketing solutions.
-          </p>
-
-          <div class="hero-cta">
-            <a href="#cta" class="btn btn-primary"><i class="ri-rocket-2-line"></i> Get Started</a>
-            <a href="#process" class="btn btn-secondary"><i class="ri-calendar-check-line"></i> Book a Strategy Call</a>
-          </div>
-
-          <div class="hero-metrics">
-            <div class="metric-card">
-              <strong><span class="counter" data-target="500">0</span>+</strong>
-              <span>Campaigns Launched</span>
-            </div>
-            <div class="metric-card">
-              <strong><span class="counter" data-target="120">0</span>+</strong>
-              <span>Global Clients</span>
-            </div>
-            <div class="metric-card">
-              <strong><span class="counter" data-target="10">0</span>B+</strong>
-              <span>Impressions Managed</span>
-            </div>
-          </div>
-
-          <div class="trust-row">
-            <span class="trust-pill"><i class="ri-shield-check-line"></i> Trusted by brands worldwide</span>
-            <span class="trust-pill"><i class="ri-star-fill"></i> 4.9/5 client rating</span>
-            <span class="trust-pill"><i class="ri-award-line"></i> Enterprise-ready team</span>
-          </div>
-        </div>
-
-        <div class="hero-visual reveal fade-right" aria-label="Marketing dashboard illustration">
-          <div class="floating-card card-a">
-            <span>ROAS</span>
-            <strong>6.2x</strong>
-            <small>+18% MoM</small>
-          </div>
-          <div class="floating-card card-b">
-            <span>CPA</span>
-            <strong>-32%</strong>
-            <small>optimized</small>
-          </div>
-          <div class="floating-card card-c">
-            <span>Conversions</span>
-            <strong>48.9K</strong>
-            <small>this month</small>
-          </div>
-
-          <div class="dashboard-shell glass">
-            <div class="dash-top">
-              <div>
-                <p class="dash-label">Campaign Dashboard</p>
-                <h2>AI Optimized Growth</h2>
-              </div>
-              <span class="live-pill"><i class="ri-checkbox-blank-circle-fill"></i> Live</span>
-            </div>
-
-            <div class="chart-area">
-              <div class="chart-bars">
-                <span style="height:38%"></span>
-                <span style="height:54%"></span>
-                <span style="height:66%"></span>
-                <span style="height:48%"></span>
-                <span style="height:74%"></span>
-                <span style="height:88%"></span>
-              </div>
-            </div>
-
-            <div class="dash-grid">
-              <div>
-                <p>Revenue</p>
-                <strong>$2.4M</strong>
-              </div>
-              <div>
-                <p>CTR</p>
-                <strong>3.8%</strong>
-              </div>
-              <div>
-                <p>CPA</p>
-                <strong>$18.40</strong>
-              </div>
-              <div>
-                <p>ROAS</p>
-                <strong>5.9x</strong>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-shape shape-1"></div>
-          <div class="bg-shape shape-2"></div>
-        </div>
+  <!-- Who We Are -->
+  <section class="section section-soft" id="who">
+    <div class="container">
+      <div class="section-head reveal fade-up">
+        <span class="section-tag">Who We Are</span>
+        <h2>A Performance Marketing Team Built for Modern Growth</h2>
+        <p>
+          We’re a specialized performance marketing partner helping brands grow through affiliate marketing, media buying, mobile app growth, user acquisition, lead generation, and ROI-focused advertising. Our approach blends strategy, technology, and execution to deliver measurable outcomes.
+        </p>
       </div>
-    </section>
 
-    <!-- Services Overview -->
-    <section class="section section-soft" id="services">
-      <div class="container">
-        <div class="section-head reveal fade-up">
-          <span class="section-tag">Services Overview</span>
-          <h2>Everything You Need to Scale Faster</h2>
-          <p>Full-funnel performance marketing solutions designed to acquire users, improve conversion rates, and grow profitable revenue streams.</p>
-        </div>
-
-        <div class="cards-grid services-grid">
-          <article class="service-card reveal fade-up">
-            <i class="ri-line-chart-line service-icon"></i>
-            <h3>Performance Marketing</h3>
-            <p>ROI-focused acquisition campaigns across channels that drive measurable growth.</p>
-            <a href="#cta" class="card-link">Learn More <i class="ri-arrow-right-line"></i></a>
-          </article>
-
-          <article class="service-card reveal fade-up">
-            <i class="ri-links-line service-icon"></i>
-            <h3>Affiliate Marketing</h3>
-            <p>Scale through publisher partnerships, incentives, and tracked performance campaigns.</p>
-            <a href="#cta" class="card-link">Learn More <i class="ri-arrow-right-line"></i></a>
-          </article>
-
-          <article class="service-card reveal fade-up">
-            <i class="ri-advertisement-line service-icon"></i>
-            <h3>Media Buying</h3>
-            <p>Buy premium traffic with precision targeting and continuous optimization.</p>
-            <a href="#cta" class="card-link">Learn More <i class="ri-arrow-right-line"></i></a>
-          </article>
-
-          <article class="service-card reveal fade-up">
-            <i class="ri-window-line service-icon"></i>
-            <h3>Programmatic Advertising</h3>
-            <p>Automated ad buying using smart bidding and audience-driven targeting.</p>
-            <a href="#cta" class="card-link">Learn More <i class="ri-arrow-right-line"></i></a>
-          </article>
-
-          <article class="service-card reveal fade-up">
-            <i class="ri-smartphone-line service-icon"></i>
-            <h3>Mobile App Marketing</h3>
-            <p>Drive installs, retention, and in-app actions with mobile-first campaign strategy.</p>
-            <a href="#cta" class="card-link">Learn More <i class="ri-arrow-right-line"></i></a>
-          </article>
-
-          <article class="service-card reveal fade-up">
-            <i class="ri-user-add-line service-icon"></i>
-            <h3>User Acquisition</h3>
-            <p>Acquire high-value users with optimized funnels and multi-channel distribution.</p>
-            <a href="#cta" class="card-link">Learn More <i class="ri-arrow-right-line"></i></a>
-          </article>
-
-          <article class="service-card reveal fade-up">
-            <i class="ri-user-received-line service-icon"></i>
-            <h3>Lead Generation</h3>
-            <p>Generate qualified leads through landing pages, traffic quality controls, and testing.</p>
-            <a href="#cta" class="card-link">Learn More <i class="ri-arrow-right-line"></i></a>
-          </article>
-
-          <article class="service-card reveal fade-up">
-            <i class="ri-search-eye-line service-icon"></i>
-            <h3>SEO & Organic Growth</h3>
-            <p>Build long-term visibility with search optimization and content-led acquisition.</p>
-            <a href="#cta" class="card-link">Learn More <i class="ri-arrow-right-line"></i></a>
-          </article>
-
-          <article class="service-card reveal fade-up">
-            <i class="ri-share-forward-line service-icon"></i>
-            <h3>Social Media Marketing</h3>
-            <p>Create demand and drive traffic through paid and organic social strategies.</p>
-            <a href="#cta" class="card-link">Learn More <i class="ri-arrow-right-line"></i></a>
-          </article>
-
-          <article class="service-card reveal fade-up">
-            <i class="ri-brush-3-line service-icon"></i>
-            <h3>Creative Studio</h3>
-            <p>Produce ad creatives, landing visuals, and hooks built to improve CTR and CVR.</p>
-            <a href="#cta" class="card-link">Learn More <i class="ri-arrow-right-line"></i></a>
-          </article>
-
-          <article class="service-card reveal fade-up">
-            <i class="ri-focus-3-line service-icon"></i>
-            <h3>Conversion Rate Optimization (CRO)</h3>
-            <p>Improve landing page performance, user experience, and conversion efficiency.</p>
-            <a href="#cta" class="card-link">Learn More <i class="ri-arrow-right-line"></i></a>
-          </article>
-
-          <article class="service-card reveal fade-up">
-            <i class="ri-bar-chart-grouped-line service-icon"></i>
-            <h3>Marketing Analytics</h3>
-            <p>Track outcomes, measure attribution, and make smarter budget decisions.</p>
-            <a href="#cta" class="card-link">Learn More <i class="ri-arrow-right-line"></i></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Service -->
-    <section class="section" id="featured">
-      <div class="container">
-        <div class="featured-grid">
-          <div class="featured-copy reveal fade-left">
-            <span class="section-tag">Featured Service</span>
-            <h2>Performance Marketing</h2>
-            <p>
-              Build measurable growth with a strategy designed to improve acquisition efficiency, maximize revenue, and scale the channels that perform best.
-            </p>
-
-            <ul class="feature-list">
-              <li><i class="ri-check-line"></i> Full-funnel acquisition strategy</li>
-              <li><i class="ri-check-line"></i> Channel mix planning and media buying</li>
-              <li><i class="ri-check-line"></i> Funnel and landing page optimization</li>
-              <li><i class="ri-check-line"></i> KPI-based reporting and scaling</li>
-            </ul>
-
-            <a href="#cta" class="btn btn-primary">Start a Performance Campaign</a>
-          </div>
-
-          <div class="featured-visual reveal fade-right">
-            <div class="split-illustration glass">
-              <div class="mini-stat">
-                <span>Monthly Spend</span>
-                <strong>$180K</strong>
-              </div>
-              <div class="mini-stat">
-                <span>ROAS</span>
-                <strong>5.4x</strong>
-              </div>
-              <div class="mini-stat">
-                <span>Conversions</span>
-                <strong>24,680</strong>
-              </div>
-              <div class="illustration-chart">
-                <div class="line line-1"></div>
-                <div class="line line-2"></div>
-                <div class="line line-3"></div>
-              </div>
-            </div>
+      <div class="who-grid">
+        <div class="who-visual reveal fade-left">
+          <div class="image-panel glass">
+            <div class="image-placeholder business-illustration"></div>
+            <div class="mini-note">Global campaign management across web, app, and commerce ecosystems.</div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Industries -->
-    <section class="section section-soft" id="industries">
-      <div class="container">
-        <div class="section-head reveal fade-up">
-          <span class="section-tag">Industries We Serve</span>
-          <h2>Built for High-Growth Markets</h2>
-          <p>We create tailored acquisition strategies for verticals where performance, efficiency, and scale matter most.</p>
-        </div>
-
-        <div class="cards-grid industries-grid">
-          <article class="industry-card reveal scale"><i class="ri-bank-line"></i><h3>FinTech</h3></article>
-          <article class="industry-card reveal scale"><i class="ri-safe-2-line"></i><h3>Finance</h3></article>
-          <article class="industry-card reveal scale"><i class="ri-shield-star-line"></i><h3>Insurance</h3></article>
-          <article class="industry-card reveal scale"><i class="ri-shopping-bag-3-line"></i><h3>E-commerce</h3></article>
-          <article class="industry-card reveal scale"><i class="ri-store-2-line"></i><h3>Retail</h3></article>
-          <article class="industry-card reveal scale"><i class="ri-gamepad-line"></i><h3>Gaming</h3></article>
-          <article class="industry-card reveal scale"><i class="ri-flight-takeoff-line"></i><h3>Travel</h3></article>
-          <article class="industry-card reveal scale"><i class="ri-graduation-cap-line"></i><h3>Education</h3></article>
-          <article class="industry-card reveal scale"><i class="ri-heart-pulse-line"></i><h3>Health & Wellness</h3></article>
-          <article class="industry-card reveal scale"><i class="ri-code-s-slash-line"></i><h3>SaaS</h3></article>
-          <article class="industry-card reveal scale"><i class="ri-bit-coin-line"></i><h3>Crypto & Web3</h3></article>
-          <article class="industry-card reveal scale"><i class="ri-smartphone-line"></i><h3>Mobile Apps</h3></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process -->
-    <section class="section" id="process">
-      <div class="container">
-        <div class="section-head reveal fade-up">
-          <span class="section-tag">Our Process</span>
-          <h2>Simple, Transparent, Built to Scale</h2>
-          <p>A streamlined campaign workflow that helps you move quickly from research to growth.</p>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-step reveal fade-up">
-            <div class="timeline-icon"><i class="ri-search-line"></i></div>
-            <h3>Research</h3>
-            <p>Analyze market, audience, and funnel opportunities.</p>
-          </div>
-          <div class="timeline-arrow"><i class="ri-arrow-right-line"></i></div>
-          <div class="timeline-step reveal fade-up">
-            <div class="timeline-icon"><i class="ri-compasses-2-line"></i></div>
-            <h3>Strategy</h3>
-            <p>Build a conversion-first performance roadmap.</p>
-          </div>
-          <div class="timeline-arrow"><i class="ri-arrow-right-line"></i></div>
-          <div class="timeline-step reveal fade-up">
-            <div class="timeline-icon"><i class="ri-settings-3-line"></i></div>
-            <h3>Campaign Setup</h3>
-            <p>Launch assets, tracking, and targeting infrastructure.</p>
-          </div>
-          <div class="timeline-arrow"><i class="ri-arrow-right-line"></i></div>
-          <div class="timeline-step reveal fade-up">
-            <div class="timeline-icon"><i class="ri-tune-line"></i></div>
-            <h3>Optimization</h3>
-            <p>Improve CPA, CTR, and conversion efficiency.</p>
-          </div>
-          <div class="timeline-arrow"><i class="ri-arrow-right-line"></i></div>
-          <div class="timeline-step reveal fade-up">
-            <div class="timeline-icon"><i class="ri-rocket-line"></i></div>
-            <h3>Scale</h3>
-            <p>Expand winners and increase profitable volume.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="section section-soft" id="why-us">
-      <div class="container">
-        <div class="section-head reveal fade-up">
-          <span class="section-tag">Why Choose Us</span>
-          <h2>Agency Capabilities That Drive Growth</h2>
-          <p>Everything you need to launch, optimize, and scale performance campaigns with confidence.</p>
-        </div>
-
-        <div class="cards-grid why-grid">
-          <article class="feature-box reveal fade-up"><i class="ri-rocket-2-line"></i><h3>Performance-Based Growth</h3></article>
-          <article class="feature-box reveal fade-up"><i class="ri-database-2-line"></i><h3>Data-Driven Optimization</h3></article>
-          <article class="feature-box reveal fade-up"><i class="ri-global-line"></i><h3>Global Publisher Network</h3></article>
-          <article class="feature-box reveal fade-up"><i class="ri-crosshair-line"></i><h3>Advanced Targeting</h3></article>
-          <article class="feature-box reveal fade-up"><i class="ri-team-line"></i><h3>Dedicated Account Managers</h3></article>
-          <article class="feature-box reveal fade-up"><i class="ri-line-chart-line"></i><h3>Transparent Reporting</h3></article>
-          <article class="feature-box reveal fade-up"><i class="ri-flashlight-line"></i><h3>Real-Time Optimization</h3></article>
-          <article class="feature-box reveal fade-up"><i class="ri-shield-check-line"></i><h3>Fraud Prevention</h3></article>
-          <article class="feature-box reveal fade-up"><i class="ri-device-line"></i><h3>Multi-Channel Distribution</h3></article>
-          <article class="feature-box reveal fade-up"><i class="ri-arrow-up-circle-line"></i><h3>Scalable Growth</h3></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Results -->
-    <section class="section" id="results">
-      <div class="container">
-        <div class="section-head reveal fade-up">
-          <span class="section-tag">Results</span>
-          <h2>Growth at Scale</h2>
-          <p>Proof points that demonstrate the reach and impact of our performance-led campaigns.</p>
-        </div>
-
-        <div class="stats-grid">
-          <div class="stat-box reveal counter-box">
-            <strong><span class="counter" data-target="500">0</span>+</strong>
-            <span>Global Clients</span>
-          </div>
-          <div class="stat-box reveal counter-box">
-            <strong><span class="counter" data-target="120">0</span>+</strong>
-            <span>Countries Reached</span>
-          </div>
-          <div class="stat-box reveal counter-box">
-            <strong><span class="counter" data-target="10">0</span>B+</strong>
-            <span>Monthly Ad Impressions</span>
-          </div>
-          <div class="stat-box reveal counter-box">
-            <strong><span class="counter" data-target="98">0</span>%</strong>
-            <span>Client Retention</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Case Studies -->
-    <section class="section section-soft" id="case-studies">
-      <div class="container">
-        <div class="section-head reveal fade-up">
-          <span class="section-tag">Case Studies</span>
-          <h2>Selected Success Stories</h2>
-          <p>Examples of how strategic performance marketing can unlock measurable business growth.</p>
-        </div>
-
-        <div class="cards-grid case-grid">
-          <article class="case-card reveal fade-up">
-            <div class="case-image placeholder"></div>
-            <h3>FinTech Success Story</h3>
-            <p>320% increase in qualified leads with 45% lower CPA.</p>
-            <a href="#cta" class="card-link">View Case Study <i class="ri-arrow-right-line"></i></a>
-          </article>
-          <article class="case-card reveal fade-up">
-            <div class="case-image placeholder"></div>
-            <h3>App Growth Campaign</h3>
-            <p>1M+ app installs generated with 4X ROAS.</p>
-            <a href="#cta" class="card-link">View Case Study <i class="ri-arrow-right-line"></i></a>
-          </article>
-          <article class="case-card reveal fade-up">
-            <div class="case-image placeholder"></div>
-            <h3>E-commerce Scale-Up</h3>
-            <p>Revenue growth from $50K to $500K monthly.</p>
-            <a href="#cta" class="card-link">View Case Study <i class="ri-arrow-right-line"></i></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section" id="testimonials">
-      <div class="container">
-        <div class="section-head reveal fade-up">
-          <span class="section-tag">Testimonials</span>
-          <h2>What Clients Say</h2>
-          <p>Trusted by growth teams and marketing leaders looking for dependable performance execution.</p>
-        </div>
-
-        <div class="testimonial-slider reveal fade-up">
-          <div class="testimonial-track">
-            <article class="testimonial-card">
-              <div class="testimonial-top">
-                <div class="client-avatar"></div>
-                <div>
-                  <strong>Sarah Johnson</strong>
-                  <span>CMO, FinTech Brand</span>
-                </div>
-              </div>
-              <p>“The team helped us launch campaigns with clarity, speed, and measurable ROI from day one.”</p>
-              <div class="stars">★★★★★</div>
+        <div class="who-copy reveal fade-right">
+          <div class="highlight-grid">
+            <article class="highlight-card">
+              <i class="ri-award-line"></i>
+              <h3>Performance Marketing Experts</h3>
+              <p>We design campaigns with conversion efficiency, scale, and profitability at the center.</p>
             </article>
-            <article class="testimonial-card">
-              <div class="testimonial-top">
-                <div class="client-avatar"></div>
-                <div>
-                  <strong>Daniel Kim</strong>
-                  <span>Growth Lead, Mobile App</span>
-                </div>
-              </div>
-              <p>“Transparent reporting and strong optimization made scaling our acquisition significantly easier.”</p>
-              <div class="stars">★★★★★</div>
+            <article class="highlight-card">
+              <i class="ri-global-line"></i>
+              <h3>Global Partner Network</h3>
+              <p>We activate quality publishers and media partners across key growth markets.</p>
             </article>
-            <article class="testimonial-card">
-              <div class="testimonial-top">
-                <div class="client-avatar"></div>
-                <div>
-                  <strong>Priya Shah</strong>
-                  <span>Founder, E-commerce Brand</span>
-                </div>
-              </div>
-              <p>“Excellent communication, fast execution, and performance outcomes we could actually trust.”</p>
-              <div class="stars">★★★★★</div>
+            <article class="highlight-card">
+              <i class="ri-brain-line"></i>
+              <h3>AI-Driven Optimization</h3>
+              <p>We use intelligent testing and signal-led decisions to improve outcomes continuously.</p>
+            </article>
+            <article class="highlight-card">
+              <i class="ri-bar-chart-grouped-line"></i>
+              <h3>Data-Backed Decisions</h3>
+              <p>Our strategy is rooted in reporting, attribution, and measurable campaign performance.</p>
             </article>
           </div>
-          <div class="slider-actions">
-            <button class="slider-btn" id="prevTest"><i class="ri-arrow-left-line"></i></button>
-            <button class="slider-btn" id="nextTest"><i class="ri-arrow-right-line"></i></button>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section section-soft" id="faq">
-      <div class="container">
-        <div class="section-head reveal fade-up">
-          <span class="section-tag">FAQ</span>
-          <h2>Frequently Asked Questions</h2>
-          <p>Clear answers to the most common questions about pricing, setup, reporting, and support.</p>
-        </div>
-
-        <div class="faq-list">
-          <div class="faq-item reveal fade-up">
-            <button class="faq-question">Pricing</button>
-            <div class="faq-answer">
-              Pricing depends on your goals, channels, and campaign complexity. We tailor engagements to your growth objectives.
-            </div>
-          </div>
-          <div class="faq-item reveal fade-up">
-            <button class="faq-question">Campaign setup</button>
-            <div class="faq-answer">
-              We handle discovery, strategy, tracking, creative planning, and launch coordination to move quickly.
-            </div>
-          </div>
-          <div class="faq-item reveal fade-up">
-            <button class="faq-question">Traffic sources</button>
-            <div class="faq-answer">
-              We support paid, organic, publisher, app, social, and performance-driven distribution channels depending on the campaign.
-            </div>
-          </div>
-          <div class="faq-item reveal fade-up">
-            <button class="faq-question">Reporting</button>
-            <div class="faq-answer">
-              You receive transparent reporting with insights into impressions, clicks, conversions, CPA, and ROAS.
-            </div>
-          </div>
-          <div class="faq-item reveal fade-up">
-            <button class="faq-question">Support</button>
-            <div class="faq-answer">
-              Our team provides dedicated support throughout launch, optimization, and scaling phases.
-            </div>
-          </div>
-          <div class="faq-item reveal fade-up">
-            <button class="faq-question">Optimization</button>
-            <div class="faq-answer">
-              We continuously test, analyze, and refine campaigns to improve efficiency and results over time.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Banner -->
-    <section class="cta-banner" id="cta">
-      <div class="container cta-wrap">
-        <div class="cta-copy reveal fade-left">
-          <h2>Ready to Scale Your Business?</h2>
-          <p>Let's build high-performing campaigns that drive measurable growth.</p>
-          <div class="hero-cta">
-            <a href="#contact" class="btn btn-dark">Get Started</a>
-            <a href="#contact" class="btn btn-light">Contact Us</a>
-          </div>
-        </div>
-
-        <form class="cta-form reveal fade-right" id="contact">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Your email" required>
-          </div>
-          <div class="form-group">
-            <label for="company">Company</label>
-            <input type="text" id="company" placeholder="Company name">
-          </div>
-          <button type="submit" class="btn btn-primary w-full">Submit Request</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a href="#" class="brand footer-brand"><span class="brand-mark"></span><span>GrowthEngine</span></a>
-        <p>Modern performance marketing solutions built for sustainable growth and measurable ROI.</p>
-      </div>
-
-      <div>
-        <h4>Company</h4>
-        <a href="#services">Services</a>
-        <a href="#industries">Industries</a>
-        <a href="#case-studies">Case Studies</a>
-      </div>
-
-      <div>
-        <h4>Resources</h4>
-        <a href="#faq">FAQ</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-      </div>
-
-      <div>
-        <h4>Newsletter</h4>
-        <form class="newsletter">
-          <input type="email" placeholder="Email address" required>
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-  // Mobile nav toggle
+  <!-- Story -->
+  <section class="section" id="story">
+    <div class="container">
+      <div class="section-head reveal fade-up">
+        <span class="section-tag">Our Story</span>
+        <h2>Built to Turn Performance Into Predictable Growth</h2>
+        <p>
+          We started with a simple belief: great marketing should be measurable, accountable, and scalable. Since then, we’ve evolved into a performance-first partner for brands that want more than vanity metrics.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal fade-up">
+          <div class="timeline-icon"><i class="ri-flag-2-line"></i></div>
+          <h3>Founded</h3>
+          <p>We began with a focus on transparent, data-led acquisition for ambitious brands.</p>
+        </article>
+        <article class="timeline-item reveal fade-up">
+          <div class="timeline-icon"><i class="ri-global-line"></i></div>
+          <h3>First Global Campaign</h3>
+          <p>We launched our first cross-border campaign and validated our scalable model.</p>
+        </article>
+        <article class="timeline-item reveal fade-up">
+          <div class="timeline-icon"><i class="ri-team-line"></i></div>
+          <h3>100+ Clients</h3>
+          <p>Our client base grew across fintech, e-commerce, SaaS, and mobile-first brands.</p>
+        </article>
+        <article class="timeline-item reveal fade-up">
+          <div class="timeline-icon"><i class="ri-earth-line"></i></div>
+          <h3>Expanded Worldwide</h3>
+          <p>We built global execution capabilities across multiple geographies and traffic channels.</p>
+        </article>
+        <article class="timeline-item reveal fade-up">
+          <div class="timeline-icon"><i class="ri-ai-generate"></i></div>
+          <h3>AI-Powered Solutions</h3>
+          <p>We now apply AI-assisted optimization and smarter attribution across campaigns.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="section section-soft" id="mission">
+    <div class="container">
+      <div class="cards-two">
+        <article class="statement-card reveal fade-left">
+          <div class="statement-icon"><i class="ri-focus-3-line"></i></div>
+          <h3>Our Mission</h3>
+          <p>Deliver measurable growth through transparent, data-driven marketing solutions that help brands acquire customers efficiently and sustainably.</p>
+        </article>
+
+        <article class="statement-card reveal fade-right">
+          <div class="statement-icon"><i class="ri-compass-3-line"></i></div>
+          <h3>Our Vision</h3>
+          <p>Become a global leader in performance marketing by helping brands achieve sustainable and scalable growth with clarity, trust, and innovation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section class="section" id="values">
+    <div class="container">
+      <div class="section-head reveal fade-up">
+        <span class="section-tag">Core Values</span>
+        <h2>The Principles Behind How We Work</h2>
+        <p>Our values shape every campaign, every partnership, and every decision we make.</p>
+      </div>
+
+      <div class="value-grid">
+        <article class="value-card reveal scale"><i class="ri-eye-line"></i><h3>Transparency</h3><p>Clear communication, clear expectations, clear reporting.</p></article>
+        <article class="value-card reveal scale"><i class="ri-lightbulb-flash-line"></i><h3>Innovation</h3><p>We test, learn, and adapt with a modern growth mindset.</p></article>
+        <article class="value-card reveal scale"><i class="ri-line-chart-line"></i><h3>Performance</h3><p>Outcomes matter. We optimize toward measurable results.</p></article>
+        <article class="value-card reveal scale"><i class="ri-team-line"></i><h3>Collaboration</h3><p>Great results come from deep alignment with our clients and partners.</p></article>
+        <article class="value-card reveal scale"><i class="ri-shield-check-line"></i><h3>Integrity</h3><p>We protect quality, compliance, and long-term brand trust.</p></article>
+        <article class="value-card reveal scale"><i class="ri-rocket-2-line"></i><h3>Continuous Growth</h3><p>We improve, iterate, and scale without standing still.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section section-soft" id="choose-us">
+    <div class="container">
+      <div class="section-head reveal fade-up">
+        <span class="section-tag">Why Choose Us</span>
+        <h2>A Performance Stack Built for Scale</h2>
+        <p>We combine strategy, technology, and execution to deliver dependable growth across channels and geographies.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card reveal fade-up"><i class="ri-rocket-line"></i><h3>Performance-Based Growth</h3><p>Growth systems aligned to outcomes and ROI.</p></article>
+        <article class="feature-card reveal fade-up"><i class="ri-database-2-line"></i><h3>Data-Driven Optimization</h3><p>We refine campaigns using real performance signals.</p></article>
+        <article class="feature-card reveal fade-up"><i class="ri-global-line"></i><h3>Global Publisher Network</h3><p>Access to premium partners and scalable traffic.</p></article>
+        <article class="feature-card reveal fade-up"><i class="ri-crosshair-line"></i><h3>Advanced Targeting</h3><p>Audience, geography, and intent-based targeting.</p></article>
+        <article class="feature-card reveal fade-up"><i class="ri-file-chart-line"></i><h3>Transparent Reporting</h3><p>Easy-to-read reporting built for decision makers.</p></article>
+        <article class="feature-card reveal fade-up"><i class="ri-user-star-line"></i><h3>Dedicated Account Managers</h3><p>Strategic support throughout the engagement.</p></article>
+        <article class="feature-card reveal fade-up"><i class="ri-flashlight-line"></i><h3>Real-Time Optimization</h3><p>Live adjustments to improve campaign efficiency.</p></article>
+        <article class="feature-card reveal fade-up"><i class="ri-shield-check-line"></i><h3>Fraud Prevention</h3><p>Traffic quality controls and compliance standards.</p></article>
+        <article class="feature-card reveal fade-up"><i class="ri-device-line"></i><h3>Scalable Campaigns</h3><p>Built to expand without sacrificing quality.</p></article>
+        <article class="feature-card reveal fade-up"><i class="ri-earth-line"></i><h3>Global Reach</h3><p>Campaign execution across multiple markets and regions.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="section" id="industries">
+    <div class="container">
+      <div class="section-head reveal fade-up">
+        <span class="section-tag">Industries We Serve</span>
+        <h2>Specialized Growth Support Across High-Value Verticals</h2>
+        <p>We bring relevant experience and channel strategy to industries where precision acquisition matters most.</p>
+      </div>
+
+      <div class="industry-grid">
+        <article class="industry-card reveal"><i class="ri-bank-line"></i><h3>FinTech</h3><p>Acquisition programs for financial products and digital finance apps.</p></article>
+        <article class="industry-card reveal"><i class="ri-safe-2-line"></i><h3>Finance</h3><p>Lead generation and revenue growth for financial services.</p></article>
+        <article class="industry-card reveal"><i class="ri-shield-star-line"></i><h3>Insurance</h3><p>Trusted campaigns designed to drive qualified policy inquiries.</p></article>
+        <article class="industry-card reveal"><i class="ri-shopping-bag-3-line"></i><h3>E-commerce</h3><p>Performance strategies that lift sales and average order value.</p></article>
+        <article class="industry-card reveal"><i class="ri-store-2-line"></i><h3>Retail</h3><p>Omnichannel growth for modern retail brands.</p></article>
+        <article class="industry-card reveal"><i class="ri-smartphone-line"></i><h3>Mobile Apps</h3><p>User acquisition and event-based scaling for app growth.</p></article>
+        <article class="industry-card reveal"><i class="ri-gamepad-line"></i><h3>Gaming</h3><p>Scaled user acquisition with performance optimization.</p></article>
+        <article class="industry-card reveal"><i class="ri-code-s-slash-line"></i><h3>SaaS</h3><p>Pipeline growth for trials, demos, and subscriptions.</p></article>
+        <article class="industry-card reveal"><i class="ri-flight-takeoff-line"></i><h3>Travel</h3><p>Demand generation for bookings and travel experiences.</p></article>
+        <article class="industry-card reveal"><i class="ri-graduation-cap-line"></i><h3>Education</h3><p>Enrollment and lead generation for education brands.</p></article>
+        <article class="industry-card reveal"><i class="ri-heart-pulse-line"></i><h3>Health & Wellness</h3><p>Performance marketing for wellness, supplements, and care brands.</p></article>
+        <article class="industry-card reveal"><i class="ri-bit-coin-line"></i><h3>Crypto & Web3</h3><p>Audience acquisition in emerging digital asset markets.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section-soft" id="process">
+    <div class="container">
+      <div class="section-head reveal fade-up">
+        <span class="section-tag">Our Marketing Process</span>
+        <h2>Built to Launch Fast and Scale Responsibly</h2>
+        <p>We follow a repeatable operating model that keeps strategy, execution, and optimization aligned.</p>
+      </div>
+
+      <div class="process">
+        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-search-line"></i></span><h3>Research</h3><p>Understand the market, audience, offer, and opportunity.</p></article>
+        <div class="process-line"></div>
+        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-compasses-2-line"></i></span><h3>Strategy</h3><p>Create a growth plan tailored to the brand’s goals.</p></article>
+        <div class="process-line"></div>
+        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-settings-3-line"></i></span><h3>Campaign Setup</h3><p>Build the tracking, creatives, and channel architecture.</p></article>
+        <div class="process-line"></div>
+        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-rocket-line"></i></span><h3>Launch</h3><p>Go live with a controlled, performance-first rollout.</p></article>
+        <div class="process-line"></div>
+        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-tune-2-line"></i></span><h3>Optimization</h3><p>Iterate on audiences, bids, creatives, and placements.</p></article>
+        <div class="process-line"></div>
+        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-arrow-up-circle-line"></i></span><h3>Scaling</h3><p>Expand what works and grow with confidence.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Numbers -->
+  <section class="section" id="numbers">
+    <div class="container">
+      <div class="section-head reveal fade-up">
+        <span class="section-tag">By The Numbers</span>
+        <h2>Credibility You Can Measure</h2>
+        <p>We believe proof should be visible, simple, and easy to trust.</p>
+      </div>
+
+      <div class="number-grid">
+        <article class="number-card reveal"><strong><span class="counter" data-target="500">0</span>+</strong><span>Clients</span></article>
+        <article class="number-card reveal"><strong><span class="counter" data-target="10">0</span>B+</strong><span>Monthly Impressions</span></article>
+        <article class="number-card reveal"><strong><span class="counter" data-target="120">0</span>+</strong><span>Countries</span></article>
+        <article class="number-card reveal"><strong><span class="counter" data-target="95">0</span>%</strong><span>Client Retention</span></article>
+        <article class="number-card reveal"><strong><span class="counter" data-target="150">0</span>+</strong><span>Global Publishers</span></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section section-soft" id="team">
+    <div class="container">
+      <div class="section-head reveal fade-up">
+        <span class="section-tag">Meet Our Team</span>
+        <h2>Leadership With Hands-On Performance Expertise</h2>
+        <p>Our team blends growth strategy, creative thinking, and operational discipline.</p>
+      </div>
+
+      <div class="team-grid">
+        <article class="team-card reveal scale">
+          <div class="avatar avatar-1"></div>
+          <h3>Alex Carter</h3>
+          <p class="role">Founder & CEO</p>
+          <p>Growth strategist focused on performance systems, partner ecosystems, and scale.</p>
+          <div class="socials"><a href="#"><i class="ri-linkedin-fill"></i></a><a href="#"><i class="ri-twitter-x-fill"></i></a></div>
+        </article>
+        <article class="team-card reveal scale">
+          <div class="avatar avatar-2"></div>
+          <h3>Maya Singh</h3>
+          <p class="role">Head of Media Buying</p>
+          <p>Leads cross-channel buying, testing frameworks, and ROI optimization.</p>
+          <div class="socials"><a href="#"><i class="ri-linkedin-fill"></i></a><a href="#"><i class="ri-twitter-x-fill"></i></a></div>
+        </article>
+        <article class="team-card reveal scale">
+          <div class="avatar avatar-3"></div>
+          <h3>Jordan Lee</h3>
+          <p class="role">VP, Partnerships</p>
+          <p>Builds global partner relationships and publisher network strategy.</p>
+          <div class="socials"><a href="#"><i class="ri-linkedin-fill"></i></a><a href="#"><i class="ri-twitter-x-fill"></i></a></div>
+        </article>
+        <article class="team-card reveal scale">
+          <div class="avatar avatar-4"></div>
+          <h3>Elena Novak</h3>
+          <p class="role">Director of Analytics</p>
+          <p>Turns campaign data into insights, actions, and growth opportunities.</p>
+          <div class="socials"><a href="#"><i class="ri-linkedin-fill"></i></a><a href="#"><i class="ri-twitter-x-fill"></i></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-head reveal fade-up">
+        <span class="section-tag">Client Testimonials</span>
+        <h2>Trusted by Growth-Focused Brands</h2>
+        <p>What clients say about our transparency, execution, and results.</p>
+      </div>
+
+      <div class="slider reveal fade-up">
+        <div class="slides" id="slides">
+          <article class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="client-photo photo-1"></div>
+              <div>
+                <strong>Sarah Johnson</strong>
+                <span>CMO, FinTech Brand</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>They helped us move from fragmented campaigns to a clear, measurable growth engine with real reporting and accountability.</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="client-photo photo-2"></div>
+              <div>
+                <strong>Daniel Kim</strong>
+                <span>Growth Lead, Mobile App</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>Their team brought structure, speed, and optimization discipline that made it much easier to scale acquisition sustainably.</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="client-photo photo-3"></div>
+              <div>
+                <strong>Priya Shah</strong>
+                <span>Founder, E-commerce Brand</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>We saw better-quality traffic, stronger conversions, and a team that was deeply invested in performance outcomes.</p>
+          </article>
+        </div>
+
+        <div class="slider-actions">
+          <button class="slider-btn" id="prev"><i class="ri-arrow-left-line"></i></button>
+          <button class="slider-btn" id="next"><i class="ri-arrow-right-line"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="section section-soft" id="partners">
+    <div class="container">
+      <div class="section-head reveal fade-up">
+        <span class="section-tag">Certifications & Partners</span>
+        <h2>Certified and Connected</h2>
+        <p>We work within major ad platforms and partner ecosystems to support enterprise-grade execution.</p>
+      </div>
+
+      <div class="partner-grid">
+        <div class="partner-card reveal">Google Ads</div>
+        <div class="partner-card reveal">Meta</div>
+        <div class="partner-card reveal">TikTok</div>
+        <div class="partner-card reveal">Microsoft Ads</div>
+        <div class="partner-card reveal">Amazon Ads</div>
+        <div class="partner-card reveal">Adjust</div>
+        <div class="partner-card reveal">AppsFlyer</div>
+        <div class="partner-card reveal">Branch</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Presence -->
+  <section class="section" id="global">
+    <div class="container">
+      <div class="section-head reveal fade-up">
+        <span class="section-tag">Global Presence</span>
+        <h2>Worldwide Campaign Coverage</h2>
+        <p>Our network and execution footprint allow us to support brands across regions and growth markets.</p>
+      </div>
+
+      <div class="global-grid">
+        <div class="global-map reveal fade-left">
+          <div class="map-overlay">
+            <span>Countries Served: 120+</span>
+            <span>Global Publisher Network</span>
+            <span>Worldwide Campaign Coverage</span>
+          </div>
+        </div>
+        <div class="global-copy reveal fade-right">
+          <article class="global-card">
+            <h3>International execution, localized strategy.</h3>
+            <p>We adapt targeting, creative, and channel selection to each market while keeping reporting and optimization unified.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-soft" id="faq">
+    <div class="container">
+      <div class="section-head reveal fade-up">
+        <span class="section-tag">Frequently Asked Questions</span>
+        <h2>Common Questions About Working With Us</h2>
+        <p>Clear answers reduce friction and help visitors understand how we operate.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal fade-up">
+          <button class="faq-question">Who do you work with?</button>
+          <div class="faq-answer">We work with brands, startups, app companies, e-commerce businesses, fintech firms, and enterprise advertisers that want measurable performance growth.</div>
+        </div>
+        <div class="faq-item reveal fade-up">
+          <button class="faq-question">Which industries do you serve?</button>
+          <div class="faq-answer">We support a wide range of verticals including fintech, finance, insurance, e-commerce, SaaS, gaming, travel, education, health, and Web3.</div>
+        </div>
+        <div class="faq-item reveal fade-up">
+          <button class="faq-question">How do campaigns work?</button>
+          <div class="faq-answer">We start with discovery and strategy, then launch campaigns with the right partners, measure performance, optimize continuously, and scale winners.</div>
+        </div>
+        <div class="faq-item reveal fade-up">
+          <button class="faq-question">How is reporting shared?</button>
+          <div class="faq-answer">Reporting is shared through transparent dashboards and regular performance updates so you always know what is driving results.</div>
+        </div>
+        <div class="faq-item reveal fade-up">
+          <button class="faq-question">How quickly can campaigns launch?</button>
+          <div class="faq-answer">Launch timelines vary, but most campaigns can move quickly once goals, tracking, and creative assets are aligned.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner" id="contact">
+    <div class="container cta-grid">
+      <div class="cta-copy reveal fade-left">
+        <h2>Ready to Accelerate Your Growth?</h2>
+        <p>Partner with our team to launch data-driven performance marketing campaigns that deliver measurable business results.</p>
+        <div class="hero-cta">
+          <a href="#" class="btn btn-dark">Get Started</a>
+          <a href="#" class="btn btn-light">Book a Free Consultation</a>
+        </div>
+      </div>
+
+      <form class="cta-form reveal fade-right">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Work Email</label>
+          <input id="email" type="email" placeholder="Your email" required>
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input id="company" type="text" placeholder="Company name" required>
+        </div>
+        <div class="form-group">
+          <label for="message">How can we help?</label>
+          <textarea id="message" rows="4" placeholder="Tell us about your growth goals"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-full">Submit Inquiry</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#hero" class="brand footer-brand"><span class="brand-mark"></span><span>GrowthEngine</span></a>
+      <p>Premium performance marketing, AdTech, and SaaS growth solutions built for measurable outcomes.</p>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <a href="#who">About</a>
+      <a href="#services">Services</a>
+      <a href="#industries">Industries</a>
+      <a href="#story">Case Studies</a>
+    </div>
+
+    <div>
+      <h4>Resources</h4>
+      <a href="#faq">Blog</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+
+    <div>
+      <h4>Newsletter</h4>
+      <form class="newsletter">
+        <input type="email" placeholder="Email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <div class="socials footer-socials">
+        <a href="#"><i class="ri-linkedin-fill"></i></a>
+        <a href="#"><i class="ri-twitter-x-fill"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile navigation
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');
 
@@ -1782,8 +1687,7 @@ textarea {
   // Counter animation
   const counters = document.querySelectorAll('.counter');
   const countUp = (el) => {
-    const target = parseInt(el.getAttribute('data-target'), 10);
-    const duration = 1400;
+    const target = parseInt(el.dataset.target, 10);
     const steps = 60;
     let current = 0;
     const increment = target / steps;
@@ -1810,7 +1714,7 @@ textarea {
     });
   }, { threshold: 0.3 });
 
-  document.querySelectorAll('.counter-box, .hero-metrics, .hero-visual').forEach(section => {
+  document.querySelectorAll('.hero, .number-grid, .hero-copy').forEach(section => {
     counterObserver.observe(section);
   });
 
@@ -1822,64 +1726,55 @@ textarea {
     button.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
       faqItems.forEach(i => i.classList.remove('active'));
-      if (!isActive) {
-        item.classList.add('active');
-      }
+      if (!isActive) item.classList.add('active');
     });
   });
 
-  // Testimonial carousel
-  const track = document.querySelector('.testimonial-track');
-  const prevBtn = document.getElementById('prevTest');
-  const nextBtn = document.getElementById('nextTest');
-  let testimonialIndex = 0;
+  // Testimonial slider
+  const slides = document.getElementById('slides');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  let index = 0;
 
-  const updateTestimonials = () => {
-    if (track) {
-      track.style.transform = `translateX(-${testimonialIndex * 100}%)`;
+  const updateSlider = () => {
+    if (slides) {
+      slides.style.transform = `translateX(-${index * 100}%)`;
     }
   };
 
-  if (prevBtn && nextBtn && track) {
-    prevBtn.addEventListener('click', () => {
-      testimonialIndex = testimonialIndex === 0 ? track.children.length - 1 : testimonialIndex - 1;
-      updateTestimonials();
+  if (prev && next && slides) {
+    prev.addEventListener('click', () => {
+      index = (index - 1 + slides.children.length) % slides.children.length;
+      updateSlider();
     });
 
-    nextBtn.addEventListener('click', () => {
-      testimonialIndex = testimonialIndex === track.children.length - 1 ? 0 : testimonialIndex + 1;
-      updateTestimonials();
+    next.addEventListener('click', () => {
+      index = (index + 1) % slides.children.length;
+      updateSlider();
     });
   }
 
-  // Optional: auto-cycle testimonials
+  // Auto slide testimonials
   setInterval(() => {
-    if (track) {
-      testimonialIndex = testimonialIndex === track.children.length - 1 ? 0 : testimonialIndex + 1;
-      updateTestimonials();
+    if (slides) {
+      index = (index + 1) % slides.children.length;
+      updateSlider();
     }
-  }, 6000);
+  }, 6500);
 
-  // Simple form handling
-  const contactForm = document.querySelector('.cta-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thank you! Your request has been submitted.');
-      contactForm.reset();
-    });
-  }
+  // Forms
+  document.querySelector('.cta-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you! Your inquiry has been submitted.');
+    e.target.reset();
+  });
 
-  // Newsletter form
-  const newsletterForm = document.querySelector('.newsletter');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Subscribed successfully!');
-      newsletterForm.reset();
-    });
-  }
+  document.querySelector('.newsletter')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Subscribed successfully!');
+    e.target.reset();
+  });
 });
-  </script>
+</script>
 </body>
 </html>
