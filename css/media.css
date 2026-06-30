@@ -154,7 +154,13 @@
         margin-bottom: 2rem;
     }
 
-    
+    section{
+        overflow-x: hidden;
+    }
+
+    .accordion-item-header{
+        gap: 0.5rem;
+    }
     
 }
 
@@ -286,6 +292,16 @@
 
     .abt-industries-sec.srvc-industries-sec .other-srvc-card { 
     margin: 0 auto 30px;}
+
+    .srvc-faq-sec .pub-bg-clr {
+        padding: 31px 12px;
+    }
+
+    .abt-hero-visual .fc-1 {
+        top: -78px;
+        right: 12px;
+        width: 138px;
+    }
 }
 
 
@@ -324,6 +340,10 @@
     .other-srvc-card{
         width: 280px;
         margin: 0 auto 1.5rem;
+    }
+
+    .abt-hero-visual .fc-1 {
+        top: 93px;
     }
 }
 

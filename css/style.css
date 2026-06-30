@@ -1624,6 +1624,27 @@ header.active nav ul li a.login::after {
     font-size: 1.1rem;
     padding: 15px 25px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq-plus i, .faq-minus i{
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+
+.process-cntnt-bx.active .prss-title .faq-plus{
+    display: none;
+}
+
+.prss-title .faq-minus{
+    display: none;
+}
+
+.process-cntnt-bx.active .prss-title .faq-minus{
+    display: block;
 }
 
 .process-cntnt-bx.active .prss-title{
@@ -2841,4 +2862,11 @@ small {
     left: 19px;
     width: 18rem;
 }
+
+.abt-industries-sec.srvc-industries-sec .other-srvc-card {
+    margin: 0 0 30px;
+}
+
+
+
 
