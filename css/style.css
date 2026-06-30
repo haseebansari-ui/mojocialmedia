@@ -95,6 +95,21 @@ small {
     background: linear-gradient(135deg, #fff7e8, #fff);
 }
 
+input{
+    display: block;
+    line-height: 45px;
+    width: 100%;
+    background: var(--bg-soft); 
+    border: 1px solid rgb(204, 204, 218);
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-top: 10px;
+       
+}
+label{
+    display: block;
+}
+
 /* --- Header Section --- */
 
 header {
@@ -2932,6 +2947,78 @@ small {
     font-weight: 500;
 }
 
+/* ==========================
+    Contact Us Page Section
+=============================*/
+
+.contactus-sec.inn-ban-pg{
+    padding: 10rem 0;
+}
+
+.contactus-sec .casestudy-content-bx{
+    padding-top: 3rem;
+}
+
+.contact-field-bx select{
+    background: var(--bg-soft);
+    color: var(--font-color);
+    padding: 0 10px;
+    height:45px;
+    width: 100%;
+    display: block;
+    border: 1px solid rgb(204, 204, 218);
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.contact-field-bx select option{
+    background: var(--white-color);
+    cursor: pointer;
+}
+
+.text-message{
+    display: block;
+    background: var(--bg-soft);
+    width: 100%;
+    border: 1px solid rgb(204, 204, 218);
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
 
 
+.contact-form-container .btn{
+    margin-top: 2rem;
+}
+
+.contact-sec .heading-bx{
+    margin-bottom: 3rem;
+}
+
+.contact-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.contact-info-bx2{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    background: var(--bg-soft);
+    border: 1px solid rgb(204, 204, 218);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.contact-info-bx2 .contact-para{
+    margin-top: 1rem;
+}
 
