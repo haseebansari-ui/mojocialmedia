@@ -2868,5 +2868,50 @@ small {
 }
 
 
+/* --- Loader --- */
+
+.loader-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--white-color);
+    z-index: 1003;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    
+    width: 70px;
+    height: 70px;
+    border: 6px solid rgba(255,183,2,.15);
+    border-top: 6px solid #ffb702;
+    border-right: 6px solid #ff8c00;
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+    box-shadow: 0 0 20px rgba(255,183,2,.4);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-content-box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mojicial-title{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+
 
 

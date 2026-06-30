@@ -143,3 +143,16 @@ for(let i = 0; i < processAcc.length; i++){
       processAcc[i].classList.toggle("active");
    })
 }
+
+
+
+// Loader
+
+setTimeout(() => {
+  let loader = document.querySelector(".loader-wrapper")
+
+  if(loader){
+    loader.style.display = "none";
+  }
+
+}, 5000);
