@@ -838,12 +838,18 @@ header.active nav ul li a.login::after {
 
 /* --- Solution Section --- */
 .slt-bg-clr {
-	width: 100%;
+	/* width: 100%;
 	background: #f9f8fc;
 	border: 1px solid #e2e2e8;
 	-webkit-box-shadow: 6px 15px 20px 5px rgb(5 5 5 / 5%);
 	border-radius: 15px;
-	padding: 50px;
+	padding: 50px; */
+
+    background: linear-gradient(135deg, #fff7e8, #fff);
+    border: 1px solid linear-gradient(135deg, #fff7e8, #fff);
+    -webkit-box-shadow: 6px 15px 20px 5px rgb(255, 247, 232);
+    border-radius: 15px;
+    padding: 50px;
 }
 
 .solution-item {
@@ -889,7 +895,7 @@ header.active nav ul li a.login::after {
 }
 
 .overlay-content {
-	position: absolute;
+	/* position: absolute;
 	bottom: 0px;
 	left: 0px;
 	height: 100%;
@@ -900,7 +906,20 @@ header.active nav ul li a.login::after {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	justify-content: center;
+	justify-content: center; */
+
+    min-height: 430px;
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    background: radial-gradient(circle at 25% 32%, rgba(255, 176, 0, .28), transparent 16%), radial-gradient(circle at 55% 42%, rgba(255, 176, 0, .18), transparent 18%), radial-gradient(circle at 75% 60%, rgba(17, 24, 39, .16), transparent 18%), linear-gradient(135deg, #f8dba4, rgba(255, 255, 255, .96));
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    color: var(--secondry);
 }
 
 .solution-preview::before {
@@ -2114,9 +2133,9 @@ header.active nav ul li a.login::after {
 
 /* --- Advertiser Faq Section --- */
 
-.adv-faq-sec{
+/* .adv-faq-sec{
     background: var(--bg-soft);
-}
+} */
 
 /* --- Services Hero Section --- */
 
@@ -2288,6 +2307,7 @@ small {
     border-radius: 16px;
     background: rgba(247, 248, 251, 0.9);
 }
+
 
 /* --- Services Overview Section --- */
 
