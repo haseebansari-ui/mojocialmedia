@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact our performance marketing experts to scale your business with data-driven campaigns, global publishers, and measurable growth." />
-  <meta name="keywords" content="contact performance marketing agency, performance marketing contact, adtech contact, martech lead generation, book consultation" />
-  <meta name="author" content="Performance Marketing Agency" />
+  <meta name="description" content="Sign in to your performance marketing dashboard with secure access, real-time reporting, and AI-powered campaign optimization." />
+  <meta name="keywords" content="login, performance marketing, adtech, martech, dashboard access, secure sign in" />
+  <meta name="author" content="Performance Marketing Platform" />
   <meta name="theme-color" content="#111827" />
-  <title>Contact Us | Performance Marketing Agency</title>
+  <title>Login | Performance Marketing Platform</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,8 +25,7 @@
   --line: rgba(17, 24, 39, 0.08);
   --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
   --shadow-hover: 0 24px 70px rgba(255, 176, 0, 0.14);
-  --radius: 18px;
-  --radius-lg: 24px;
+  --radius: 20px;
   --container: 1200px;
 }
 
@@ -38,175 +37,204 @@ body {
   background: var(--bg);
   overflow-x: hidden;
 }
-a { text-decoration: none; color: inherit; }
-button, input, select, textarea { font: inherit; }
-.container {
-  width: min(100% - 2rem, var(--container));
-  margin-inline: auto;
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+input, button { outline: none; }
+
+.auth-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(255,176,0,0.08), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(17,24,39,0.06), transparent 28%),
+    var(--bg);
 }
-.section {
-  padding: 100px 0;
+
+.auth-grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+/* Left visual */
+.auth-visual {
   position: relative;
-}
-.section-soft { background: var(--bg-soft); }
-
-.section-tag, .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: rgba(255, 176, 0, 0.12);
-  color: #9a5e00;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
-.section-head {
-  max-width: 760px;
-  margin-bottom: 36px;
-}
-
-.section-head h2,
-.hero h1,
-.cta-copy h2 {
-  letter-spacing: -0.04em;
-}
-
-.section-head h2 {
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  margin-top: 14px;
-  margin-bottom: 12px;
-}
-
-.section-head p {
-  color: var(--muted);
-  line-height: 1.8;
-  font-size: 1rem;
-}
-
-/* Header */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255,255,255,0.86);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(17, 24, 39, 0.06);
-}
-.nav-wrap {
-  min-height: 80px;
+  overflow: hidden;
+  padding: 44px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: center;
+  background:
+    linear-gradient(135deg, rgba(17,24,39,0.96), rgba(17,24,39,0.88)),
+    linear-gradient(135deg, #0b1220, #111827);
+  color: #fff;
 }
+
+.visual-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,176,0,0.20), transparent 18%),
+    radial-gradient(circle at 72% 30%, rgba(255,176,0,0.12), transparent 20%),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.06), transparent 18%);
+}
+
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.75;
+  animation: float 8s ease-in-out infinite;
+}
+.orb-1 {
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(255,176,0,0.35), transparent 65%);
+  top: 18px;
+  right: 18px;
+}
+.orb-2 {
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(255,255,255,0.10), transparent 68%);
+  bottom: 44px;
+  left: 20px;
+  animation-delay: 1s;
+}
+.orb-3 {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(255,138,0,0.22), transparent 65%);
+  top: 40%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.visual-content {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+  width: 100%;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   font-weight: 800;
   font-size: 1.05rem;
-  color: var(--navy);
 }
+
 .brand-mark {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 14px;
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
-  box-shadow: 0 10px 20px rgba(255, 176, 0, 0.25);
+  box-shadow: 0 10px 22px rgba(255,176,0,0.25);
 }
-.nav {
-  display: flex;
-  gap: 22px;
-  color: var(--muted);
-}
-.nav a:hover { color: var(--navy); }
 
-.header-actions {
+.visual-content h1 {
+  margin-top: 28px;
+  font-size: clamp(2.5rem, 4vw, 4.7rem);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+}
+
+.visual-content p {
+  margin-top: 16px;
+  max-width: 56ch;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.8;
+  font-size: 1.02rem;
+}
+
+.glass {
+  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.dash {
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: 28px;
+  box-shadow: 0 22px 60px rgba(0,0,0,0.25);
+}
+
+.dash-top {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-}
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: 0;
-  font-size: 1.5rem;
-  color: var(--navy);
+  gap: 12px;
 }
 
-/* Buttons */
-.btn {
+.dash-label {
+  color: rgba(255,255,255,0.58);
+  font-size: 0.88rem;
+}
+
+.dash-top h2 {
+  margin-top: 4px;
+  font-size: 1.45rem;
+}
+
+.live-pill {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 13px 20px;
+  gap: 6px;
+  padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  background: rgba(16,185,129,0.14);
+  color: #9ff3cc;
+  font-size: 0.85rem;
   font-weight: 700;
-  white-space: nowrap;
-  position: relative;
-  overflow: hidden;
 }
-.btn:hover { transform: translateY(-2px); }
-.btn-primary {
-  color: #111;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-  box-shadow: 0 16px 28px rgba(255, 176, 0, 0.22);
-}
-.btn-secondary {
-  color: var(--navy);
-  background: #fff;
-  border-color: var(--line);
-}
-.btn-ghost {
-  color: var(--navy);
-  background: rgba(17, 24, 39, 0.04);
-}
-.btn-dark {
-  background: #111827;
-  color: #fff;
-}
-.btn-light {
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.15);
-}
-.w-full { width: 100%; }
 
-/* Hero */
-.hero {
-  padding-top: 88px;
-  overflow: hidden;
-}
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 42px;
-  align-items: center;
-}
-.hero h1 {
-  font-size: clamp(2.8rem, 5vw, 5.2rem);
-  line-height: 1.02;
-  margin: 18px 0 16px;
-}
-.hero p {
-  font-size: 1.08rem;
-  line-height: 1.85;
-  color: var(--muted);
-  max-width: 62ch;
-}
-.hero-cta {
+.dash-graphic {
+  margin-top: 20px;
+  height: 230px;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255,176,0,0.12), rgba(255,255,255,0)),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px) 0 0 / 28px 28px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 26px;
+  align-items: end;
+  gap: 12px;
+  padding: 18px;
 }
-.hero-badges {
+
+.bar {
+  flex: 1;
+  border-radius: 16px 16px 0 0;
+  background: linear-gradient(180deg, var(--primary), var(--primary-2));
+  box-shadow: 0 14px 22px rgba(255,176,0,0.18);
+  animation: grow 1.2s ease both;
+}
+.bar-1 { height: 38%; }
+.bar-2 { height: 58%; }
+.bar-3 { height: 74%; }
+.bar-4 { height: 52%; }
+.bar-5 { height: 88%; }
+
+.dash-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+.dash-stats div {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.07);
+}
+.dash-stats span {
+  display: block;
+  color: rgba(255,255,255,0.58);
+  font-size: 0.82rem;
+  margin-bottom: 4px;
+}
+.dash-stats strong { font-size: 1.05rem; }
+
+.feature-row {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -218,270 +246,175 @@ button, input, select, textarea { font: inherit; }
   gap: 8px;
   padding: 10px 14px;
   border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,0.9);
-  color: var(--muted);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.82);
   font-size: 0.9rem;
 }
-.hero-visual {
-  position: relative;
-  min-height: 560px;
+
+/* Right panel */
+.auth-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 34px;
+  background: linear-gradient(180deg, #fff, #fbfbfd);
 }
-.glass {
-  backdrop-filter: blur(16px);
-  background: rgba(255,255,255,0.72);
-  border: 1px solid rgba(255,255,255,0.4);
-}
-.dash {
-  position: relative;
-  z-index: 2;
-  padding: 24px;
+
+.auth-card {
+  width: min(100%, 560px);
+  margin: 0 auto;
+  background: rgba(255,255,255,0.94);
+  border: 1px solid var(--line);
   border-radius: 28px;
   box-shadow: var(--shadow);
+  padding: 32px;
 }
-.dash-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
+
+.auth-header h2 {
+  margin-top: 14px;
+  font-size: clamp(2rem, 3vw, 3rem);
+  letter-spacing: -0.04em;
 }
-.dash-label {
+.auth-header p {
+  margin-top: 10px;
   color: var(--muted);
-  font-size: 0.88rem;
+  line-height: 1.7;
 }
-.dash-top h2 {
-  margin-top: 4px;
-  font-size: 1.6rem;
-}
-.live-pill {
+
+.eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
+  gap: 8px;
+  padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(16, 185, 129, 0.12);
-  color: #047857;
+  background: rgba(255,176,0,0.12);
+  color: #9a5e00;
   font-size: 0.85rem;
   font-weight: 700;
 }
-.dash-hero-graphic {
+
+.login-form {
+  margin-top: 24px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.input-wrap {
   position: relative;
-  margin-top: 22px;
-  height: 230px;
-  border-radius: 24px;
-  background:
-    linear-gradient(180deg, rgba(255,176,0,0.12), rgba(255,255,255,0)),
-    linear-gradient(90deg, rgba(17,24,39,0.05) 1px, transparent 1px) 0 0 / 28px 28px;
-  overflow: hidden;
 }
-.node {
+.input-icon {
   position: absolute;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-  box-shadow: 0 0 0 10px rgba(255, 176, 0, 0.12);
-  animation: float 6s ease-in-out infinite;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  z-index: 2;
 }
-.node-1 { top: 26%; left: 16%; }
-.node-2 { top: 50%; left: 42%; animation-delay: 0.8s; }
-.node-3 { top: 34%; left: 72%; animation-delay: 1.6s; }
-.pulse-line {
-  position: absolute;
-  inset: auto 12% 28% 12%;
-  height: 4px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--primary), var(--primary-2));
-  box-shadow: 0 10px 20px rgba(255,176,0,0.18);
-}
-.dash-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-top: 16px;
-}
-.dash-stats div {
-  padding: 14px;
+.input-wrap input {
+  width: 100%;
+  height: 58px;
+  padding: 20px 48px 10px 44px;
   border-radius: 16px;
-  background: var(--bg-soft);
-}
-.dash-stats span {
-  display: block;
-  color: var(--muted);
-  font-size: 0.82rem;
-  margin-bottom: 4px;
-}
-.dash-stats strong { font-size: 1.05rem; }
-
-.floating-card {
-  position: absolute;
-  z-index: 3;
-  width: 160px;
-  padding: 14px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.88);
-  border: 1px solid rgba(255,255,255,0.5);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(14px);
-}
-.floating-card span {
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-.floating-card strong {
-  display: block;
-  font-size: 1.5rem;
-  margin: 4px 0;
-}
-.fc-1 { top: 20px; right: 14px; }
-.fc-2 { top: 170px; left: -12px; }
-.fc-3 { bottom: 24px; right: 44px; }
-.bg-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(10px);
-  opacity: 0.7;
-}
-.orb-1 {
-  width: 220px;
-  height: 220px;
-  background: radial-gradient(circle, rgba(255,176,0,0.34), transparent 65%);
-  top: 24px;
-  right: -20px;
-  animation: float 8s ease-in-out infinite;
-}
-.orb-2 {
-  width: 160px;
-  height: 160px;
-  background: radial-gradient(circle, rgba(17,24,39,0.12), transparent 68%);
-  left: -18px;
-  bottom: 10px;
-  animation: float 9s ease-in-out infinite;
-}
-
-/* Contact info */
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-.info-card {
+  border: 1px solid rgba(17,24,39,0.12);
   background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 22px;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
-.info-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
+.input-wrap label {
+  position: absolute;
+  left: 44px;
+  top: 18px;
+  color: var(--muted);
+  pointer-events: none;
+  transition: all 0.22s ease;
+  background: transparent;
 }
-.info-card i {
-  width: 52px;
-  height: 52px;
+.input-wrap input:focus,
+.input-wrap input:not(:placeholder-shown) {
+  border-color: rgba(255,176,0,0.85);
+  box-shadow: 0 0 0 4px rgba(255,176,0,0.12);
+}
+.input-wrap input:focus + label,
+.input-wrap input:not(:placeholder-shown) + label {
+  top: 8px;
+  font-size: 0.76rem;
+  color: #9a5e00;
+}
+.toggle-pass {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.error-msg {
+  display: block;
+  min-height: 18px;
+  margin-top: 8px;
+  color: #dc2626;
+  font-size: 0.85rem;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 10px 0 18px;
+}
+.remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+.link {
+  color: #9a5e00;
+  font-weight: 700;
+}
+
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 16px;
-  margin-bottom: 14px;
-  background: linear-gradient(135deg, rgba(255,176,0,0.18), rgba(255,138,0,0.18));
-  color: #111827;
-  font-size: 1.3rem;
-}
-.info-card h3 { margin-bottom: 8px; }
-.info-card a,
-.info-card p {
-  color: var(--muted);
-  line-height: 1.7;
-  display: block;
-}
-
-/* Form */
-.form-layout {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 24px;
-  align-items: start;
-}
-.side-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  box-shadow: var(--shadow);
-  padding: 24px;
-}
-.side-card + .side-card { margin-top: 18px; }
-.side-card h3 { margin-bottom: 12px; }
-.steps-list {
-  list-style: none;
-  display: grid;
-  gap: 12px;
-  color: var(--muted);
-}
-.steps-list li {
-  display: flex;
   gap: 10px;
-  line-height: 1.6;
-}
-.steps-list i { color: #0ea65a; margin-top: 2px; }
-
-.contact-form {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 26px;
-  box-shadow: var(--shadow);
-  padding: 24px;
-}
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.field.full { margin-top: 16px; }
-label {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
   font-weight: 700;
+  position: relative;
+  overflow: hidden;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+  color: #111;
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  box-shadow: 0 16px 28px rgba(255,176,0,0.22);
+}
+.btn-social {
+  justify-content: flex-start;
+  background: #fff;
+  border-color: var(--line);
   color: var(--navy);
 }
-input, select, textarea {
-  width: 100%;
-  padding: 13px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(17,24,39,0.12);
-  outline: none;
-  background: rgba(247,248,251,0.75);
-  transition: all 0.25s ease;
+.btn-social:hover,
+.auth-card:hover {
+  box-shadow: var(--shadow-hover);
 }
-input:focus, select:focus, textarea:focus {
-  border-color: rgba(255,176,0,0.8);
-  box-shadow: 0 0 0 4px rgba(255,176,0,0.12);
-  background: #fff;
-}
-textarea {
-  resize: vertical;
-  min-height: 130px;
-}
-.checkbox-wrap {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  margin: 18px 0;
-  color: var(--muted);
-}
-.checkbox-wrap a { color: #9a5e00; font-weight: 700; }
-.error-msg {
-  color: #dc2626;
-  font-size: 0.85rem;
-  min-height: 18px;
-}
-.checkbox-error { display: block; margin-top: -8px; }
 .submit-btn {
-  width: 100%;
   margin-top: 6px;
 }
 .btn-loader {
@@ -495,18 +428,79 @@ textarea {
 }
 .submit-btn.loading .btn-loader { display: inline-block; }
 .submit-btn.loading .btn-text { opacity: 0.8; }
-.success-message {
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0;
+  color: var(--muted);
+}
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+}
+
+.social-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.extra-links {
+  margin-top: 18px;
+  text-align: center;
+}
+.extra-links p {
+  color: var(--muted);
+}
+.extra-links a {
+  color: #9a5e00;
+  font-weight: 700;
+}
+.small-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.success-state {
   display: none;
   align-items: flex-start;
   gap: 12px;
-  margin-top: 16px;
+  margin-top: 18px;
   padding: 16px;
   border-radius: 16px;
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.18);
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.18);
 }
-.success-message.show { display: flex; }
-.success-message i {
+.success-state.show {
+  display: flex;
+  animation: pop 0.35s ease;
+}
+.success-state i {
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -517,329 +511,34 @@ textarea {
   flex: 0 0 auto;
 }
 
-/* Why contact */
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-.feature-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
-  text-align: left;
-  transition: all 0.3s ease;
-}
-.feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
-}
-.feature-card i {
-  width: 50px;
-  height: 50px;
-  border-radius: 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
-  background: linear-gradient(135deg, rgba(255,176,0,0.18), rgba(255,138,0,0.18));
-  color: #111827;
-  font-size: 1.25rem;
-}
-.feature-card h3 { margin-bottom: 8px; font-size: 1rem; }
-.feature-card p { color: var(--muted); line-height: 1.7; font-size: 0.94rem; }
-
-/* Process */
-.process {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 14px;
-}
-.process-step {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 20px;
-  box-shadow: var(--shadow);
-  text-align: center;
-  transition: all 0.3s ease;
-}
-.process-step:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
-}
-.step-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  display: grid;
-  place-items: center;
-  margin: 0 auto 12px;
-  background: linear-gradient(135deg, rgba(255,176,0,0.18), rgba(255,138,0,0.18));
-  color: #111827;
-  font-size: 1.25rem;
-}
-.process-step h3 { margin-bottom: 8px; font-size: 1rem; }
-.process-step p { color: var(--muted); line-height: 1.7; font-size: 0.93rem; }
-
-/* Industries */
-.industry-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-.industry-card i {
-  width: 48px;
-  height: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  margin-bottom: 12px;
-  background: rgba(255,176,0,0.12);
-  color: #9a5e00;
-  font-size: 1.25rem;
-}
-.industry-card h3 { margin-bottom: 8px; }
-.industry-card p { color: var(--muted); line-height: 1.65; }
-
-/* Global */
-.global-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 24px;
-  align-items: center;
-}
-.world-map {
-  min-height: 430px;
-  border-radius: 28px;
-  box-shadow: var(--shadow);
-  background:
-    radial-gradient(circle at 25% 32%, rgba(255,176,0,.28), transparent 16%),
-    radial-gradient(circle at 55% 42%, rgba(255,176,0,.18), transparent 18%),
-    radial-gradient(circle at 75% 60%, rgba(17,24,39,.16), transparent 18%),
-    linear-gradient(135deg, rgba(17,24,39,.06), rgba(255,255,255,.96));
-  position: relative;
-  overflow: hidden;
-}
-.map-pin {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-  box-shadow: 0 0 0 10px rgba(255,176,0,0.12);
-  animation: float 6s ease-in-out infinite;
-}
-.pin-1 { top: 32%; left: 28%; }
-.pin-2 { top: 46%; left: 53%; animation-delay: 0.8s; }
-.pin-3 { top: 62%; left: 72%; animation-delay: 1.6s; }
-.map-overlay {
-  position: absolute;
-  inset: auto 18px 18px 18px;
-  display: grid;
-  gap: 10px;
-}
-.map-overlay div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: fit-content;
-  padding: 10px 12px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.9);
-  border: 1px solid var(--line);
-}
-.map-overlay strong {
-  font-size: 1rem;
-}
-.map-overlay span {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-.global-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 28px;
-  box-shadow: var(--shadow);
-}
-.global-card h3 { margin-bottom: 10px; font-size: 1.3rem; }
-.global-card p { color: var(--muted); line-height: 1.8; }
-
-/* FAQ */
-.faq-list {
-  display: grid;
-  gap: 12px;
-}
-.faq-item {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-.faq-question {
-  width: 100%;
-  padding: 18px 20px;
-  border: none;
-  background: transparent;
-  text-align: left;
-  font-weight: 700;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-}
-.faq-question::after {
-  content: '+';
-  color: #9a5e00;
-  font-size: 1.2rem;
-}
-.faq-item.active .faq-question::after {
-  content: '−';
-}
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 20px;
-  color: var(--muted);
-  line-height: 1.8;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-}
-.faq-item.active .faq-answer {
-  max-height: 160px;
-  padding: 0 20px 18px;
-}
-
-/* Map */
-.map-wrap {
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--line);
-}
-.map-wrap iframe {
-  width: 100%;
-  min-height: 420px;
-  border: 0;
-  display: block;
-}
-
-/* Testimonials */
-.slider {
-  overflow: hidden;
-}
-.slides {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 100%;
-  transition: transform 0.45s ease;
-}
-.testimonial-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-  padding: 24px;
-}
-.testimonial-top {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 16px;
-}
-.client-photo {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(255,176,0,0.25), rgba(17,24,39,0.12));
-}
-.stars {
-  color: #f59e0b;
-  margin-bottom: 12px;
-  letter-spacing: 2px;
-}
-.testimonial-card p {
-  line-height: 1.8;
-  color: var(--text);
-}
-.slider-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 16px;
-}
-.slider-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: #fff;
-  cursor: pointer;
-}
-
-/* CTA */
-.cta-banner {
-  padding: 92px 0;
-  background: linear-gradient(135deg, #ffb000, #ff8a00);
-  color: #111827;
-}
-.cta-copy h2 {
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  margin-bottom: 12px;
-}
-.cta-copy p {
-  color: rgba(17,24,39,0.82);
-  font-size: 1.02rem;
-  line-height: 1.8;
-}
-.cta-form {
-  background: rgba(255,255,255,0.18);
-  border: 1px solid rgba(255,255,255,0.24);
-  backdrop-filter: blur(14px);
-  padding: 22px;
-  border-radius: 22px;
-}
-
 /* Footer */
-.site-footer {
-  background: #0b1220;
-  color: rgba(255,255,255,0.84);
-  padding: 70px 0;
+.auth-footer {
+  width: min(100%, 560px);
+  margin: 18px auto 0;
+  text-align: center;
+  color: var(--muted);
 }
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr;
-  gap: 24px;
-}
-.site-footer h4 {
-  color: #fff;
-  margin-bottom: 14px;
-}
-.site-footer a {
-  display: block;
-  margin-bottom: 10px;
-  color: rgba(255,255,255,0.76);
-}
-.site-footer a:hover { color: #fff; }
-.site-footer p {
-  margin-top: 14px;
-  line-height: 1.8;
-  max-width: 34ch;
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 .socials {
   display: flex;
+  justify-content: center;
   gap: 10px;
+  margin: 14px 0;
 }
 .socials a {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: rgba(255,255,255,0.08);
-  color: #fff;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--navy);
 }
 
 /* Reveal */
@@ -851,70 +550,61 @@ textarea {
 }
 .fade-left { transform: translateX(-24px); }
 .fade-right { transform: translateX(24px); }
-.scale { transform: scale(0.96); }
 
 /* Ripple */
 .ripple { position: relative; overflow: hidden; }
 
 /* Responsive */
-@media (max-width: 1200px) {
-  .info-grid,
-  .feature-grid,
-  .industry-grid,
-  .process,
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .form-layout,
-  .global-grid,
-  .hero-grid {
+@media (max-width: 1100px) {
+  .auth-grid {
     grid-template-columns: 1fr;
+  }
+  .auth-visual {
+    min-height: 560px;
+    padding: 30px 22px;
   }
 }
+
 @media (max-width: 768px) {
-  .section { padding: 72px 0; }
-  .nav {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-top: 1px solid var(--line);
-    padding: 16px;
-    flex-direction: column;
-    gap: 14px;
-    display: none;
+  .auth-panel {
+    padding: 20px 14px 28px;
   }
-  .nav.open { display: flex; }
-  .menu-toggle { display: inline-flex; }
-  .header-actions .btn-ghost { display: none; }
-  .hero-visual { min-height: 480px; }
-  .info-grid,
-  .feature-grid,
-  .industry-grid,
-  .process,
-  .footer-grid,
-  .grid-2 {
-    grid-template-columns: 1fr;
+  .auth-card {
+    padding: 24px;
+  }
+  .feature-row,
+  .trust-badges,
+  .footer-links {
+    justify-content: center;
+  }
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .auth-visual {
+    min-height: auto;
   }
   .dash-stats {
     grid-template-columns: 1fr;
   }
-  .floating-card {
-    width: 130px;
-  }
-  .fc-2 { left: 0; }
-  .fc-3 { right: 12px; }
 }
+
 @media (max-width: 520px) {
-  .hero h1 { font-size: 2.6rem; }
-  .hero-visual { min-height: auto; }
+  .auth-card {
+    border-radius: 22px;
+    padding: 20px;
+  }
+  .visual-content h1 {
+    font-size: 2.4rem;
+  }
+  .dash {
+    padding: 18px;
+  }
   .floating-card {
     position: static;
     width: 100%;
     margin-bottom: 12px;
   }
-  .dash { padding: 18px; }
 }
 
 /* Animations */
@@ -924,745 +614,307 @@ textarea {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+@keyframes grow {
+  from { transform: scaleY(0.2); transform-origin: bottom; }
+  to { transform: scaleY(1); transform-origin: bottom; }
+}
+@keyframes pop {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Ripple effect style injected by JS */
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  background: rgba(255,255,255,0.5);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
   </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a href="#hero" class="brand" aria-label="Homepage">
-      <span class="brand-mark"></span>
-      <span>GrowthEngine</span>
-    </a>
+<main class="auth-shell">
+  <section class="auth-grid">
+    <!-- Left panel -->
+    <aside class="auth-visual" aria-label="Marketing platform illustration">
+      <div class="visual-overlay"></div>
+      <div class="bg-orb orb-1"></div>
+      <div class="bg-orb orb-2"></div>
+      <div class="bg-orb orb-3"></div>
 
-    <nav class="nav" aria-label="Primary">
-      <a href="#contact-info">Contact</a>
-      <a href="#form">Form</a>
-      <a href="#process">Process</a>
-      <a href="#faq">FAQ</a>
-      <a href="#footer">Footer</a>
-    </nav>
+      <div class="visual-content reveal fade-up">
+        <a href="#" class="brand">
+          <span class="brand-mark"></span>
+          <span>GrowthEngine</span>
+        </a>
 
-    <div class="header-actions">
-      <a class="btn btn-ghost" href="#form">Send Message</a>
-      <a class="btn btn-primary" href="#form">Book Free Consultation</a>
-      <button class="menu-toggle" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
-    </div>
-  </div>
-</header>
-
-<main>
-  <!-- Hero -->
-  <section class="hero section" id="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy reveal fade-up">
-        <span class="eyebrow"><i class="ri-customer-service-2-line"></i> Talk to a Performance Marketing Expert</span>
-        <h1>Let's Grow Together</h1>
+        <h1>Grow Faster with Data-Driven Performance Marketing</h1>
         <p>
-          Ready to scale your business with data-driven performance marketing? Get in touch with our experts today.
+          Scale your business using AI-powered campaigns, real-time optimization, and transparent reporting.
         </p>
-        <div class="hero-cta">
-          <a href="#form" class="btn btn-primary ripple"><i class="ri-calendar-check-line"></i> Book a Free Consultation</a>
-          <a href="#contact-info" class="btn btn-secondary ripple"><i class="ri-mail-send-line"></i> Contact Sales</a>
-        </div>
-        <div class="hero-badges">
-          <span class="pill"><i class="ri-shield-check-line"></i> Enterprise-ready support</span>
-          <span class="pill"><i class="ri-time-line"></i> Fast response times</span>
-          <span class="pill"><i class="ri-global-line"></i> Global campaign coverage</span>
-        </div>
-      </div>
-
-      <div class="hero-visual reveal fade-right" aria-label="Marketing and communication illustration">
-        <div class="floating-card fc-1">
-          <span>ROAS</span><strong>6.2x</strong><small>optimized</small>
-        </div>
-        <div class="floating-card fc-2">
-          <span>Response time</span><strong>&lt; 24h</strong><small>sales follow-up</small>
-        </div>
-        <div class="floating-card fc-3">
-          <span>Global reach</span><strong>120+</strong><small>countries served</small>
-        </div>
 
         <div class="dash glass">
           <div class="dash-top">
             <div>
-              <p class="dash-label">Contact Intelligence</p>
-              <h2>Campaign-ready support</h2>
+              <p class="dash-label">Marketing Intelligence</p>
+              <h2>Connected performance dashboards</h2>
             </div>
             <span class="live-pill"><i class="ri-checkbox-blank-circle-fill"></i> Live</span>
           </div>
 
-          <div class="dash-hero-graphic">
-            <div class="node node-1"></div>
-            <div class="node node-2"></div>
-            <div class="node node-3"></div>
-            <div class="pulse-line"></div>
+          <div class="dash-graphic">
+            <div class="bar bar-1"></div>
+            <div class="bar bar-2"></div>
+            <div class="bar bar-3"></div>
+            <div class="bar bar-4"></div>
+            <div class="bar bar-5"></div>
           </div>
 
           <div class="dash-stats">
-            <div><span>Clients</span><strong>500+</strong></div>
-            <div><span>Publishers</span><strong>150+</strong></div>
-            <div><span>Retention</span><strong>95%</strong></div>
+            <div><span>ROAS</span><strong>6.1x</strong></div>
+            <div><span>CPA</span><strong>-28%</strong></div>
+            <div><span>Impressions</span><strong>10B+</strong></div>
           </div>
         </div>
 
-        <div class="bg-orb orb-1"></div>
-        <div class="bg-orb orb-2"></div>
+        <div class="feature-row">
+          <span class="pill"><i class="ri-shield-check-line"></i> Secure access</span>
+          <span class="pill"><i class="ri-global-line"></i> Global network</span>
+          <span class="pill"><i class="ri-brain-line"></i> AI optimization</span>
+        </div>
       </div>
-    </div>
-  </section>
+    </aside>
 
-  <!-- Contact Info -->
-  <section class="section section-soft" id="contact-info">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="section-tag">Contact Information</span>
-        <h2>Choose the Fastest Way to Reach Us</h2>
-        <p>We make it easy to connect with the right team member based on your goals, location, and campaign needs.</p>
-      </div>
-
-      <div class="info-grid">
-        <article class="info-card reveal fade-up">
-          <i class="ri-phone-line"></i>
-          <h3>Phone</h3>
-          <a href="tel:+18005550123">+1 (800) 555-0123</a>
-          <p>Speak directly with our growth team for urgent requests or strategic questions.</p>
-        </article>
-
-        <article class="info-card reveal fade-up">
-          <i class="ri-mail-line"></i>
-          <h3>Email</h3>
-          <a href="mailto:hello@growthengine.com">hello@growthengine.com</a>
-          <p>Send your brief, goals, or partnership inquiry and we’ll route it to the right expert.</p>
-        </article>
-
-        <article class="info-card reveal fade-up">
-          <i class="ri-map-pin-line"></i>
-          <h3>Office Address</h3>
-          <p>245 Market Street, Suite 1200<br>San Francisco, CA 94105</p>
-        </article>
-
-        <article class="info-card reveal fade-up">
-          <i class="ri-time-line"></i>
-          <h3>Business Hours</h3>
-          <p>Monday - Friday<br>9:00 AM - 6:00 PM PST</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Form -->
-  <section class="section" id="form">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="section-tag">Contact Form</span>
-        <h2>Tell Us About Your Growth Goals</h2>
-        <p>Share a few details and we’ll recommend the right channels, budget range, and next steps.</p>
-      </div>
-
-      <div class="form-layout">
-        <div class="form-aside reveal fade-left">
-          <article class="side-card">
-            <h3>What happens next?</h3>
-            <ul class="steps-list">
-              <li><i class="ri-checkbox-circle-line"></i> We review your inquiry and business fit.</li>
-              <li><i class="ri-checkbox-circle-line"></i> You receive a strategy-led response within 24 hours.</li>
-              <li><i class="ri-checkbox-circle-line"></i> We schedule a consultation and align on goals.</li>
-            </ul>
-          </article>
-
-          <article class="side-card">
-            <h3>Why brands contact us</h3>
-            <p>From user acquisition to lead generation, we help teams build measurable growth systems with transparent reporting and expert execution.</p>
-          </article>
+    <!-- Right panel -->
+    <section class="auth-panel">
+      <div class="auth-card reveal fade-right">
+        <div class="auth-header">
+          <span class="eyebrow"><i class="ri-lock-2-line"></i> Enterprise Login</span>
+          <h2>Welcome Back</h2>
+          <p>Sign in to access your performance marketing dashboard.</p>
         </div>
 
-        <form class="contact-form reveal fade-right" id="contactForm" novalidate>
-          <div class="grid-2">
-            <div class="field">
-              <label for="name">Full Name</label>
-              <input id="name" name="name" type="text" placeholder="Your full name" required />
-              <span class="error-msg"></span>
-            </div>
-
-            <div class="field">
-              <label for="company">Company Name</label>
-              <input id="company" name="company" type="text" placeholder="Company name" required />
-              <span class="error-msg"></span>
-            </div>
-
-            <div class="field">
+        <form id="loginForm" class="login-form" novalidate>
+          <div class="field">
+            <div class="input-wrap">
+              <i class="ri-mail-line input-icon"></i>
+              <input type="email" id="email" name="email" autocomplete="email" required />
               <label for="email">Email Address</label>
-              <input id="email" name="email" type="email" placeholder="you@company.com" required />
-              <span class="error-msg"></span>
             </div>
-
-            <div class="field">
-              <label for="phone">Phone Number</label>
-              <input id="phone" name="phone" type="tel" placeholder="+1 555 123 4567" required />
-              <span class="error-msg"></span>
-            </div>
-
-            <div class="field">
-              <label for="country">Country</label>
-              <select id="country" name="country" required>
-                <option value="">Select country</option>
-                <option>United States</option>
-                <option>Canada</option>
-                <option>United Kingdom</option>
-                <option>India</option>
-                <option>Singapore</option>
-                <option>Australia</option>
-                <option>United Arab Emirates</option>
-                <option>Germany</option>
-              </select>
-              <span class="error-msg"></span>
-            </div>
-
-            <div class="field">
-              <label for="industry">Industry</label>
-              <select id="industry" name="industry" required>
-                <option value="">Select industry</option>
-                <option>FinTech</option>
-                <option>Finance</option>
-                <option>Insurance</option>
-                <option>E-commerce</option>
-                <option>Retail</option>
-                <option>Gaming</option>
-                <option>Travel</option>
-                <option>Education</option>
-                <option>Health & Wellness</option>
-                <option>Mobile Apps</option>
-                <option>SaaS</option>
-                <option>Crypto & Web3</option>
-              </select>
-              <span class="error-msg"></span>
-            </div>
-
-            <div class="field">
-              <label for="budget">Monthly Marketing Budget</label>
-              <select id="budget" name="budget" required>
-                <option value="">Select budget</option>
-                <option>$5K - $15K</option>
-                <option>$15K - $50K</option>
-                <option>$50K - $100K</option>
-                <option>$100K - $250K</option>
-                <option>$250K+</option>
-              </select>
-              <span class="error-msg"></span>
-            </div>
-
-            <div class="field">
-              <label for="services">Services Interested In</label>
-              <select id="services" name="services" required>
-                <option value="">Select service</option>
-                <option>Performance Marketing</option>
-                <option>Affiliate Marketing</option>
-                <option>Media Buying</option>
-                <option>Programmatic Advertising</option>
-                <option>User Acquisition</option>
-                <option>Lead Generation</option>
-                <option>CRO</option>
-                <option>Marketing Analytics</option>
-              </select>
-              <span class="error-msg"></span>
-            </div>
+            <span class="error-msg" id="emailError"></span>
           </div>
 
-          <div class="field full">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us about your goals, timelines, and what success looks like for your team." required></textarea>
-            <span class="error-msg"></span>
+          <div class="field">
+            <div class="input-wrap">
+              <i class="ri-lock-line input-icon"></i>
+              <input type="password" id="password" name="password" autocomplete="current-password" required minlength="8" />
+              <label for="password">Password</label>
+              <button type="button" class="toggle-pass" id="togglePassword" aria-label="Show password">
+                <i class="ri-eye-line"></i>
+              </button>
+            </div>
+            <span class="error-msg" id="passwordError"></span>
           </div>
 
-          <label class="checkbox-wrap">
-            <input id="privacy" type="checkbox" required />
-            <span>I agree to the <a href="#">Privacy Policy</a>.</span>
-          </label>
-          <span class="error-msg checkbox-error"></span>
+          <div class="form-row">
+            <label class="remember">
+              <input type="checkbox" id="rememberMe">
+              <span>Remember Me</span>
+            </label>
+            <a href="#" class="link">Forgot Password?</a>
+          </div>
 
-          <button type="submit" class="btn btn-primary submit-btn ripple" id="submitBtn">
-            <span class="btn-text">Send Message</span>
+          <button type="submit" class="btn btn-primary submit-btn ripple" id="loginBtn">
+            <span class="btn-text">Login</span>
             <span class="btn-loader" aria-hidden="true"></span>
           </button>
 
-          <div class="success-message" id="successMessage" role="status" aria-live="polite">
+          <div class="divider"><span>OR</span></div>
+
+          <div class="social-grid">
+            <button type="button" class="btn btn-social ripple"><i class="ri-google-fill"></i> Continue with Google</button>
+            <button type="button" class="btn btn-social ripple"><i class="ri-microsoft-fill"></i> Continue with Microsoft</button>
+            <button type="button" class="btn btn-social ripple"><i class="ri-linkedin-fill"></i> Continue with LinkedIn</button>
+          </div>
+
+          <div class="extra-links">
+            <p>Don't have an account? <a href="#">Create Account</a></p>
+            <div class="small-links">
+              <a href="#">Publisher Login</a>
+              <a href="#">Advertiser Login</a>
+            </div>
+          </div>
+
+          <div class="trust-badges" aria-label="Security features">
+            <span class="badge"><i class="ri-shield-check-line"></i> Secure Login</span>
+            <span class="badge"><i class="ri-file-list-3-line"></i> GDPR Compliant</span>
+            <span class="badge"><i class="ri-lock-line"></i> SSL Protected</span>
+            <span class="badge"><i class="ri-customer-service-2-line"></i> 24/7 Support</span>
+            <span class="badge"><i class="ri-bar-chart-grouped-line"></i> Real-Time Analytics</span>
+            <span class="badge"><i class="ri-global-line"></i> Global Publisher Network</span>
+          </div>
+
+          <div class="success-state" id="successState" role="status" aria-live="polite">
             <i class="ri-check-line"></i>
             <div>
-              <strong>Message sent successfully.</strong>
-              <p>Thanks for reaching out. Our team will contact you shortly.</p>
+              <strong>Login successful.</strong>
+              <p>Redirecting to your dashboard...</p>
             </div>
           </div>
         </form>
       </div>
-    </div>
-  </section>
 
-  <!-- Why Contact -->
-  <section class="section section-soft" id="why-contact">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="section-tag">Why Contact Us</span>
-        <h2>Why Growth Teams Choose Us</h2>
-        <p>We combine strategic clarity and execution speed to help teams launch and scale faster.</p>
-      </div>
-
-      <div class="feature-grid">
-        <article class="feature-card reveal fade-up"><i class="ri-rocket-2-line"></i><h3>Performance-Based Growth</h3><p>Campaigns built around measurable ROI and profitable scale.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-user-star-line"></i><h3>Dedicated Account Managers</h3><p>Direct communication with specialists who understand your goals.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-file-chart-line"></i><h3>Transparent Reporting</h3><p>Clear reporting with metrics that matter to decision makers.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-database-2-line"></i><h3>Data-Driven Optimization</h3><p>Continuous testing and performance improvement across channels.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-global-line"></i><h3>Global Publisher Network</h3><p>Access to quality partner inventory and global distribution.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-flashlight-line"></i><h3>Real-Time Optimization</h3><p>Fast iteration based on live campaign signals and market changes.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-shield-check-line"></i><h3>Fraud Prevention</h3><p>Traffic quality controls that help protect performance and spend.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-bar-chart-grouped-line"></i><h3>Scalable Campaigns</h3><p>Growth systems designed to scale without losing efficiency.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="section" id="process">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="section-tag">Our Process</span>
-        <h2>How We Turn Inquiries Into Campaigns</h2>
-        <p>A simple and transparent workflow from first inquiry to ongoing optimization.</p>
-      </div>
-
-      <div class="process">
-        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-inbox-archive-line"></i></span><div><h3>Submit Inquiry</h3><p>Tell us what you’re looking to achieve and where you need support.</p></div></article>
-        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-discuss-line"></i></span><div><h3>Consultation Call</h3><p>We review your goals, budget, and channel opportunities together.</p></div></article>
-        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-compasses-2-line"></i></span><div><h3>Marketing Strategy</h3><p>We shape a tailored plan around your growth objectives.</p></div></article>
-        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-rocket-line"></i></span><div><h3>Campaign Launch</h3><p>We activate the right channels, tracking, and creative assets.</p></div></article>
-        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-tune-line"></i></span><div><h3>Performance Optimization</h3><p>We monitor results and refine campaigns to improve outcomes.</p></div></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Industries -->
-  <section class="section section-soft" id="industries">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="section-tag">Industries We Serve</span>
-        <h2>Built for High-Growth Verticals</h2>
-        <p>We bring tailored acquisition strategies to industries where precision and efficiency matter most.</p>
-      </div>
-
-      <div class="industry-grid">
-        <article class="industry-card reveal"><i class="ri-bank-line"></i><h3>FinTech</h3><p>Acquisition for financial products and platforms.</p></article>
-        <article class="industry-card reveal"><i class="ri-safe-2-line"></i><h3>Finance</h3><p>Lead generation and ROI-focused financial campaigns.</p></article>
-        <article class="industry-card reveal"><i class="ri-shield-star-line"></i><h3>Insurance</h3><p>Qualified inquiry generation with trust-first messaging.</p></article>
-        <article class="industry-card reveal"><i class="ri-shopping-bag-3-line"></i><h3>E-commerce</h3><p>Conversion-focused growth for online retail brands.</p></article>
-        <article class="industry-card reveal"><i class="ri-store-2-line"></i><h3>Retail</h3><p>Omnichannel customer acquisition strategies.</p></article>
-        <article class="industry-card reveal"><i class="ri-gamepad-line"></i><h3>Gaming</h3><p>Player acquisition and scale for gaming apps.</p></article>
-        <article class="industry-card reveal"><i class="ri-flight-takeoff-line"></i><h3>Travel</h3><p>Booking and demand generation campaigns.</p></article>
-        <article class="industry-card reveal"><i class="ri-graduation-cap-line"></i><h3>Education</h3><p>Enrollment and lead generation for education brands.</p></article>
-        <article class="industry-card reveal"><i class="ri-heart-pulse-line"></i><h3>Health & Wellness</h3><p>Growth for wellness, health, and care brands.</p></article>
-        <article class="industry-card reveal"><i class="ri-smartphone-line"></i><h3>Mobile Apps</h3><p>User acquisition for app installs and events.</p></article>
-        <article class="industry-card reveal"><i class="ri-code-s-slash-line"></i><h3>SaaS</h3><p>Pipeline growth for demos, trials, and subscriptions.</p></article>
-        <article class="industry-card reveal"><i class="ri-bit-coin-line"></i><h3>Crypto & Web3</h3><p>Audience growth in emerging digital markets.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Global Presence -->
-  <section class="section" id="global">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="section-tag">Global Presence</span>
-        <h2>A Worldwide Network Built for Scale</h2>
-        <p>We support advertisers and publishers across multiple regions with consistent execution and reporting.</p>
-      </div>
-
-      <div class="global-grid">
-        <div class="world-map reveal fade-left">
-          <div class="map-pin pin-1"></div>
-          <div class="map-pin pin-2"></div>
-          <div class="map-pin pin-3"></div>
-          <div class="map-overlay">
-            <div><strong><span class="counter" data-target="120">0</span>+</strong><span>Countries Served</span></div>
-            <div><strong><span class="counter" data-target="150">0</span>+</strong><span>Publisher Network</span></div>
-            <div><strong><span class="counter" data-target="500">0</span>+</strong><span>Global Advertisers</span></div>
-          </div>
+      <footer class="auth-footer">
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Help Center</a>
+          <a href="#">Contact Support</a>
         </div>
 
-        <div class="global-copy reveal fade-right">
-          <article class="global-card">
-            <h3>Coverage that supports international growth.</h3>
-            <p>Our global footprint helps brands reach audiences across markets while maintaining consistent campaign governance, reporting, and optimization standards.</p>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section section-soft" id="faq">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="section-tag">FAQ</span>
-        <h2>Frequently Asked Questions</h2>
-        <p>Answers to common questions about launch timelines, services, reporting, and partnership options.</p>
-      </div>
-
-      <div class="faq-list">
-        <div class="faq-item reveal fade-up">
-          <button class="faq-question">How quickly can campaigns launch?</button>
-          <div class="faq-answer">Most campaigns can launch quickly once goals, tracking, creatives, and approval requirements are aligned.</div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-question">What industries do you specialize in?</button>
-          <div class="faq-answer">We work across fintech, finance, insurance, e-commerce, retail, gaming, travel, education, health, SaaS, mobile apps, and Web3.</div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-question">Do you work internationally?</button>
-          <div class="faq-answer">Yes, we support global advertisers and publisher partnerships across multiple regions and markets.</div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-question">How is campaign reporting shared?</button>
-          <div class="faq-answer">We share transparent reporting through dashboards and regular updates covering the metrics that matter most.</div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-question">What is your pricing model?</button>
-          <div class="faq-answer">Pricing depends on scope, goals, channels, and campaign complexity. We tailor our approach to your business needs.</div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-question">How do I become a publisher?</button>
-          <div class="faq-answer">You can reach out through the form, and our partnerships team will review your inventory, audience, and fit.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Map -->
-  <section class="section" id="map-section">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="section-tag">Google Map</span>
-        <h2>Visit Our Office</h2>
-        <p>Our team is based in San Francisco and works with clients around the world.</p>
-      </div>
-
-      <div class="map-wrap reveal fade-up">
-        <iframe
-          title="Office location on Google Maps"
-          src="https://www.google.com/maps?q=San%20Francisco%20CA&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section section-soft" id="testimonials">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="section-tag">Testimonials</span>
-        <h2>What Clients Say</h2>
-        <p>Real feedback from teams that value clarity, speed, and measurable performance outcomes.</p>
-      </div>
-
-      <div class="slider reveal fade-up">
-        <div class="slides" id="slides">
-          <article class="testimonial-card">
-            <div class="testimonial-top">
-              <div class="client-photo photo-1"></div>
-              <div>
-                <strong>Sarah Johnson</strong>
-                <span>CMO, FinTech Brand</span>
-              </div>
-            </div>
-            <div class="stars">★★★★★</div>
-            <p>They responded quickly, understood our goals, and brought a strategic approach that gave us confidence from the start.</p>
-          </article>
-
-          <article class="testimonial-card">
-            <div class="testimonial-top">
-              <div class="client-photo photo-2"></div>
-              <div>
-                <strong>Daniel Kim</strong>
-                <span>Growth Lead, Mobile App</span>
-              </div>
-            </div>
-            <div class="stars">★★★★★</div>
-            <p>Reporting was transparent, communication was sharp, and the recommendations were grounded in performance data.</p>
-          </article>
-
-          <article class="testimonial-card">
-            <div class="testimonial-top">
-              <div class="client-photo photo-3"></div>
-              <div>
-                <strong>Priya Shah</strong>
-                <span>Founder, E-commerce Brand</span>
-              </div>
-            </div>
-            <div class="stars">★★★★★</div>
-            <p>We were impressed by the professionalism, speed, and attention to detail across every stage of the process.</p>
-          </article>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+          <a href="#" aria-label="X"><i class="ri-twitter-x-fill"></i></a>
+          <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
         </div>
 
-        <div class="slider-actions">
-          <button class="slider-btn" id="prev"><i class="ri-arrow-left-line"></i></button>
-          <button class="slider-btn" id="next"><i class="ri-arrow-right-line"></i></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-banner" id="cta">
-    <div class="container cta-grid">
-      <div class="cta-copy reveal fade-left">
-        <h2>Ready to Scale Your Business?</h2>
-        <p>Speak with our performance marketing experts and start building campaigns that deliver measurable results.</p>
-        <div class="hero-cta">
-          <a href="#form" class="btn btn-dark ripple">Book a Strategy Call</a>
-          <a href="#form" class="btn btn-light ripple">Get Started</a>
-        </div>
-      </div>
-
-      <form class="cta-form reveal fade-right">
-        <div class="field">
-          <label for="newsletter-email">Newsletter Subscription</label>
-          <input id="newsletter-email" type="email" placeholder="Work email" />
-        </div>
-        <button type="submit" class="btn btn-primary ripple">Subscribe</button>
-      </form>
-    </div>
+        <p>© 2026 GrowthEngine. All rights reserved.</p>
+      </footer>
+    </section>
   </section>
 </main>
 
-<footer class="site-footer" id="footer">
-  <div class="container footer-grid">
-    <div>
-      <a href="#hero" class="brand footer-brand"><span class="brand-mark"></span><span>GrowthEngine</span></a>
-      <p>Premium performance marketing, AdTech, and MarTech solutions designed to drive measurable growth.</p>
-    </div>
-
-    <div>
-      <h4>Company</h4>
-      <a href="#hero">About</a>
-      <a href="#form">Services</a>
-      <a href="#industries">Industries</a>
-      <a href="#testimonials">Case Studies</a>
-    </div>
-
-    <div>
-      <h4>Resources</h4>
-      <a href="#faq">Blog</a>
-      <a href="#faq">Resources</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-    </div>
-
-    <div>
-      <h4>Social</h4>
-      <div class="socials footer-socials">
-        <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-        <a href="#" aria-label="X"><i class="ri-twitter-x-fill"></i></a>
-        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-      </div>
-    </div>
-  </div>
-</footer>
-
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
-
-  if (menuToggle && nav) {
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
-  }
-
-  // Scroll reveal
+document.addEventListener('DOMContentLoaded', () => {
+  // Reveal
   const revealElements = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries, observer) => {
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.18 });
+  }, { threshold: 0.15 });
 
-  revealElements.forEach(el => revealObserver.observe(el));
+  revealElements.forEach(el => observer.observe(el));
 
-  // Counters
-  const counterSections = document.querySelectorAll('.number-grid, .world-map, .dash-stats');
-  const counters = document.querySelectorAll('.counter');
+  // Password toggle
+  const passwordInput = document.getElementById('password');
+  const togglePassword = document.getElementById('togglePassword');
 
-  const animateCounter = (el) => {
-    const target = parseInt(el.dataset.target, 10);
-    const duration = 1400;
-    const steps = 60;
-    let current = 0;
-    const increment = target / steps;
-
-    const update = () => {
-      current += increment;
-      if (current < target) {
-        el.textContent = Math.floor(current).toLocaleString();
-        requestAnimationFrame(update);
-      } else {
-        el.textContent = target.toLocaleString();
-      }
-    };
-
-    update();
-  };
-
-  const counterObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.querySelectorAll('.counter').forEach(animateCounter);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  counterSections.forEach(section => counterObserver.observe(section));
-
-  // FAQ
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const button = item.querySelector('.faq-question');
-    button.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      faqItems.forEach(i => i.classList.remove('active'));
-      if (!isActive) item.classList.add('active');
-    });
-  });
-
-  // Testimonial slider
-  const slides = document.getElementById('slides');
-  const prev = document.getElementById('prev');
-  const next = document.getElementById('next');
-  let index = 0;
-
-  const updateSlider = () => {
-    if (slides) slides.style.transform = `translateX(-${index * 100}%)`;
-  };
-
-  if (slides && prev && next) {
-    prev.addEventListener('click', () => {
-      index = (index - 1 + slides.children.length) % slides.children.length;
-      updateSlider();
-    });
-    next.addEventListener('click', () => {
-      index = (index + 1) % slides.children.length;
-      updateSlider();
+  if (togglePassword && passwordInput) {
+    togglePassword.addEventListener('click', () => {
+      const isHidden = passwordInput.type === 'password';
+      passwordInput.type = isHidden ? 'text' : 'password';
+      togglePassword.innerHTML = isHidden
+        ? '<i class="ri-eye-off-line"></i>'
+        : '<i class="ri-eye-line"></i>';
+      togglePassword.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
     });
   }
 
-  setInterval(() => {
-    if (slides) {
-      index = (index + 1) % slides.children.length;
-      updateSlider();
+  // Validation helpers
+  const form = document.getElementById('loginForm');
+  const email = document.getElementById('email');
+  const emailError = document.getElementById('emailError');
+  const passwordError = document.getElementById('passwordError');
+  const loginBtn = document.getElementById('loginBtn');
+  const successState = document.getElementById('successState');
+
+  const setError = (field, msg) => {
+    field.textContent = msg || '';
+  };
+
+  const validateEmail = () => {
+    const value = email.value.trim();
+    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    if (!value) {
+      setError(emailError, 'Please enter your email address.');
+      return false;
     }
-  }, 6500);
-
-  // Form validation
-  const form = document.getElementById('contactForm');
-  const submitBtn = document.getElementById('submitBtn');
-  const successMessage = document.getElementById('successMessage');
-
-  const validators = {
-    name: value => value.trim().length >= 2 ? '' : 'Please enter your full name.',
-    company: value => value.trim().length >= 2 ? '' : 'Please enter your company name.',
-    email: value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? '' : 'Please enter a valid email address.',
-    phone: value => value.trim().length >= 7 ? '' : 'Please enter a valid phone number.',
-    country: value => value ? '' : 'Please select your country.',
-    industry: value => value ? '' : 'Please select your industry.',
-    budget: value => value ? '' : 'Please select a budget range.',
-    services: value => value ? '' : 'Please select a service.',
-    message: value => value.trim().length >= 15 ? '' : 'Please tell us a little more about your goals.',
-    privacy: value => value ? '' : 'You must agree to the Privacy Policy.'
+    if (!valid) {
+      setError(emailError, 'Please enter a valid email address.');
+      return false;
+    }
+    setError(emailError, '');
+    return true;
   };
 
-  const fields = ['name', 'company', 'email', 'phone', 'country', 'industry', 'budget', 'services', 'message'];
+  const validatePassword = () => {
+    const value = passwordInput.value.trim();
+    if (!value) {
+      setError(passwordError, 'Please enter your password.');
+      return false;
+    }
+    if (value.length < 8) {
+      setError(passwordError, 'Password must be at least 8 characters.');
+      return false;
+    }
+    setError(passwordError, '');
+    return true;
+  };
 
-  function setError(fieldId, message) {
-    const field = document.getElementById(fieldId);
-    const error = field.closest('.field').querySelector('.error-msg');
-    error.textContent = message;
-    field.classList.toggle('invalid', !!message);
-  }
+  email.addEventListener('input', validateEmail);
+  passwordInput.addEventListener('input', validatePassword);
+  email.addEventListener('blur', validateEmail);
+  passwordInput.addEventListener('blur', validatePassword);
 
-  function validateField(fieldId) {
-    const field = document.getElementById(fieldId);
-    const message = validators[fieldId](field.type === 'checkbox' ? field.checked : field.value);
-    if (fieldId !== 'privacy') setError(fieldId, message);
-    return !message;
-  }
-
-  fields.forEach(id => {
-    const field = document.getElementById(id);
-    field.addEventListener('input', () => validateField(id));
-    field.addEventListener('blur', () => validateField(id));
-    field.addEventListener('change', () => validateField(id));
-  });
-
-  const privacy = document.getElementById('privacy');
-  privacy.addEventListener('change', () => {
-    const error = document.querySelector('.checkbox-error');
-    error.textContent = validators.privacy(privacy.checked) ? '' : 'You must agree to the Privacy Policy.';
-  });
-
-  form?.addEventListener('submit', (e) => {
+  // Submit
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    successMessage.classList.remove('show');
+    successState.classList.remove('show');
 
-    let valid = true;
-    fields.forEach(id => {
-      if (!validateField(id)) valid = false;
-    });
+    const validEmail = validateEmail();
+    const validPassword = validatePassword();
 
-    const privacyError = document.querySelector('.checkbox-error');
-    if (!privacy.checked) {
-      privacyError.textContent = 'You must agree to the Privacy Policy.';
-      valid = false;
-    } else {
-      privacyError.textContent = '';
-    }
+    if (!validEmail || !validPassword) return;
 
-    if (!valid) return;
-
-    submitBtn.classList.add('loading');
-    submitBtn.disabled = true;
+    loginBtn.classList.add('loading');
+    loginBtn.disabled = true;
 
     setTimeout(() => {
-      submitBtn.classList.remove('loading');
-      submitBtn.disabled = false;
-      successMessage.classList.add('show');
+      loginBtn.classList.remove('loading');
+      loginBtn.disabled = false;
+      successState.classList.add('show');
       form.reset();
-      fields.forEach(id => setError(id, ''));
-      privacyError.textContent = '';
+      togglePassword.innerHTML = '<i class="ri-eye-line"></i>';
+      passwordInput.type = 'password';
+      passwordInput.focus();
     }, 1400);
   });
 
   // Ripple effect
   document.querySelectorAll('.ripple').forEach(btn => {
     btn.addEventListener('click', function (e) {
-      const circle = document.createElement('span');
-      const diameter = Math.max(this.clientWidth, this.clientHeight);
-      const radius = diameter / 2;
+      const rect = this.getBoundingClientRect();
+      const ripple = document.createElement('span');
+      const size = Math.max(rect.width, rect.height);
 
-      circle.style.width = circle.style.height = `${diameter}px`;
-      circle.style.left = `${e.clientX - this.getBoundingClientRect().left - radius}px`;
-      circle.style.top = `${e.clientY - this.getBoundingClientRect().top - radius}px`;
-      circle.classList.add('ripple-effect');
+      ripple.className = 'ripple-effect';
+      ripple.style.width = ripple.style.height = `${size}px`;
+      ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
+      ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
 
-      const ripple = this.querySelector('.ripple-effect');
-      if (ripple) ripple.remove();
+      const existing = this.querySelector('.ripple-effect');
+      if (existing) existing.remove();
 
-      this.appendChild(circle);
-      setTimeout(() => circle.remove(), 600);
+      this.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 600);
     });
   });
+
+  // Focus the email field
+  email.focus();
 });
 </script>
 </body>

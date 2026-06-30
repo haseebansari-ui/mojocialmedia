@@ -55,13 +55,13 @@
 								</span>
 							</div>
 							<ul>
-								<li><a href="#">Home</a></li>
+								<li><a href="index.html">Home</a></li>
 								<li><a href="aboutus.html">About us</a></li>
 								<li><a href="services.html">Services</a></li>
                                 <li><a href="advertiser.html">Advertiser</a></li>
 								<li><a href="publisher.html">Publisher</a></li>
                                 <li><a href="casestudy.html">Casestudy</a></li>
-								<li><a href="#" class="login">Login</a></li>
+								<li><a href="login.html" class="login">Login</a></li>
 							</ul>
 						</nav>
 						<div class="menue-bar-bx">
@@ -108,29 +108,14 @@
                             <div class="row mb-4">
                                 <div class="col-lg-6">
                                     <div class="contact-field-bx">
-                                        <label for="#">Full Name</label>
-                                        <input type="text" class="input-field" placeholder="Your Full Name" />
+                                        <label for="name">Full Name</label>
+                                        <input type="text" class="input-field" name="name" id="name" placeholder="Your Full Name" />
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="contact-field-bx">
-                                        <label for="#">Company Name</label>
-                                        <input type="text" class="input-field" placeholder="Company Name"/>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row mb-4">
-                                <div class="col-lg-6">
-                                    <div class="contact-field-bx">
-                                        <label for="#">Email Address</label>
-                                        <input type="mail" class="input-field" placeholder="example@company.com"/>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="contact-field-bx">
-                                        <label for="#">Phone Number</label>
-                                        <input type="text" class="input-field" placeholder="+1555 123 4568"/>
+                                        <label for="company">Company Name</label>
+                                        <input type="text" class="input-field" name="company" id="company" placeholder="Company Name"/>
                                     </div>
                                 </div>
                             </div>
@@ -138,8 +123,23 @@
                             <div class="row mb-4">
                                 <div class="col-lg-6">
                                     <div class="contact-field-bx">
-                                        <label for="#">Country Name</label>
-                                        <select id="country" name="country" required="" class="invalid">
+                                        <label for="mail">Email Address</label>
+                                        <input type="mail" class="input-field" name="mail" id="mail" placeholder="example@company.com"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="contact-field-bx">
+                                        <label for="num">Phone Number</label>
+                                        <input type="text" class="input-field" name="num" id="num" placeholder="+1555 123 4568"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-lg-6">
+                                    <div class="contact-field-bx">
+                                        <label for="country">Country Name</label>
+                                        <select id="country" name="country" class="select-option">
                                             <option value="">Select country</option>
                                             <option>United States</option>
                                             <option>Canada</option>
@@ -155,7 +155,7 @@
                                 <div class="col-lg-6">
                                     <div class="contact-field-bx">
                                         <label for="industry">Industry Name</label>
-                                        <select id="industry" name="industry" required="" class="invalid">
+                                        <select id="industry" name="industry" class="select-option">
                                             <option value="">Select industry</option>
                                             <option>FinTech</option>
                                             <option>Finance</option>
@@ -177,8 +177,8 @@
                             <div class="row mb-4">
                                 <div class="col-lg-6">
                                     <div class="contact-field-bx">
-                                        <label for="#">Monthly Marketing Budget</label>
-                                        <select id="budget" name="budget" required="" class="invalid">
+                                        <label for="budget">Monthly Marketing Budget</label>
+                                        <select id="budget" name="budget" class="select-option">
                                             <option value="">Select budget</option>
                                             <option>$5K - $15K</option>
                                             <option>$15K - $50K</option>
@@ -190,8 +190,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="contact-field-bx">
-                                        <label for="industry">Services Interested In</label>
-                                        <select id="services" name="services" required="" class="invalid">
+                                        <label for="services">Services Interested In</label>
+                                        <select id="services" name="services " class="select-option">
                                             <option value="">Select service</option>
                                             <option>Performance Marketing</option>
                                             <option>Affiliate Marketing</option>
@@ -206,12 +206,11 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="text-area-bx">
-                                    <label for="message">Message</label>
-                                    <textarea class="text-message" name="Message" rows="4" cols="50" id="message" maxlength="150"></textarea>
-                                </div>
+                            <div class="text-area-bx">
+                                <label for="message">Message</label>
+                                <textarea class="text-message" name="Message" id="message" rows="4" cols="50" id="message" maxlength="150"></textarea>
                             </div>
+                            
                             
                             <a href="#" class="btn"> Send Message </a>
                         </form>
