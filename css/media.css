@@ -302,6 +302,10 @@
         right: 12px;
         width: 138px;
     }
+
+    .mojicial-title {
+        font-size: 2rem;
+    }
 }
 
 
@@ -344,6 +348,11 @@
 
     .abt-hero-visual .fc-1 {
         top: 93px;
+    }
+
+    .loader{
+        width: 40px;
+        height: 50px;
     }
 }
 
