@@ -164,14 +164,31 @@ for(let i = 0; i < processAcc.length; i++){
 
 // Loader
 
-setTimeout(() => {
-  let loader = document.querySelector(".loader-wrapper")
+window.addEventListener("load", () => {
 
-  if(loader){
-    loader.style.display = "none";
-  }
+    const loader = document.querySelector(".loader-wrapper");
 
-}, 5000);
+    if (loader) {
+
+        loader.classList.add("hide");
+
+        setTimeout(() => {
+            loader.remove();
+        }, 3000);
+
+    }
+
+});
+
+
+// setTimeout(() => {
+//   let loader = document.querySelector(".loader-wrapper")
+
+//   if(loader){
+//     loader.style.display = "none";
+//   }
+
+// }, 5000);
 
 // Login Form
 
