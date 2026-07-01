@@ -161,6 +161,23 @@
     .accordion-item-header{
         gap: 0.5rem;
     }
+
+    .auth-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-visual{
+        padding: 44px 15px;
+    }
+
+    .auth-panel{
+        padding: 34px 15px;
+    }
+
+    .auth-card{
+        width: min(100%, 630px);
+        padding: 32px 15px;
+    }
     
 }
 

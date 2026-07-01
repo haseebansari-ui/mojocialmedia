@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mojicial Media</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/media.css" />
+	</head>
+	<body>
+	
+        <main class="auth-shell">
+            <section class="login-sec auth-grid">
+                <!-- Left panel -->
+                <aside class="auth-visual" aria-label="Marketing platform illustration">
+                <div class="visual-overlay"></div>
+                <div class="bg-orb orb-1"></div>
+                <div class="bg-orb orb-2"></div>
+                <div class="bg-orb orb-3"></div>
+
+                <div class="visual-content reveal fade-up visible">
+                    <a href="#" class="brand">
+                    <span class="brand-mark"></span>
+                    <span>GrowthEngine</span>
+                    </a>
+
+                    <h1>Grow Faster with Data-Driven Performance Marketing</h1>
+                    <p>
+                    Scale your business using AI-powered campaigns, real-time optimization, and transparent reporting.
+                    </p>
+
+                    <div class="dash glass">
+                    <div class="dash-top">
+                        <div>
+                        <p class="dash-label">Marketing Intelligence</p>
+                        <h2>Connected performance dashboards</h2>
+                        </div>
+                        <span class="live-pill"><i class="ri-checkbox-blank-circle-fill"></i> Live</span>
+                    </div>
+
+                    <div class="dash-graphic">
+                        <div class="bar bar-1"></div>
+                        <div class="bar bar-2"></div>
+                        <div class="bar bar-3"></div>
+                        <div class="bar bar-4"></div>
+                        <div class="bar bar-5"></div>
+                    </div>
+
+                    <div class="dash-stats">
+                        <div><span>ROAS</span><strong>6.1x</strong></div>
+                        <div><span>CPA</span><strong>-28%</strong></div>
+                        <div><span>Impressions</span><strong>10B+</strong></div>
+                    </div>
+                    </div>
+
+                    <div class="feature-row">
+                    <span class="pill"><i class="ri-shield-check-line"></i> Secure access</span>
+                    <span class="pill"><i class="ri-global-line"></i> Global network</span>
+                    <span class="pill"><i class="ri-brain-line"></i> AI optimization</span>
+                    </div>
+                </div>
+                </aside>
+
+                <!-- Right panel -->
+                <section class="auth-panel">
+                <div class="auth-card reveal fade-right visible">
+                    <div class="auth-header">
+                    <span class="eyebrow"><i class="ri-lock-2-line"></i> Enterprise Login</span>
+                    <h2>Welcome Back</h2>
+                    <p>Sign in to access your performance marketing dashboard.</p>
+                    </div>
+
+                    <form id="loginForm" class="login-form" novalidate="">
+                    <div class="field">
+                        <div class="input-wrap">
+                        <i class="ri-mail-line input-icon"></i>
+                        <input type="email" id="email" name="email" autocomplete="email" required="">
+                        <label for="email">Email Address</label>
+                        </div>
+                        <span class="error-msg" id="emailError"></span>
+                    </div>
+
+                    <div class="field">
+                        <div class="input-wrap">
+                        <i class="ri-lock-line input-icon"></i>
+                        <input type="password" id="password" name="password" autocomplete="current-password" required="" minlength="8">
+                        <label for="password">Password</label>
+                        <button type="button" class="toggle-pass" id="togglePassword" aria-label="Show password">
+                            <i class="ri-eye-line input-icon"></i>
+                        </button>
+                        </div>
+                        <span class="error-msg" id="passwordError"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <label class="remember">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Remember Me</span>
+                        </label>
+                        <a href="#" class="link">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn" id="loginBtn">
+                        <span class="btn-text">Login</span>
+                        <span class="btn-loader" aria-hidden="true"></span>
+                    </button>
+
+                    <!-- <button type="submit" class="btn btn-primary submit-btn ripple" id="loginBtn">
+                        <span class="btn-text">Login</span>
+                        <span class="btn-loader" aria-hidden="true"></span>
+                    </button> -->
+
+                    <div class="divider"><span>OR</span></div>
+
+                    <div class="social-grid">
+                        <button type="button" class="btn btn-social ripple"><i class="ri-google-fill"></i> Continue with Google</button>
+                        <button type="button" class="btn btn-social ripple"><i class="ri-microsoft-fill"></i> Continue with Microsoft</button>
+                        <button type="button" class="btn btn-social ripple"><i class="ri-linkedin-fill"></i> Continue with LinkedIn</button>
+                    </div>
+
+                    <div class="extra-links">
+                        <p>Don't have an account? <a href="#">Create Account</a></p>
+                        <div class="small-links">
+                        <a href="#">Publisher Login</a>
+                        <a href="#">Advertiser Login</a>
+                        </div>
+                    </div>
+
+                    <div class="success-state" id="successState" role="status" aria-live="polite">
+                        <i class="ri-check-line"></i>
+                        <div>
+                        <strong>Login successful.</strong>
+                        <p>Redirecting to your dashboard...</p>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+
+                <div class="auth-footer">
+                    <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="#">Help Center</a>
+                    <a href="#">Contact Support</a>
+                    </div>
+
+                    <div class="socials">
+                    <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                    <a href="#" aria-label="X"><i class="ri-twitter-x-fill"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    </div>
+
+                    <p>© 2026 Mojicialmedia. All rights reserved.</p>
+                </div>
+                </section>
+            </section>
+        </main>
+
+	    <script src="js/scritp.js"></script>
+	</body>
+</html>
