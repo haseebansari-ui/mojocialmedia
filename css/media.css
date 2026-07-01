@@ -178,7 +178,18 @@
         width: min(100%, 630px);
         padding: 32px 15px;
     }
+
+    .contact-form-container .mb-4{
+        margin-bottom: 0 !important;
+    }
     
+    .contact-field-bx{
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-form-container .btn {
+        margin: 2rem 0;
+    }
 }
 
 @media only screen and (max-width: 767px){
