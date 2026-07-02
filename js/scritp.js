@@ -192,140 +192,143 @@ window.addEventListener("load", () => {
 
 // Login Form
 
-const loginForm = document.getElementById("loginForm");
+// const loginForm = document.getElementById("loginForm");
 
-const email = document.getElementById("email");
-const password = document.getElementById("password");
+// const email = document.getElementById("email");
+// const password = document.getElementById("password");
 
-const emailError = document.getElementById("emailError");
-const passwordError = document.getElementById("passwordError");
+// const emailError = document.getElementById("emailError");
+// const passwordError = document.getElementById("passwordError");
 
-loginForm.addEventListener("submit", function (e) {
+// loginForm.addEventListener("submit", function (e) {
 
-    e.preventDefault();
+//     e.preventDefault();
 
-    let isValid = true;
+//     let isValid = true;
 
-    // Reset Errors
-    emailError.textContent = "";
-    passwordError.textContent = "";
+//     // Reset Errors
+//     emailError.textContent = "";
+//     passwordError.textContent = "";
 
-    email.classList.remove("error");
-    password.classList.remove("error");
+//     email.classList.remove("error");
+//     password.classList.remove("error");
 
-    // Email Validation
+//     // Email Validation
 
-    if (email.value.trim() === "") {
+//     if (email.value.trim() === "") {
 
-        emailError.textContent = "Email is required.";
+//         emailError.textContent = "Email is required.";
 
-        email.classList.add("error");
+//         email.classList.add("error");
 
-        isValid = false;
+//         isValid = false;
 
-    } else if (!validateEmail(email.value.trim())) {
+//     } else if (!validateEmail(email.value.trim())) {
 
-        emailError.textContent = "Please enter a valid email address.";
+//         emailError.textContent = "Please enter a valid email address.";
 
-        email.classList.add("error");
+//         email.classList.add("error");
 
-        isValid = false;
+//         isValid = false;
 
-    }
+//     }
 
-    // Password Validation
+//     // Password Validation
 
-    if (password.value.trim() === "") {
+//     if (password.value.trim() === "") {
 
-        passwordError.textContent = "Password is required.";
+//         passwordError.textContent = "Password is required.";
 
-        password.classList.add("error");
+//         password.classList.add("error");
 
-        isValid = false;
+//         isValid = false;
 
-    } else if (password.value.length < 8) {
+//     } else if (password.value.length < 8) {
 
-        passwordError.textContent = "Password must be at least 8 characters.";
+//         passwordError.textContent = "Password must be at least 8 characters.";
 
-        password.classList.add("error");
+//         password.classList.add("error");
 
-        isValid = false;
+//         isValid = false;
 
-    }
+//     }
 
-    // Form Submitted Successfully
+//     // Form Submitted Successfully
 
-    if (isValid) {
+//     if (isValid) {
 
-        alert("Login Successful!");
+//         alert("Login Successful!");
 
-        loginForm.submit();
+//         loginForm.submit();
 
-    }
+//     }
 
-});
+// });
 
-function validateEmail(email) {
+// function validateEmail(email) {
 
-    const regex =
-        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     const regex =
+//         /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    return regex.test(email);
+//     return regex.test(email);
 
-}
+// }
 
-[email, password].forEach(input => {
+// [email, password].forEach(input => {
 
-    input.addEventListener("input", function () {
+//     input.addEventListener("input", function () {
 
-        this.classList.remove("error");
+//         this.classList.remove("error");
 
-        if (this.id === "email") {
+//         if (this.id === "email") {
 
-            emailError.textContent = "";
+//             emailError.textContent = "";
 
-        } else {
+//         } else {
 
-            passwordError.textContent = "";
+//             passwordError.textContent = "";
 
-        }
+//         }
 
-    });
+//     });
 
-});
+// });
 
-const togglePassword = document.getElementById("togglePassword");
+// const togglePassword = document.getElementById("togglePassword");
 
-togglePassword.addEventListener("click", () => {
+// togglePassword.addEventListener("click", () => {
 
-    if (password.type === "password") {
+//     if (password.type === "password") {
 
-        password.type = "text";
+//         password.type = "text";
 
-        togglePassword.innerHTML =
-            '<i class="ri-eye-off-line"></i>';
+//         togglePassword.innerHTML =
+//             '<i class="ri-eye-off-line"></i>';
 
-    } else {
+//     } else {
 
-        password.type = "password";
+//         password.type = "password";
 
-        togglePassword.innerHTML =
-            '<i class="ri-eye-line"></i>';
+//         togglePassword.innerHTML =
+//             '<i class="ri-eye-line"></i>';
 
-    }
+//     }
 
-});
+// });
 
-const loginBtn = document.getElementById("loginBtn");
+// const loginBtn = document.getElementById("loginBtn");
 
-const btnText = loginBtn.querySelector(".btn-text");
+// const btnText = loginBtn.querySelector(".btn-text");
 
-const loader = loginBtn.querySelector(".btn-loader");
+// const loader = loginBtn.querySelector(".btn-loader");
 
-btnText.style.display = "none";
+// btnText.style.display = "none";
 
-loader.style.display = "inline-block";
+// loader.style.display = "inline-block";
 
-btnText.style.display = "inline";
+// btnText.style.display = "inline";
 
-loader.style.display = "none";
+// loader.style.display = "none";
+
+
+
