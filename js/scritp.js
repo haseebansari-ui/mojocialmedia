@@ -199,14 +199,7 @@ window.addEventListener("load", () => {
 });
 
 
-// setTimeout(() => {
-//   let loader = document.querySelector(".loader-wrapper")
 
-//   if(loader){
-//     loader.style.display = "none";
-//   }
-
-// }, 5000);
 
 // Login Form
 
