@@ -312,20 +312,23 @@ header.active nav ul li a.login::after {
 .hero-sec {
 	height: 100%;
 	position: relative;
+    border-radius: 0 0 7rem 7rem;
 }
 
 .hero-video {
 	width: 100%;
+    border-radius: 0 0 5rem 5rem;
 }
 
 .hero-content {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 100%;
+	height: 99%;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.4);
     text-align: center;
+    border-radius: 0 0 5rem 5rem;
 }
 .hero-content h1 {
 	font-size: 4rem;
@@ -386,15 +389,17 @@ header.active nav ul li a.login::after {
     }
 }
 
-.hero-bnn-white-bg{
+/* background: rgba(0, 0, 0, 1); */
+/* .hero-bnn-white-bg{
     position: absolute;
-    background: var(--white-color);
-    height: 5rem;
+    background: linear-gradient(135deg, #fde1ac, #fad8d8);
+    height: 7rem;
     width: 100%;
     z-index: 5;
-    bottom: -34px;
-    left: 0;
-}
+    bottom: 0px;
+    left: 0px;
+    border-radius: 0 0 7rem 7rem;
+} */
 
 /* --- Marquee --- */
 
@@ -1699,6 +1704,7 @@ header.active nav ul li a.login::after {
 
 .mrkt-proess-sec .heading-bx{
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 /* .process-cntnt-bx{
@@ -1893,6 +1899,7 @@ header.active nav ul li a.login::after {
     position: relative;
     overflow: hidden;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .benefit-card::after {
@@ -1925,6 +1932,7 @@ header.active nav ul li a.login::after {
     place-items: center;
     margin-bottom: 12px;
     font-size: 1.2rem;
+    margin: 0 auto 1rem;
 }
 
 .benefit-icon span i{
@@ -2168,13 +2176,12 @@ header.active nav ul li a.login::after {
 }
 
 .prss-steps-sec .step-card{
-    display: flex;
-    gap: 1rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 13px 25px rgba(17, 24, 39, .08);
     padding: 1rem;
     border-radius: 1rem;
     background: var(--white-color);
+    text-align: center;
 }
 
 .step-card .step-num{
@@ -2186,6 +2193,10 @@ header.active nav ul li a.login::after {
     font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
 }
 
 .prss-step-bg-clr{
@@ -2608,6 +2619,13 @@ small {
     
 }
 
+/* --- Services Faq Section --- */
+
+.srvc-faq-sec.mrkt-proess-sec .heading-bx{
+    text-align: center;
+} 
+
+
 /* =========================
     About Page
 ============================*/
@@ -2847,6 +2865,13 @@ small {
     margin-bottom: 1rem;
 }
 
+.timeline-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .timeline-item:hover{
     box-shadow: 0 20px 60px rgba(253, 192, 101, 0.61);
 }
@@ -2869,6 +2894,11 @@ small {
 
 .timeline-title p{
     font-size: 1rem;
+    text-align: center;
+}
+
+.timeline-item p{
+    text-align: center;
 }
 
 /* --- About Core values Section --- */
@@ -2897,6 +2927,7 @@ small {
 
 .value-card {
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .value-card span i{
@@ -3016,6 +3047,9 @@ small {
     margin: 0 0 30px;
 }
 
+.abt-faq.mrkt-proess-sec .heading-bx{
+    text-align: center;
+}
 
 /* --- Loader --- */
 
@@ -3676,4 +3710,13 @@ small {
 
 .auth-footer p{
     color: #64748b;
+}
+
+
+/* =====================
+    Advertiser Section
+========================*/
+
+.adv-faq-sec.mrkt-proess-sec .heading-bx{
+    text-align: center;
 }
