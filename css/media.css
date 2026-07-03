@@ -65,12 +65,14 @@
         transform: translateX(0%);
         opacity: 1;
         visibility: visible;
+        background: linear-gradient(135deg, #fff7e8, #fff);
     }
 
     nav ul{
         display: flex;
         flex-direction: column;
         margin-top: 10rem;
+        
     }
 
     header.active nav ul li a{
@@ -79,12 +81,12 @@
     }
 
     .inn-header nav ul li a{
-       color: var(--white-color); 
+       color: var(--secondry); 
     }
 
     .inn-header nav ul li a:hover {
 	    /* color: var(--white-color); */
-        color: var(--font-color);
+        color: var(--secondry);
     }
 
     .menu-close{
@@ -92,11 +94,11 @@
         position: absolute;
         top: 18px;
         right: 29px;
-        color: var(--white-color);
+        color: var(--secondry);
         height: 3rem;
         width: 3rem;
         border-radius: 100%;
-        border: 1px solid var(--white-color);
+        border: 1px solid var(--secondry);
         display: flex;
         align-items: center;
         justify-content: center;
