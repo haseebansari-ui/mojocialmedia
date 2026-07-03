@@ -77,11 +77,16 @@
 
     nav ul li a{
         color: var(--secondry);
+        font-size: 1.3rem;
     }
 
-    header.active nav ul li a{
-        color: var(--secondry);    
-        font-size: 1.3rem;
+    header.active nav ul li a.login{
+        border: none;
+    }
+
+    header.active nav ul li a.login{
+        color: var(--secondry);
+        background: var(--primary);    
     }
 
     .inn-header nav ul li a{
