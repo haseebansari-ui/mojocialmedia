@@ -83,7 +83,8 @@
     }
 
     .inn-header nav ul li a:hover {
-	    color: var(--white-color);
+	    /* color: var(--white-color); */
+        color: var(--font-color);
     }
 
     .menu-close{

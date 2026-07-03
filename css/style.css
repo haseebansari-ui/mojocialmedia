@@ -142,7 +142,7 @@ header.active .logo {
 	z-index: 5;
 }
 
-.logo-bg {
+/* .logo-bg {
 	position: absolute;
 	bottom: -3px;
 	left: 0px;
@@ -153,6 +153,22 @@ header.active .logo {
 	visibility: visible;
 	opacity: 1;
 	z-index: -1;
+} */
+
+.logo-bg{
+    position: absolute;
+    bottom: -2px;
+    left: -15px;
+    height: 28px;
+    width: 155px;
+    box-shadow: 0 0 21px #ffffff;
+    transition: var(--transition);
+    visibility: visible;
+    opacity: 1;
+    z-index: -1;
+    background: #ffffffb3;
+    border-radius: 100%;
+    transform: skew(-34deg, 0deg);
 }
 
 header.active .logo-bg {
@@ -368,6 +384,16 @@ header.active nav ul li a.login::after {
     51%,100%{
         opacity:0;
     }
+}
+
+.hero-bnn-white-bg{
+    position: absolute;
+    background: var(--white-color);
+    height: 5rem;
+    width: 100%;
+    z-index: 5;
+    bottom: -34px;
+    left: 0;
 }
 
 /* --- Marquee --- */
