@@ -1768,6 +1768,7 @@ header.active nav ul li a.login::after {
   border: 1px solid var(--primary);
   border-radius: .25rem;
   margin-bottom: 0.5rem;
+  width: 100%;
 }
 
 .prss-title{
@@ -3716,4 +3717,16 @@ small {
 
 .adv-faq-sec.mrkt-proess-sec .heading-bx{
     text-align: center;
+}
+
+
+
+/* --- Faq Section --- */
+
+.faq-sec{
+    overflow: hidden;
+}
+
+.faq-sec .heading-bx{
+    margin-bottom: 3rem;
 }
