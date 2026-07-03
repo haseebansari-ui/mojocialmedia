@@ -75,8 +75,12 @@
         
     }
 
+    nav ul li a{
+        color: var(--secondry);
+    }
+
     header.active nav ul li a{
-        color: var(--white-color);    
+        color: var(--secondry);    
         font-size: 1.3rem;
     }
 
