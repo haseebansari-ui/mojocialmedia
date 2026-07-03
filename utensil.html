@@ -1,1268 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Become a partner with our performance marketing platform. Join as a publisher, advertiser, agency, or brand and grow with premium campaigns and global reach." />
-  <meta name="keywords" content="become a partner, performance marketing partner, affiliate program, advertiser signup, publisher application" />
-  <meta name="author" content="Performance Marketing Platform" />
-  <meta name="theme-color" content="#0f172a" />
-  <title>Become a Partner | Performance Marketing Platform</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havmor Media | Next-Gen Enterprise Performance Marketing Network</title>
+    <meta name="description" content="Scale global acquisition with Havmor Media's AI-optimized performance marketing engine. Real-time attribution, fraud prevention, and predictive analytics.">
+    <link rel="stylesheet" href="design-system.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+      /* ==========================================================================
+   DESIGN TOKENS & SYSTEM ARCHITECTURE
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-  <style>
-    :root {
-  --primary: #ffb000;
-  --primary-2: #ff8a00;
-  --navy: #111827;
-  --text: #111827;
-  --muted: #64748b;
-  --bg: #ffffff;
-  --bg-soft: #f7f8fb;
-  --line: rgba(17, 24, 39, 0.08);
-  --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
-  --shadow-hover: 0 24px 70px rgba(255, 176, 0, 0.14);
-  --radius: 20px;
-  --container: 1200px;
+:root {
+    /* Color Palette */
+    --clr-primary: #FFB000;
+    --clr-secondary: #FF8A00;
+    --clr-dark: #111827;
+    --clr-dark-bg: #0B0F19;
+    --clr-white: #FFFFFF;
+    --clr-light-bg: #F8FAFC;
+    --clr-success: #10B981;
+    --clr-slate-400: #94A3B8;
+    --clr-slate-700: #334155;
+    --clr-glass-border: rgba(255, 255, 255, 0.08);
+    --clr-glass-bg: rgba(17, 24, 39, 0.7);
+    
+    /* Gradients */
+    --grad-accent: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-secondary) 100%);
+    --grad-dark: linear-gradient(180deg, #111827 0%, #0B0F19 100%);
+    --grad-glow: radial-gradient(circle, rgba(255, 138, 0, 0.15) 0%, rgba(0,0,0,0) 70%);
+
+    /* Typography Hierarchy (Fluid Type Scale) */
+    --ff-main: 'Manrope', sans-serif;
+    --fs-display: clamp(2.5rem, 5vw, 4.5rem);
+    --fs-h1: clamp(2rem, 4vw, 3.5rem);
+    --fs-h2: clamp(1.75rem, 3vw, 2.5rem);
+    --fs-h3: clamp(1.25rem, 2vw, 1.75rem);
+    --fs-body: clamp(1rem, 1vw + 0.5rem, 1.125rem);
+    --fs-sm: 0.875rem;
+
+    /* Spacing & Layout */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+    --radius-lg: 24px;
+    --radius-md: 12px;
+    --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+/* Base Global Resets */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  font-family: 'Manrope', sans-serif;
-  color: var(--text);
-  background: var(--bg);
-  overflow-x: hidden;
+    font-family: var(--ff-main);
+    background-color: var(--clr-dark-bg);
+    color: var(--clr-white);
+    overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
-a { text-decoration: none; color: inherit; }
-button, input, select, textarea { font: inherit; }
-input, select, textarea { outline: none; }
 
+/* Reusable Layout Engine */
 .container {
-  width: min(100% - 2rem, var(--container));
-  margin-inline: auto;
-}
-.section { padding: 100px 0; position: relative; }
-.section-soft { background: var(--bg-soft); }
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255,255,255,0.84);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(17,24,39,0.06);
-}
-.nav-wrap {
-  min-height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  color: var(--navy);
-}
-.brand-mark {
-  width: 40px;
-  height: 40px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-  box-shadow: 0 10px 22px rgba(255,176,0,0.25);
-}
-.nav {
-  display: flex;
-  gap: 22px;
-  color: var(--muted);
-}
-.nav a:hover { color: var(--navy); }
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: 0;
-  color: var(--navy);
-  font-size: 1.5rem;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 13px 20px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 700;
-  white-space: nowrap;
-  position: relative;
-  overflow: hidden;
-}
-.btn:hover { transform: translateY(-2px); }
-.btn-primary {
-  color: #111;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-  box-shadow: 0 16px 28px rgba(255,176,0,0.22);
-}
-.btn-secondary {
-  color: var(--navy);
-  background: #fff;
-  border-color: var(--line);
-}
-.btn-ghost {
-  color: var(--navy);
-  background: rgba(17,24,39,0.04);
-}
-.btn-dark {
-  background: #111827;
-  color: #fff;
-}
-.btn-light {
-  background: rgba(255,255,255,0.12);
-  color: #fff;
-  border-color: rgba(255,255,255,0.14);
-}
-.ripple { position: relative; overflow: hidden; }
-
-.hero {
-  padding-top: 88px;
-  overflow: hidden;
-}
-.hero-grid,
-.partner-layout,
-.cta-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  align-items: center;
-}
-.hero h1 {
-  font-size: clamp(2.8rem, 5vw, 5.2rem);
-  line-height: 1.02;
-  letter-spacing: -0.04em;
-  margin: 18px 0 14px;
-}
-.hero-copy p,
-.section-head p,
-.cta-copy p {
-  color: var(--muted);
-  line-height: 1.85;
-  font-size: 1.02rem;
-}
-.hero-cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 26px;
-}
-.hero-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 18px;
-}
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: #fff;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.section-head {
-  max-width: 760px;
-  margin-bottom: 36px;
-}
-.section-tag, .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: rgba(255,176,0,0.12);
-  color: #9a5e00;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-.section-head h2,
-.cta-copy h2 {
-  margin-top: 14px;
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  letter-spacing: -0.04em;
-}
-
-.hero-visual {
-  position: relative;
-  min-height: 560px;
-}
-.glass {
-  backdrop-filter: blur(16px);
-  background: rgba(255,255,255,0.72);
-  border: 1px solid rgba(255,255,255,0.4);
-}
-.dash {
-  position: relative;
-  z-index: 2;
-  padding: 24px;
-  border-radius: 28px;
-  box-shadow: var(--shadow);
-}
-.dash-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-}
-.dash-label {
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-.dash-top h2 { margin-top: 4px; font-size: 1.55rem; }
-.live-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(16,185,129,0.12);
-  color: #047857;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-.dash-graphic {
-  position: relative;
-  margin-top: 22px;
-  height: 230px;
-  border-radius: 24px;
-  background:
-    linear-gradient(180deg, rgba(255,176,0,0.12), rgba(255,255,255,0)),
-    linear-gradient(90deg, rgba(17,24,39,0.05) 1px, transparent 1px) 0 0 / 28px 28px;
-  overflow: hidden;
-}
-.node {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-  box-shadow: 0 0 0 10px rgba(255,176,0,0.12);
-  animation: float 6s ease-in-out infinite;
-}
-.node-1 { top: 26%; left: 16%; }
-.node-2 { top: 52%; left: 42%; animation-delay: 0.8s; }
-.node-3 { top: 34%; left: 72%; animation-delay: 1.4s; }
-.node-4 { top: 62%; left: 62%; animation-delay: 2s; }
-.dash-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-top: 16px;
-}
-.dash-stats div {
-  padding: 14px;
-  border-radius: 16px;
-  background: var(--bg-soft);
-}
-.dash-stats span {
-  display: block;
-  color: var(--muted);
-  font-size: 0.82rem;
-  margin-bottom: 4px;
-}
-.dash-stats strong { font-size: 1.05rem; }
-
-.floating-card {
-  position: absolute;
-  z-index: 3;
-  width: 170px;
-  padding: 14px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.88);
-  border: 1px solid rgba(255,255,255,0.55);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(14px);
-}
-.floating-card span { color: var(--muted); font-size: 0.8rem; }
-.floating-card strong { display: block; font-size: 1.5rem; margin: 4px 0; }
-.fc-1 { top: 20px; right: 14px; }
-.fc-2 { top: 170px; left: -10px; }
-.fc-3 { bottom: 24px; right: 38px; }
-
-.bg-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(10px);
-  opacity: 0.7;
-}
-.orb-1 {
-  width: 220px;
-  height: 220px;
-  background: radial-gradient(circle, rgba(255,176,0,0.34), transparent 65%);
-  top: 24px;
-  right: -20px;
-  animation: float 8s ease-in-out infinite;
-}
-.orb-2 {
-  width: 160px;
-  height: 160px;
-  background: radial-gradient(circle, rgba(17,24,39,0.12), transparent 68%);
-  left: -18px;
-  bottom: 10px;
-  animation: float 9s ease-in-out infinite;
-}
-
-/* Benefits */
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-}
-.feature-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
-  transition: all 0.3s ease;
-}
-.feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
-}
-.feature-card i {
-  width: 50px;
-  height: 50px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  margin-bottom: 12px;
-  background: linear-gradient(135deg, rgba(255,176,0,0.18), rgba(255,138,0,0.18));
-  color: #111827;
-  font-size: 1.25rem;
-}
-.feature-card h3 { margin-bottom: 8px; font-size: 1rem; }
-.feature-card p { color: var(--muted); line-height: 1.7; font-size: 0.94rem; }
-
-/* Form */
-.partner-layout { align-items: start; }
-.trust-sidebar {
-  display: grid;
-  gap: 18px;
-}
-.sidebar-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-  padding: 24px;
-}
-.trust-list {
-  list-style: none;
-  display: grid;
-  gap: 12px;
-  margin-top: 14px;
-  color: var(--muted);
-}
-.trust-list li { display: flex; gap: 10px; align-items: center; }
-.trust-list i { color: #10b981; }
-
-.partner-form {
-  padding: 28px;
-  border-radius: 28px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(255,255,255,0.4);
-}
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-.field { margin-bottom: 16px; }
-.field.full { margin-top: 2px; }
-.input-wrap {
-  position: relative;
-}
-.input-icon {
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--muted);
-  z-index: 2;
-}
-.input-wrap input,
-.input-wrap select,
-.textarea-wrap textarea {
-  width: 100%;
-  height: 58px;
-  padding: 20px 46px 10px 44px;
-  border-radius: 16px;
-  border: 1px solid rgba(17,24,39,0.12);
-  background: rgba(247,248,251,0.72);
-  transition: all 0.25s ease;
-}
-.input-wrap select { appearance: none; }
-.textarea-wrap textarea {
-  min-height: 150px;
-  resize: vertical;
-  padding-top: 24px;
-}
-.input-wrap label {
-  position: absolute;
-  left: 44px;
-  top: 18px;
-  color: var(--muted);
-  pointer-events: none;
-  transition: all 0.22s ease;
-}
-.input-wrap input:focus,
-.input-wrap select:focus,
-.textarea-wrap textarea:focus {
-  border-color: rgba(255,176,0,0.85);
-  box-shadow: 0 0 0 4px rgba(255,176,0,0.12);
-  background: #fff;
-}
-.input-wrap input:focus + label,
-.input-wrap input:not(:placeholder-shown) + label,
-.input-wrap select:focus + label,
-.textarea-wrap textarea:focus + label,
-.textarea-wrap textarea:not(:placeholder-shown) + label {
-  top: 8px;
-  font-size: 0.76rem;
-  color: #9a5e00;
-}
-.error-msg {
-  display: block;
-  min-height: 18px;
-  margin-top: 8px;
-  color: #dc2626;
-  font-size: 0.85rem;
-}
-.remember {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--muted);
-}
-.submit-btn {
-  width: 100%;
-  margin-top: 6px;
-}
-.btn-loader {
-  width: 16px;
-  height: 16px;
-  border: 2px solid rgba(255,255,255,0.5);
-  border-top-color: #111827;
-  border-radius: 50%;
-  display: none;
-  animation: spin 0.8s linear infinite;
-}
-.submit-btn.loading .btn-loader { display: inline-block; }
-.submit-btn.loading .btn-text { opacity: 0.8; }
-.success-message {
-  display: none;
-  align-items: flex-start;
-  gap: 12px;
-  margin-top: 16px;
-  padding: 16px;
-  border-radius: 16px;
-  background: rgba(16,185,129,0.1);
-  border: 1px solid rgba(16,185,129,0.18);
-}
-.success-message.show {
-  display: flex;
-  animation: pop 0.35s ease;
-}
-.success-message i {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: #10b981;
-  color: #fff;
-  flex: 0 0 auto;
-}
-
-/* Process */
-.process {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-}
-.process-step {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 20px;
-  box-shadow: var(--shadow);
-  text-align: center;
-  transition: all 0.3s ease;
-}
-.process-step:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
-}
-.step-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  display: grid;
-  place-items: center;
-  margin: 0 auto 12px;
-  background: linear-gradient(135deg, rgba(255,176,0,0.18), rgba(255,138,0,0.18));
-  color: #111827;
-  font-size: 1.25rem;
-}
-.process-step h3 { margin-bottom: 8px; font-size: 1rem; }
-.process-step p { color: var(--muted); line-height: 1.7; font-size: 0.93rem; }
-
-/* FAQ */
-.faq-list {
-  display: grid;
-  gap: 12px;
-}
-.faq-item {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-.faq-question {
-  width: 100%;
-  padding: 18px 20px;
-  border: none;
-  background: transparent;
-  text-align: left;
-  font-weight: 700;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-}
-.faq-question::after {
-  content: '+';
-  color: #9a5e00;
-  font-size: 1.2rem;
-}
-.faq-item.active .faq-question::after { content: '−'; }
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 20px;
-  color: var(--muted);
-  line-height: 1.8;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-}
-.faq-item.active .faq-answer {
-  max-height: 180px;
-  padding: 0 20px 18px;
-}
-
-/* CTA */
-.cta-banner {
-  padding: 92px 0;
-  background: linear-gradient(135deg, #ffb000, #ff8a00);
-  color: #111827;
-}
-.cta-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-/* Footer */
-.site-footer {
-  background: #0b1220;
-  color: rgba(255,255,255,0.84);
-  padding: 70px 0;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr;
-  gap: 24px;
-}
-.site-footer h4 { color: #fff; margin-bottom: 14px; }
-.site-footer a {
-  display: block;
-  margin-bottom: 10px;
-  color: rgba(255,255,255,0.76);
-}
-.site-footer a:hover { color: #fff; }
-.site-footer p {
-  margin-top: 14px;
-  line-height: 1.8;
-  max-width: 34ch;
-}
-.socials {
-  display: flex;
-  gap: 10px;
-}
-.socials a {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: rgba(255,255,255,0.08);
-  color: #fff;
-}
-
-/* Reveal */
-.reveal { opacity: 0; transform: translateY(24px); }
-.reveal.visible {
-  opacity: 1;
-  transform: none;
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.fade-left { transform: translateX(-24px); }
-.fade-right { transform: translateX(24px); }
-
-/* Ripple */
-.ripple-effect {
-  position: absolute;
-  border-radius: 50%;
-  transform: scale(0);
-  background: rgba(255,255,255,0.5);
-  animation: ripple 0.6s linear;
-  pointer-events: none;
-}
-
-/* Animations */
-@keyframes float { 50% { transform: translateY(-10px); } }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pop { from { transform: scale(0.96); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-@keyframes ripple { to { transform: scale(4); opacity: 0; } }
-
-@media (max-width: 1200px) {
-  .hero-grid,
-  .partner-layout,
-  .cta-grid {
-    grid-template-columns: 1fr;
-  }
-  .feature-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  .section { padding: 72px 0; }
-  .nav {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    right: 0;
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    padding: 16px;
-    border-top: 1px solid var(--line);
-  }
-  .nav.open { display: flex; }
-  .menu-toggle { display: inline-flex; }
-  .header-actions .btn-ghost { display: none; }
-  .grid-2,
-  .feature-grid,
-  .process,
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-  .cta-actions {
-    justify-content: flex-start;
-  }
-}
-@media (max-width: 520px) {
-  .hero h1 { font-size: 2.6rem; }
-  .partner-form,
-  .sidebar-card {
-    border-radius: 20px;
-  }
-  .floating-card {
-    position: static;
     width: 100%;
-    margin-bottom: 12px;
-  }
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
 }
-  </style>
+
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space-md);
+}
+
+/* Reusable Components Architecture */
+.btn-premium {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.25rem;
+    font-weight: 600;
+    font-size: var(--fs-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--clr-dark);
+    background: var(--grad-accent);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    z-index: 1;
+}
+
+.btn-premium::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--clr-white);
+    opacity: 0;
+    transition: var(--transition-smooth);
+    z-index: -1;
+}
+
+.btn-premium:hover::before {
+    opacity: 1;
+}
+
+.card-glass {
+    background: var(--clr-glass-bg);
+    border: 1px solid var(--grad-accent);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    transition: var(--transition-smooth);
+}
+
+.card-glass:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(255, 138, 0, 0.15);
+}
+
+/* Accessibility Skip Link */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--clr-primary);
+    color: var(--clr-dark);
+    padding: var(--space-sm);
+    z-index: 9999;
+}
+.skip-link:focus { top: 0; }
+        /* Contextual Layout Override for Home Page */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            overflow: hidden;
+        }
+        .bg-orb {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: var(--grad-glow);
+            top: -200px;
+            right: -200px;
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .marquee-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+            background: rgba(17, 24, 39, 0.4);
+            padding: var(--space-md) 0;
+            border-top: 1px solid var(--clr-glass-border);
+            border-bottom: 1px solid var(--clr-glass-border);
+        }
+        .marquee-track {
+            display: inline-flex;
+            gap: var(--space-xl);
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .metric-number {
+            font-size: var(--fs-h1);
+            font-weight: 800;
+            color: var(--clr-primary);
+        }
+    </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a href="#hero" class="brand" aria-label="Homepage">
-      <span class="brand-mark"></span>
-      <span>GrowthEngine</span>
-    </a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <nav class="nav" aria-label="Primary">
-      <a href="#benefits">Why Partner</a>
-      <a href="#apply">Apply</a>
-      <a href="#works">How It Works</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-
-    <div class="header-actions">
-      <a class="btn btn-ghost" href="#apply">Become a Publisher</a>
-      <a class="btn btn-primary" href="#apply">Become an Advertiser</a>
-      <button class="menu-toggle" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
-    </div>
-  </div>
-</header>
-
-<main>
-  <!-- Hero -->
-  <section class="hero section" id="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy reveal fade-up">
-        <span class="eyebrow"><i class="ri-rocket-2-line"></i> Global Performance Marketing Network</span>
-        <h1>Become Our Growth Partner</h1>
-        <p>
-          Join our global performance marketing network and connect with premium advertisers, high-converting offers, and AI-powered optimization.
-        </p>
-        <div class="hero-cta">
-          <a href="#apply" class="btn btn-primary ripple"><i class="ri-user-add-line"></i> Become a Publisher</a>
-          <a href="#apply" class="btn btn-secondary ripple"><i class="ri-building-4-line"></i> Become an Advertiser</a>
+    <header class="card-glass" style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 95%; max-width: 1400px; padding: 15px 40px; z-index: 1000; border-radius: 50px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" aria-label="Havmor Media Home">
+                <strong style="color: var(--clr-white); font-size: 1.5rem; letter-spacing: -1px;">HAVMOR<span style="color: var(--clr-primary);">MEDIA</span></strong>
+            </a>
+            <nav aria-label="Main navigation" style="display: flex; gap: var(--space-md);">
+                <a href="#" style="color: var(--clr-white); text-decoration: none; font-weight: 500;">Solutions</a>
+                <a href="#" style="color: var(--clr-white); text-decoration: none; font-weight: 500;">Publishers</a>
+                <a href="#" style="color: var(--clr-white); text-decoration: none; font-weight: 500;">Advertisers</a>
+                <a href="#" style="color: var(--clr-white); text-decoration: none; font-weight: 500;">Case Studies</a>
+            </nav>
+            <div style="display: flex; gap: var(--space-sm); align-items: center;">
+                <a href="#" style="color: var(--clr-white); text-decoration: none; font-weight: 600; font-size: var(--fs-sm);">Client Login</a>
+                <button class="btn-premium">Get Started <i class="ri-arrow-right-line" style="margin-left: 8px;"></i></button>
+            </div>
         </div>
-        <div class="hero-badges">
-          <span class="pill"><i class="ri-shield-check-line"></i> Fraud protection</span>
-          <span class="pill"><i class="ri-bar-chart-grouped-line"></i> Real-time analytics</span>
-          <span class="pill"><i class="ri-global-line"></i> Worldwide reach</span>
-        </div>
-      </div>
+    </header>
 
-      <div class="hero-visual reveal fade-right" aria-label="Performance dashboard illustration">
-        <div class="floating-card fc-1">
-          <span>Weekly Payments</span><strong>Fast</strong><small>reliable payouts</small>
-        </div>
-        <div class="floating-card fc-2">
-          <span>Offers</span><strong>Premium</strong><small>high EPC campaigns</small>
-        </div>
-        <div class="floating-card fc-3">
-          <span>Tracking</span><strong>Smart</strong><small>AI-driven optimization</small>
-        </div>
-
-        <div class="dash glass">
-          <div class="dash-top">
-            <div>
-              <p class="dash-label">Partner Growth Intelligence</p>
-              <h2>Scale with confidence</h2>
+    <main id="main-content">
+        <section class="hero-section">
+            <div class="bg-orb"></div>
+            <div class="container">
+                <div class="grid-12" style="align-items: center;">
+                    <div style="grid-column: span 7; z-index: 2;">
+                        <span style="color: var(--clr-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: var(--fs-sm); display: block; margin-bottom: var(--space-sm);">AI-Powered Acquisition Architecture</span>
+                        <h1 class="split-text" style="font-size: var(--fs-display); font-weight: 800; line-height: 1.1; margin-bottom: var(--space-md);">Next-Gen Performance Marketing Ecosystem</h1>
+                        <p style="color: var(--clr-slate-400); font-size: var(--fs-body); margin-bottom: var(--space-lg); max-width: 90%;">Scale multi-channel ROI dynamically with fraud-proof tracking networks, native automation layers, and predictive optimization intelligence built for enterprise performance.</p>
+                        <div style="display: flex; gap: var(--space-md);">
+                            <button class="btn-premium">Launch Campaign</button>
+                            <button class="btn-premium" style="background: transparent; border: 1px solid var(--clr-glass-border); color: var(--clr-white);">Explore Network</button>
+                        </div>
+                    </div>
+                    
+                    <div style="grid-column: span 5; position: relative; z-index: 2;">
+                        <div class="card-glass" style="padding: var(--space-md); border-color: rgba(255,176,0,0.2);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-md);">
+                                <span style="font-size: var(--fs-sm); font-weight: 600; color: var(--clr-slate-400);"><i class="ri-radar-line" style="color: var(--clr-primary);"></i> Real-Time Publisher Streams</span>
+                                <span class="badge" style="background: rgba(16,185,129,0.2); color: var(--clr-success); padding: 4px 12px; border-radius: 20px; font-size: 12px;">Live Analytics Engine</span>
+                            </div>
+                            <div style="background: rgba(0,0,0,0.3); height: 200px; border-radius: var(--radius-md); border: 1px solid var(--clr-glass-border); margin-bottom: var(--space-sm); display: flex; align-items: flex-end; padding: var(--space-sm); gap: 10px;">
+                                <div style="width: 20%; height: 40%; background: var(--grad-accent); border-radius: 4px;"></div>
+                                <div style="width: 20%; height: 75%; background: var(--grad-accent); border-radius: 4px;"></div>
+                                <div style="width: 20%; height: 60%; background: var(--grad-accent); border-radius: 4px;"></div>
+                                <div style="width: 20%; height: 95%; background: var(--grad-accent); border-radius: 4px;"></div>
+                            </div>
+                            <div class="grid-12" style="gap: var(--space-sm);">
+                                <div style="grid-column: span 6;">
+                                    <p style="font-size: 12px; color: var(--clr-slate-400);">Conversion Rate</p>
+                                    <h3 class="counter-val" style="color: var(--clr-success);">4.82%</h3>
+                                </div>
+                                <div style="grid-column: span 6;">
+                                    <p style="font-size: 12px; color: var(--clr-slate-400);">Fraud Mitigation</p>
+                                    <h3 style="color: var(--clr-white);">99.98%</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <span class="live-pill"><i class="ri-checkbox-blank-circle-fill"></i> Live</span>
-          </div>
+        </section>
 
-          <div class="dash-graphic">
-            <div class="node node-1"></div>
-            <div class="node node-2"></div>
-            <div class="node node-3"></div>
-            <div class="node node-4"></div>
-          </div>
-
-          <div class="dash-stats">
-            <div><span>Global Advertisers</span><strong>500+</strong></div>
-            <div><span>Countries</span><strong>120+</strong></div>
-            <div><span>Weekly Payouts</span><strong>On time</strong></div>
-          </div>
-        </div>
-
-        <div class="bg-orb orb-1"></div>
-        <div class="bg-orb orb-2"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Benefits -->
-  <section class="section section-soft" id="benefits">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="section-tag">Why Partner With Us</span>
-        <h2>Built for Trust, Scale, and Performance</h2>
-        <p>Our partner ecosystem is designed to help quality publishers and advertisers grow with clarity, support, and measurable outcomes.</p>
-      </div>
-
-      <div class="feature-grid">
-        <article class="feature-card reveal fade-up"><i class="ri-gift-line"></i><h3>Exclusive Campaigns</h3><p>Access premium offers curated for strong partner performance.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-line-chart-line"></i><h3>High EPC Offers</h3><p>Grow revenue with campaigns engineered for stronger earnings.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-secure-payment-line"></i><h3>Weekly/Fast Payments</h3><p>Reliable payout processes that support your cash flow.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-brain-line"></i><h3>AI-Powered Optimization</h3><p>Improve results with intelligent signal-based optimization.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-fingerprint-line"></i><h3>Smart Tracking Technology</h3><p>Track performance accurately across key conversion events.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-shield-check-line"></i><h3>Fraud Protection</h3><p>Safeguard spend and traffic quality with layered controls.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-file-chart-line"></i><h3>Real-Time Analytics</h3><p>See what’s working with live reporting and actionable insights.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-global-line"></i><h3>Global Reach</h3><p>Expand across markets with a network built for scale.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-user-star-line"></i><h3>Dedicated Account Managers</h3><p>Work with experts who guide strategy and execution.</p></article>
-        <article class="feature-card reveal fade-up"><i class="ri-eye-line"></i><h3>Transparent Reporting</h3><p>Clear performance visibility for better decisions and trust.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Application -->
-  <section class="section" id="apply">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="section-tag">Partner Registration</span>
-        <h2>Become a Partner</h2>
-        <p>Complete the form below and our partnership team will contact you within 24 hours.</p>
-      </div>
-
-      <div class="partner-layout">
-        <aside class="trust-sidebar reveal fade-left">
-          <div class="sidebar-card">
-            <h3>Trust Signals</h3>
-            <ul class="trust-list">
-              <li><i class="ri-checkbox-circle-line"></i> Global Publisher Network</li>
-              <li><i class="ri-checkbox-circle-line"></i> Premium Advertisers</li>
-              <li><i class="ri-checkbox-circle-line"></i> AI Campaign Optimization</li>
-              <li><i class="ri-checkbox-circle-line"></i> Dedicated Account Managers</li>
-              <li><i class="ri-checkbox-circle-line"></i> Fraud Prevention</li>
-              <li><i class="ri-checkbox-circle-line"></i> Weekly Payments</li>
-              <li><i class="ri-checkbox-circle-line"></i> Transparent Reporting</li>
-              <li><i class="ri-checkbox-circle-line"></i> 24/7 Support</li>
-            </ul>
-          </div>
-
-          <div class="sidebar-card">
-            <h3>Fast Qualification</h3>
-            <p>We review partner submissions quickly and prioritize quality, compliance, and growth potential.</p>
-          </div>
-        </aside>
-
-        <form id="partnerForm" class="partner-form glass reveal fade-right" novalidate>
-          <div class="grid-2">
-            <div class="field">
-              <div class="input-wrap">
-                <i class="ri-account-pin-circle-line input-icon"></i>
-                <select id="partnerType" name="partnerType" required>
-                  <option value=""> </option>
-                  <option>Publisher</option>
-                  <option>Advertiser</option>
-                  <option>Agency</option>
-                  <option>Affiliate Network</option>
-                  <option>Brand</option>
-                </select>
-                <label for="partnerType">Partner Type</label>
-              </div>
-              <span class="error-msg" id="partnerTypeError"></span>
+        <section class="marquee-wrapper">
+            <div class="marquee-track">
+                <span style="font-weight:700; color: var(--clr-slate-700); font-size: var(--fs-h3);">PARTNER_ORACLE</span>
+                <span style="font-weight:700; color: var(--clr-slate-700); font-size: var(--fs-h3);">AD_MASTERY</span>
+                <span style="font-weight:700; color: var(--clr-slate-700); font-size: var(--fs-h3);">APPLOVIN_ALPHA</span>
+                <span style="font-weight:700; color: var(--clr-slate-700); font-size: var(--fs-h3);">MEDIA_FLOW</span>
+                <span style="font-weight:700; color: var(--clr-slate-700); font-size: var(--fs-h3);">PARTNER_ORACLE</span>
+                <span style="font-weight:700; color: var(--clr-slate-700); font-size: var(--fs-h3);">AD_MASTERY</span>
             </div>
+        </section>
 
-            <div class="field">
-              <div class="input-wrap">
-                <i class="ri-user-line input-icon"></i>
-                <input id="fullName" name="fullName" type="text" placeholder=" " required />
-                <label for="fullName">Full Name</label>
-              </div>
-              <span class="error-msg" id="fullNameError"></span>
+        <section style="padding: var(--space-xl) 0;">
+            <div class="container">
+                <div class="grid-12">
+                    <div class="card-glass" style="grid-column: span 4; text-align: center;">
+                        <div class="metric-number" data-target="250">0</div>
+                        <p style="color: var(--clr-slate-400); font-weight: 500;">Premium Enterprise Advertisers</p>
+                    </div>
+                    <div class="card-glass" style="grid-column: span 4; text-align: center;">
+                        <div class="metric-number" data-target="18">0</div>
+                        <p style="color: var(--clr-slate-400); font-weight: 500;">Global Active Publisher Networks</p>
+                    </div>
+                    <div class="card-glass" style="grid-column: span 4; text-align: center;">
+                        <div class="metric-number" data-target="850">0</div>
+                        <p style="color: var(--clr-slate-400); font-weight: 500;">Annual Programmatic Scale Generated</p>
+                    </div>
+                </div>
             </div>
+        </section>
+    </main>
 
-            <div class="field">
-              <div class="input-wrap">
-                <i class="ri-building-line input-icon"></i>
-                <input id="companyName" name="companyName" type="text" placeholder=" " required />
-                <label for="companyName">Company Name</label>
-              </div>
-              <span class="error-msg" id="companyNameError"></span>
-            </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
 
-            <div class="field">
-              <div class="input-wrap">
-                <i class="ri-mail-line input-icon"></i>
-                <input id="email" name="email" type="email" placeholder=" " required />
-                <label for="email">Business Email</label>
-              </div>
-              <span class="error-msg" id="emailError"></span>
-            </div>
+            // Enterprise Hero Animations Pipeline
+            const heroTimeline = gsap.timeline();
+            heroTimeline.from(".split-text", {
+                duration: 1.2,
+                y: 60,
+                opacity: 0,
+                ease: "power4.out"
+            }).from(".hero-section p", {
+                duration: 1,
+                y: 30,
+                opacity: 0,
+                ease: "power3.out"
+            }, "-=0.8").from(".btn-premium", {
+                duration: 0.8,
+                scale: 0.9,
+                opacity: 0,
+                stagger: 0.1,
+                ease: "back.out(1.7)"
+            }, "-=0.6");
 
-            <div class="field">
-              <div class="input-wrap">
-                <i class="ri-phone-line input-icon"></i>
-                <input id="phone" name="phone" type="tel" placeholder=" " required />
-                <label for="phone">Phone Number</label>
-              </div>
-              <span class="error-msg" id="phoneError"></span>
-            </div>
-
-            <div class="field">
-              <div class="input-wrap">
-                <i class="ri-global-line input-icon"></i>
-                <input id="website" name="website" type="url" placeholder=" " required />
-                <label for="website">Website URL</label>
-              </div>
-              <span class="error-msg" id="websiteError"></span>
-            </div>
-
-            <div class="field">
-              <div class="input-wrap">
-                <i class="ri-map-pin-line input-icon"></i>
-                <select id="country" name="country" required>
-                  <option value=""> </option>
-                  <option>United States</option>
-                  <option>United Kingdom</option>
-                  <option>India</option>
-                  <option>Singapore</option>
-                  <option>Canada</option>
-                  <option>Australia</option>
-                  <option>Germany</option>
-                  <option>United Arab Emirates</option>
-                </select>
-                <label for="country">Country</label>
-              </div>
-              <span class="error-msg" id="countryError"></span>
-            </div>
-
-            <div class="field">
-              <div class="input-wrap">
-                <i class="ri-advertisement-line input-icon"></i>
-                <select id="trafficSource" name="trafficSource" required>
-                  <option value=""> </option>
-                  <option>SEO</option>
-                  <option>Facebook Ads</option>
-                  <option>Google Ads</option>
-                  <option>Native Ads</option>
-                  <option>Display Ads</option>
-                  <option>Social Media</option>
-                  <option>Push Traffic</option>
-                  <option>Email Marketing</option>
-                  <option>Mobile Apps</option>
-                  <option>Influencer Marketing</option>
-                </select>
-                <label for="trafficSource">Traffic Source</label>
-              </div>
-              <span class="error-msg" id="trafficSourceError"></span>
-            </div>
-
-            <div class="field">
-              <div class="input-wrap">
-                <i class="ri-bar-chart-2-line input-icon"></i>
-                <select id="monthlyTraffic" name="monthlyTraffic" required>
-                  <option value=""> </option>
-                  <option>10K+</option>
-                  <option>50K+</option>
-                  <option>100K+</option>
-                  <option>500K+</option>
-                  <option>1M+</option>
-                  <option>10M+</option>
-                </select>
-                <label for="monthlyTraffic">Monthly Traffic</label>
-              </div>
-              <span class="error-msg" id="monthlyTrafficError"></span>
-            </div>
-
-            <div class="field">
-              <div class="input-wrap">
-                <i class="ri-briefcase-4-line input-icon"></i>
-                <select id="businessCategory" name="businessCategory" required>
-                  <option value=""> </option>
-                  <option>Finance</option>
-                  <option>FinTech</option>
-                  <option>Insurance</option>
-                  <option>Gaming</option>
-                  <option>Crypto & Web3</option>
-                  <option>SaaS</option>
-                  <option>E-commerce</option>
-                  <option>Travel</option>
-                  <option>Health</option>
-                  <option>Education</option>
-                  <option>Retail</option>
-                  <option>Mobile Apps</option>
-                </select>
-                <label for="businessCategory">Business Category</label>
-              </div>
-              <span class="error-msg" id="businessCategoryError"></span>
-            </div>
-          </div>
-
-          <div class="field full">
-            <div class="input-wrap textarea-wrap">
-              <i class="ri-message-3-line input-icon"></i>
-              <textarea id="message" name="message" rows="6" placeholder=" " required></textarea>
-              <label for="message">Tell us about your business, marketing experience, audience, and partnership goals.</label>
-            </div>
-            <span class="error-msg" id="messageError"></span>
-          </div>
-
-          <label class="remember">
-            <input type="checkbox" id="privacy" required />
-            <span>I agree to the Privacy Policy.</span>
-          </label>
-          <span class="error-msg" id="privacyError"></span>
-
-          <button type="submit" class="btn btn-primary submit-btn ripple" id="submitBtn">
-            <span class="btn-text">Submit Application</span>
-            <span class="btn-loader" aria-hidden="true"></span>
-          </button>
-
-          <div class="success-message" id="successMessage" role="status" aria-live="polite">
-            <i class="ri-check-line"></i>
-            <div>
-              <strong>Application received.</strong>
-              <p>Thanks for applying. Our partnership team will review your submission and contact you within 24 hours.</p>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Works -->
-  <section class="section section-soft" id="works">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="section-tag">How It Works</span>
-        <h2>A Simple Four-Step Path to Activation</h2>
-        <p>We keep onboarding clear and efficient so quality partners can get started quickly.</p>
-      </div>
-
-      <div class="process">
-        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-send-plane-2-line"></i></span><h3>Submit Application</h3><p>Send us your details and tell us about your traffic or business model.</p></article>
-        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-shield-check-line"></i></span><h3>Verification</h3><p>We review your profile, compliance, and fit for the network.</p></article>
-        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-user-follow-line"></i></span><h3>Account Approval</h3><p>Qualified partners receive access and next-step onboarding guidance.</p></article>
-        <article class="process-step reveal fade-up"><span class="step-icon"><i class="ri-rocket-line"></i></span><h3>Start Earning</h3><p>Launch campaigns, track results, and scale performance with confidence.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="section-tag">FAQ</span>
-        <h2>Frequently Asked Questions</h2>
-      </div>
-
-      <div class="faq-list">
-        <div class="faq-item reveal fade-up">
-          <button class="faq-question">How long does approval take?</button>
-          <div class="faq-answer">Most partner applications are reviewed quickly, and qualified applicants are usually contacted within 24 hours.</div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-question">How are payments made?</button>
-          <div class="faq-answer">We use transparent payment workflows with reliable weekly payout cycles for approved partners.</div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-question">What traffic sources are accepted?</button>
-          <div class="faq-answer">We accept compliant sources such as SEO, paid media, native, social, email, influencer, and mobile traffic depending on campaign requirements.</div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-question">Do you work worldwide?</button>
-          <div class="faq-answer">Yes, we support partners and advertisers across global markets with international reach and reporting.</div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-question">What industries do you support?</button>
-          <div class="faq-answer">We support high-growth verticals including finance, fintech, insurance, gaming, travel, education, retail, mobile apps, SaaS, and more.</div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-question">Can agencies join?</button>
-          <div class="faq-answer">Yes, agencies can apply and partner with us on behalf of brands or independent performance initiatives.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-banner" id="cta">
-    <div class="container cta-grid">
-      <div class="cta-copy reveal fade-left">
-        <h2>Ready to Grow Together?</h2>
-        <p>Partner with one of the fastest-growing performance marketing networks and scale your business with premium campaigns.</p>
-      </div>
-      <div class="cta-actions reveal fade-right">
-        <a href="#apply" class="btn btn-dark ripple">Become a Publisher</a>
-        <a href="#apply" class="btn btn-light ripple">Become an Advertiser</a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <a href="#hero" class="brand footer-brand"><span class="brand-mark"></span><span>GrowthEngine</span></a>
-      <p>Premium performance marketing and partner growth solutions for modern advertisers and publishers.</p>
-    </div>
-
-    <div>
-      <h4>Company</h4>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-      <a href="#">Support</a>
-      <a href="#">Contact Us</a>
-    </div>
-
-    <div>
-      <h4>Social</h4>
-      <div class="socials">
-        <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-        <a href="#" aria-label="X"><i class="ri-twitter-x-fill"></i></a>
-        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-      </div>
-    </div>
-
-    <div class="copyright">
-      <p>© 2026 GrowthEngine. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
-
-  if (menuToggle && nav) {
-    menuToggle.addEventListener('click', () => nav.classList.toggle('open'));
-  }
-
-  const revealElements = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  revealElements.forEach(el => revealObserver.observe(el));
-
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const button = item.querySelector('.faq-question');
-    button.addEventListener('click', () => {
-      const active = item.classList.contains('active');
-      faqItems.forEach(i => i.classList.remove('active'));
-      if (!active) item.classList.add('active');
-    });
-  });
-
-  const form = document.getElementById('partnerForm');
-  const submitBtn = document.getElementById('submitBtn');
-  const successMessage = document.getElementById('successMessage');
-  const privacy = document.getElementById('privacy');
-  const privacyError = document.getElementById('privacyError');
-
-  const fields = {
-    partnerType: { el: document.getElementById('partnerType'), error: document.getElementById('partnerTypeError') },
-    fullName: { el: document.getElementById('fullName'), error: document.getElementById('fullNameError') },
-    companyName: { el: document.getElementById('companyName'), error: document.getElementById('companyNameError') },
-    email: { el: document.getElementById('email'), error: document.getElementById('emailError') },
-    phone: { el: document.getElementById('phone'), error: document.getElementById('phoneError') },
-    website: { el: document.getElementById('website'), error: document.getElementById('websiteError') },
-    country: { el: document.getElementById('country'), error: document.getElementById('countryError') },
-    trafficSource: { el: document.getElementById('trafficSource'), error: document.getElementById('trafficSourceError') },
-    monthlyTraffic: { el: document.getElementById('monthlyTraffic'), error: document.getElementById('monthlyTrafficError') },
-    businessCategory: { el: document.getElementById('businessCategory'), error: document.getElementById('businessCategoryError') },
-    message: { el: document.getElementById('message'), error: document.getElementById('messageError') }
-  };
-
-  const validators = {
-    partnerType: v => v ? '' : 'Please select a partner type.',
-    fullName: v => v.trim().length >= 2 ? '' : 'Please enter your full name.',
-    companyName: v => v.trim().length >= 2 ? '' : 'Please enter your company name.',
-    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'Please enter a valid business email.',
-    phone: v => /^[0-9()+\-\s]{7,}$/.test(v.trim()) ? '' : 'Please enter a valid phone number.',
-    website: v => {
-      try {
-        const url = new URL(v.trim());
-        return url.protocol.startsWith('http') ? '' : 'Please enter a valid website URL.';
-      } catch {
-        return 'Please enter a valid website URL.';
-      }
-    },
-    country: v => v ? '' : 'Please select your country.',
-    trafficSource: v => v ? '' : 'Please select a traffic source.',
-    monthlyTraffic: v => v ? '' : 'Please select your traffic volume.',
-    businessCategory: v => v ? '' : 'Please select a business category.',
-    message: v => v.trim().length >= 30 ? '' : 'Please provide at least 30 characters.'
-  };
-
-  function setError(field, msg) {
-    field.error.textContent = msg || '';
-    if (field.el) field.el.classList.toggle('invalid', !!msg);
-  }
-
-  function validateField(key) {
-    const field = fields[key];
-    const msg = validators[key](field.el.value);
-    setError(field, msg);
-    return !msg;
-  }
-
-  Object.keys(fields).forEach(key => {
-    const field = fields[key];
-    field.el.addEventListener('input', () => validateField(key));
-    field.el.addEventListener('change', () => validateField(key));
-    field.el.addEventListener('blur', () => validateField(key));
-  });
-
-  privacy.addEventListener('change', () => {
-    privacyError.textContent = privacy.checked ? '' : 'You must agree to the Privacy Policy.';
-  });
-
-  document.querySelectorAll('.ripple').forEach(btn => {
-    btn.addEventListener('click', function (e) {
-      const rect = this.getBoundingClientRect();
-      const circle = document.createElement('span');
-      const size = Math.max(rect.width, rect.height);
-
-      circle.className = 'ripple-effect';
-      circle.style.width = circle.style.height = `${size}px`;
-      circle.style.left = `${e.clientX - rect.left - size / 2}px`;
-      circle.style.top = `${e.clientY - rect.top - size / 2}px`;
-
-      const old = this.querySelector('.ripple-effect');
-      if (old) old.remove();
-
-      this.appendChild(circle);
-      setTimeout(() => circle.remove(), 600);
-    });
-  });
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    successMessage.classList.remove('show');
-
-    let valid = true;
-    Object.keys(fields).forEach(key => {
-      if (!validateField(key)) valid = false;
-    });
-
-    if (!privacy.checked) {
-      privacyError.textContent = 'You must agree to the Privacy Policy.';
-      valid = false;
-    } else {
-      privacyError.textContent = '';
-    }
-
-    if (!valid) return;
-
-    submitBtn.classList.add('loading');
-    submitBtn.disabled = true;
-
-    setTimeout(() => {
-      submitBtn.classList.remove('loading');
-      submitBtn.disabled = false;
-      successMessage.classList.add('show');
-      form.reset();
-      Object.keys(fields).forEach(key => setError(fields[key], ''));
-    }, 1500);
-  });
-});
-</script>
+            // ScrollTrigger Data Counters Engine
+            gsap.utils.toArray('.metric-number').forEach(counter => {
+                const targetValue = parseInt(counter.getAttribute('data-target'), 10);
+                gsap.to(counter, {
+                    scrollTrigger: {
+                        trigger: counter,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    },
+                    innerText: targetValue,
+                    duration: 2.5,
+                    snap: { innerText: 1 },
+                    ease: "power3.out",
+                    modifiers: {
+                        innerText: value => Math.floor(value).toLocaleString() + (targetValue > 100 ? 'M+' : 'K+')
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
