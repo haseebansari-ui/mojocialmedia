@@ -312,12 +312,10 @@ header.active nav ul li a.login::after {
 .hero-sec {
 	height: 100%;
 	position: relative;
-    border-radius: 0 0 7rem 7rem;
 }
 
 .hero-video {
 	width: 100%;
-    border-radius: 0 0 5rem 5rem;
 }
 
 .hero-content {
@@ -328,7 +326,7 @@ header.active nav ul li a.login::after {
 	width: 100%;
 	background: rgba(0, 0, 0, 0.4);
     text-align: center;
-    border-radius: 0 0 5rem 5rem;
+    /* border-radius: 0 0 5rem 5rem; */
 }
 .hero-content h1 {
 	font-size: 4rem;
@@ -389,17 +387,16 @@ header.active nav ul li a.login::after {
     }
 }
 
-/* background: rgba(0, 0, 0, 1); */
-/* .hero-bnn-white-bg{
+
+.hero-bnn-white-bg{
     position: absolute;
-    background: linear-gradient(135deg, #fde1ac, #fad8d8);
-    height: 7rem;
+    background: var(--white-color);
+    height: 5rem;
     width: 100%;
     z-index: 5;
-    bottom: 0px;
+    bottom: -28px;
     left: 0px;
-    border-radius: 0 0 7rem 7rem;
-} */
+}
 
 /* --- Marquee --- */
 
