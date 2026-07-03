@@ -37,43 +37,72 @@ body{
   font-family: 'Rubik', sans-serif;
 }
 
+p{
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
 .process-cntnt-bx{
   background: var(--bg);
-  max-width: 500px;
   border: 1px solid var(--primary);
-  margin: 2rem 0 0 2rem;
-  border-radius: 0.5rem;
+  max-width: 500px;
+  border-radius: .25rem;
+  margin-bottom: 1rem;
 }
 
 .prss-title{
-  color: var(--navy);
-  font-weight: bold;
-  padding: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  cursor:pointer;
+  font-weight: bold;
 }
 
-.prss-title.active{
+.process-cntnt-bx.active .prss-title{
   border-bottom: 1px solid;
   border-image: linear-gradient(to right, transparent, var(--primary), transparent) 1;
 }
 
+.faq-plus, .faq-minus{
+  color: var(--primary);
+  font-size: 1.3rem;
+} 
+
+.faq-minus{
+  display: none;
+}
+
+.process-cntnt-bx.active .faq-plus{
+  display: none;
+}
+
+.process-cntnt-bx.active .faq-minus{
+  display: block;
+}
+
 .prss-ctnt{
-  padding: 0;
+  padding: 0 1.5rem;
   max-height: 0;
   visibility: hidden;
   opacity: 0;
+  transition: 0.5s ease-in-out;
 }
 
-.prss-title.active .prss-ctnt{
-  padding: 0.8rem 1rem 1rem;
+.process-cntnt-bx.active .prss-ctnt{
+  padding:  1rem 1.5rem;
   max-height: 200px;
-  visibility: hidden;
+  visibility: visible;
   opacity: 1;
-  color: var(--navy);
+  transition: 0.4s ease-in-out;
 }
+
+
+/* .process-cntnt-bx.active .prss-title{
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, transparent, var(--primary), transparent) 1;
+} */
 
 
   </style>
@@ -94,7 +123,49 @@ body{
                   </span>
                 </div>
               </div>
-              <div class="prss-ctnt">
+              <div class="prss-ctnt active">
+                <p>
+                  Pricing depends on your goals, channels, and campaign complexity. We tailor engagements to your growth objectives.
+                </p>
+              </div>			
+				  </div>
+
+          <div class="process-cntnt-bx">
+              <div class="prss-title">
+                <div>
+                  Pricing
+                </div>
+                <div>
+                  <span class="faq-plus">
+                    <i class="fa-solid fa-plus"></i>
+                  </span>
+                  <span class="faq-minus">
+                      <i class="fa-solid fa-minus"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="prss-ctnt active">
+                <p>
+                  Pricing depends on your goals, channels, and campaign complexity. We tailor engagements to your growth objectives.
+                </p>
+              </div>			
+				  </div>
+
+          <div class="process-cntnt-bx">
+              <div class="prss-title">
+                <div>
+                  Pricing
+                </div>
+                <div>
+                  <span class="faq-plus">
+                    <i class="fa-solid fa-plus"></i>
+                  </span>
+                  <span class="faq-minus">
+                      <i class="fa-solid fa-minus"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="prss-ctnt active">
                 <p>
                   Pricing depends on your goals, channels, and campaign complexity. We tailor engagements to your growth objectives.
                 </p>
@@ -102,13 +173,26 @@ body{
 				  </div>
 
 <script>
-const accordion = documnet.querySelectorAll(".prss-title");
 
-for(let i =0; i > accordion.length; i++){
-  accordion[i].addEventListner("click", ()=>{
-    accordion[i].classList.toggle("active");
+  const acc = document.querySelectorAll(".prss-title");
+
+  acc.forEach((item) =>{
+    item.addEventListener("click", ()=>{
+      const current = item.parentElement;
+
+      const panel = document.querySelectorAll(".process-cntnt-bx");
+
+      panel.forEach((box)=>{
+        if(box !== current){
+          box.classList.remove("active");
+        }
+      })
+
+      current.classList.toggle("active");
+    })
   })
-} 
+
+ 
 </script>
 </body>
 </html>

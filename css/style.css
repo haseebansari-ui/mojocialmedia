@@ -1675,7 +1675,7 @@ header.active nav ul li a.login::after {
     margin-bottom: 3rem;
 }
 
-.process-cntnt-bx{
+/* .process-cntnt-bx{
     border: 1px solid var(--primary);
     margin-bottom: 1rem;
     border-radius: 0.5rem;
@@ -1728,11 +1728,70 @@ header.active nav ul li a.login::after {
     opacity: 1;
     visibility: visible;
     padding: 15px 25px 20px;
-}
+} */
 
 .mrkt-proess-sec .heading-bx h2{
     margin-top: 2rem;
 }
+
+.process-cntnt-bx{
+  background: var(--bg);
+  border: 1px solid var(--primary);
+  border-radius: .25rem;
+  margin-bottom: 0.5rem;
+}
+
+.prss-title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1.5rem 0.7rem 1rem;
+  cursor:pointer;
+  font-weight: bold;
+}
+
+.process-cntnt-bx.active .prss-title{
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, transparent, var(--primary), transparent) 1;
+}
+
+.faq-plus, .faq-minus{
+  color: var(--primary);
+  font-size: 0.8rem;
+} 
+
+.faq-minus{
+  display: none;
+}
+
+.process-cntnt-bx.active .faq-plus{
+  display: none;
+}
+
+.process-cntnt-bx.active .faq-minus{
+  display: block;
+}
+
+.prss-ctnt{
+  padding: 0 1.5rem;
+  max-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.prss-ctnt p{
+    font-size: 1rem;
+}
+
+.process-cntnt-bx.active .prss-ctnt{
+  padding:  1rem 1.5rem;
+  max-height: 200px;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+
 
 /* ==============================
     Publisher Page

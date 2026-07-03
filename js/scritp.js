@@ -152,13 +152,31 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 
 // Casestudy accordian
 
-const processAcc = document.querySelectorAll(".process-cntnt-bx");
+// const processAcc = document.querySelectorAll(".process-cntnt-bx");
 
-for(let i = 0; i < processAcc.length; i++){
-   processAcc[i].addEventListener("click", ()=>{
-      processAcc[i].classList.toggle("active");
-   })
-}
+// for(let i = 0; i < processAcc.length; i++){
+//    processAcc[i].addEventListener("click", ()=>{
+//       processAcc[i].classList.toggle("active");
+//    })
+// }
+
+const acc = document.querySelectorAll(".prss-title");
+
+  acc.forEach((item) =>{
+    item.addEventListener("click", ()=>{
+      const current = item.parentElement;
+
+      const panel = document.querySelectorAll(".process-cntnt-bx");
+
+      panel.forEach((box)=>{
+        if(box !== current){
+          box.classList.remove("active");
+        }
+      })
+
+      current.classList.toggle("active");
+    })
+  })
 
 
 
