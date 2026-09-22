@@ -2844,6 +2844,7 @@ small {
     align-items: center;
     justify-content: center;
     gap: 0.3rem;
+    padding: 8px;
 }
 
 .abt-hero-sec .trust-pill i {
