@@ -163,7 +163,18 @@
         margin-top: 2rem;
     }
     .value-img-bx{
-        margin-bottom: 2rem;
+        height: 500px;
+        width: 500px;
+        border-radius: 100%;
+        margin: 0 auto 2rem;
+    }
+
+    .value-img-bx:hover{
+        box-shadow: 0 0 20px rgba(254, 188, 22, 0.686);
+    }
+
+    .value-img-bx img {
+        height: 500px;
     }
 
     section{
@@ -398,6 +409,11 @@
     .loader{
         width: 40px;
         height: 40px;
+    }
+
+    .value-img-bx {
+        height: 350px;
+        width: 350px;
     }
 }
 
