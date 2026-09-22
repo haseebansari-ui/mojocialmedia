@@ -1863,6 +1863,8 @@ header.active nav ul li a.login::after {
 
 .publisher-hero .dashboard{
     grid-template-columns: 1fr;
+    padding: 40px;
+    inset: 0;
 }
 
 .publisher-hero .metric{
