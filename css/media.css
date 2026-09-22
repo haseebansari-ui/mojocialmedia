@@ -415,6 +415,10 @@
         height: 350px;
         width: 350px;
     }
+
+    .value-img-bx img {
+        height: 350px;
+    }
 }
 
 
@@ -518,5 +522,14 @@
     .ww-campaign-cnct{
         height: inherit;
         margin: 29px auto 0;
+    }
+
+    .value-img-bx {
+        height: 300px;
+        width: 300px;
+    }
+
+    .value-img-bx img {
+        height: 300px;
     }
 }
