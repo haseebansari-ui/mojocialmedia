@@ -285,6 +285,10 @@
     .sub-heading-title{
         text-align: center;
     }
+
+    .banner-title br{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 767px){
