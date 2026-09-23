@@ -116,6 +116,13 @@
 
     .casestudy-content-bx{
         margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .abt-hero-sec .casestudy-content-bx small{
+        width: 300px;
+        display: block;
+        margin: 0 auto;
     }
 
     .pub-test-sec .test-card {
@@ -217,6 +224,36 @@
     .pub-inn-pg-trust{
         display: flex;
         justify-content: center;
+    }
+
+    .abt-hero-visual .fc-1 {
+        top: 89px;
+        right: 14px;
+    }
+
+    .abt-who-we-are-sec .heading-bx {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .heading-bx{
+        text-align: center;
+    }
+
+    .heading-bx h2 br, p br{
+        display: none;
+    }
+
+    .abt-industries-sec .heading-bx{
+        text-align: center;
+    }
+
+    .srvc-choose-us-sec .heading-bx{
+        text-align: center;
+    }
+
+    .heading2{
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -504,6 +541,7 @@
     .abt-hero-sec .casestudy-content-bx small{
         width: 300px;
         display: block;
+        margin: 0 auto;
     }
 
     .abt-hero-sec .trust-row{
