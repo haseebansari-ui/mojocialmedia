@@ -289,6 +289,10 @@
     .banner-title br{
         display: none;
     }
+
+    .app-growth .card {
+        height: inherit;
+    }
 }
 
 @media only screen and (max-width: 767px){
