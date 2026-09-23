@@ -259,6 +259,28 @@
     .casestudy-btn-bx{
         justify-content: center;
     }
+
+    .srvc-hero-sec .casestudy-content-bx .btn{
+        width: 210px !important;
+    }
+
+    .fetre-srvc-content ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: balance;
+        gap: 1rem 2rem;
+    }
+
+    .fetre-srvc-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fetre-srvc-sec .heading-bx{
+        margin-bottom: 2rem;
+    }
 }
 
 @media only screen and (max-width: 767px){
@@ -449,7 +471,7 @@
 
     .loader{
         width: 40px;
-        height: 40px;
+        height: 40px;536
     }
 
     .value-img-bx {
@@ -536,6 +558,7 @@
     .srvc-hero-sec .casestudy-content-bx small{
         width: 293px;
         display: block;
+        margin: 0 auto;
     }  
     
     .counter-content{
