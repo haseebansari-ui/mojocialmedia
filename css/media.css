@@ -281,6 +281,10 @@
     .fetre-srvc-sec .heading-bx{
         margin-bottom: 2rem;
     }
+
+    .sub-heading-title{
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 767px){
