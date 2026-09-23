@@ -454,6 +454,7 @@
     .adv-hro-sec small{
         display: block;
         width: 320px;    
+        margin: 0 auto;
     }
 
     .heading-bx p br{
