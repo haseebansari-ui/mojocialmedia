@@ -3583,12 +3583,38 @@ small {
     margin: 10px 0 18px;
 }
 
+.signup-main .form-row{
+    display: inherit;
+}
+
 .remember {
     display: flex;
     align-items: center;
-    gap: 0;
+    gap: 6px;
     color: #64748b;
 }
+
+.remember input{
+    width: 10%;
+    margin-top: 0;
+}
+
+.signup-row .remember{
+    gap: 2px;
+}
+
+.signup-row .remember input{
+    width: 5%;
+}
+
+.agree{
+    color: #9a5e00;
+}
+
+.agree:hover{
+    color: #9a5e00;
+}
+
 
 .link {
     color: #9a5e00;

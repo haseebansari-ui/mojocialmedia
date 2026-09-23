@@ -45,16 +45,16 @@
                      </a> -->
                     </a>
 
-                    <h1>Grow Faster with Data-Driven Performance Marketing</h1>
+                    <h1>Build Smarter. <br> Grow Faster.</h1>
                     <p>
-                    Scale your business using AI-powered campaigns, real-time optimization, and transparent reporting.
+                    Create your Mojicial Media account and start managing your performance marketing campaigns with intelligent data-driven insights.
                     </p>
 
                     <div class="dash glass">
                     <div class="dash-top">
                         <div>
                         <p class="dash-label">Marketing Intelligence</p>
-                        <h2>Connected performance dashboards</h2>
+                        <h2>Your growth starts here</h2>
                         </div>
                         <span class="live-pill"><i class="ri-checkbox-blank-circle-fill"></i> Live</span>
                     </div>
@@ -83,15 +83,25 @@
                 </aside>
 
                 <!-- Right panel -->
-                <section class="auth-panel">
+                <section class="auth-panel signup-main">
                 <div class="auth-card reveal fade-right visible">
                     <div class="auth-header">
-                    <span class="eyebrow"><i class="ri-lock-2-line"></i> Enterprise Login</span>
-                    <h2>Welcome Back</h2>
-                    <p>Sign in to access your performance marketing dashboard.</p>
+                    <span class="eyebrow"><i class="ri-user-add-line"></i> Create Account</span>
+                    <h2>Get Started</h2>
+                    <p>Create your account to access your performance marketing dashboard.</p>
                     </div>
 
                     <form id="loginForm" class="login-form" novalidate="">
+
+                     <div class="field">
+                        <div class="input-wrap">
+                        <i class="ri-user-3-line input-icon"></i>
+                        <input type="text" id="fname" name="fname" autocomplete="fname" required="" />
+                        <label for="fname">Full Name</label>
+                        </div>
+                        <span class="error-msg" id="emailError"></span>
+                    </div>   
+
                     <div class="field">
                         <div class="input-wrap">
                         <i class="ri-mail-line input-icon"></i>
@@ -99,6 +109,15 @@
                         <label for="email">Email Address</label>
                         </div>
                         <span class="error-msg" id="emailError"></span>
+                    </div>
+
+                    <div class="field">
+                        <div class="input-wrap">
+                        <i class="ri-phone-line input-icon"></i>
+                        <input type="tel" id="signupPhone" name="phone" autocomplete="tel" required="" />
+                        <label for="signupPhone">Phone Number</label>
+                        </div>
+                        <span class="error-msg" id="phoneError"></span>
                     </div>
 
                     <div class="field">
@@ -113,21 +132,20 @@
                         <span class="error-msg" id="passwordError"></span>
                     </div>
 
-                    <div class="form-row">
+                    <div class="form-row signup-row">
                         <label class="remember">
                         <input type="checkbox" id="rememberMe">
-                        <span>Remember Me</span>
+                        <span>I agree to the <a href="#" class="agree"> Terms & Conditions </a> and <a href="#" class="agree">Privacy Policy</a> </span>
                         </label>
-                        <a href="#" class="link">Forgot Password?</a>
                     </div>
 
                     <button type="submit" class="btn" id="loginBtn">
                         <span class="btn-text">Login</span>
                         <span class="btn-loader" aria-hidden="true"></span>
-                    </button>
+                    </button>             
 
                     <div class="extra-links">
-                        <p>Don't have an account? <a href="signup.html">Create Account</a></p>
+                        <p>Don't have an account? <a href="#">Create Account</a></p>
                     </div>
 
                     <div class="success-state" id="successState" role="status" aria-live="polite">
@@ -144,7 +162,6 @@
                     <div class="footer-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms &amp; Conditions</a>
-                    <a href="#">Help Center</a>
                     <a href="#">Contact Support</a>
                     </div>
 
